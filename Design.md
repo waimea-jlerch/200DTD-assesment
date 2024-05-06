@@ -17,17 +17,35 @@ The client I am working with in this project is the International Department. Th
 
 ### End-User Requirements
 
-This will work as a multi-user system:
+This will work as a multi-user system by my 2 main groups of end-user which are:
 
 - **The International Leaders/Staffs** are involved in organizing events. In order to efficiently planned the equipment needed they would need to be able to clearly see a list of the students that are coming to the upcoming events.
 
-- **The International Students** 
+- **The International Students** including migrants, would likely want to know the upcoming events easily without the need to only go to school and look at the international notice board. With this system they will be able to look out for upcoming events in the site and make them self free for the day and sign up!
 
-Replace this text with a description of your typical end-users and their specific needs / expectations / requirements.
+<!-- Replace this text with a description of your typical end-users and their specific needs / expectations / requirements. -->
 
 ### Proposed Solution
 
-Replace this text with a brief statement about the system that you intend to create, including the key functionality it should have.
+A website that allows *international staffs/leaders* to add upcoming events and view a list of student names who have signed up to come.
+
+The website will also allows *international students and migrants* to easily browse around the site and view upcoming events, past events, and signed up to upcoming events to let the staffs and leaders know that they are coming.
+
+The international staffs/leaders (The admins) should be able to:
+- log in through admin access password
+- view upcoming and past events
+- be able to set up a new upcoming event with a starting/closing date for signing up
+- Leaders should also sign up like the students
+- be able to view a list of students who are coming in a clear aesthetically pleasing table
+- be able to update the event starting/closing sign up date and description incase anything changes
+- view a list of all the international students with basic information i.e. DoB, nationality
+
+The international studetns should be able to:
+- view upcoming and past events
+- click on a button to sign up for events they think they are coming
+- undo sign in incase their plans change
+
+<!-- Replace this text with a brief statement about the system that you intend to create, including the key functionality it should have. -->
 
 
 -------------------------------------------------
