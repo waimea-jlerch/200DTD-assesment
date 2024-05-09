@@ -38,12 +38,16 @@ The international staffs/leaders (The admins) should be able to:
 - Leaders should also sign up like the students
 - be able to view a list of students who are coming in a clear aesthetically pleasing table
 - be able to update the event starting/closing sign up date and description incase anything changes
-- view a list of all the international students with basic information i.e. DoB, nationality
+- view a list of all the international and migrant students with all information i.e. DoB, nationality, forename, surname
 
 The international studetns should be able to:
 - view upcoming and past events
 - click on a button to sign up for events they think they are coming
+- click on event element and view greater details such as pictures and more descriptions in a separate page
 - undo sign in incase their plans change
+- be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server
+- be able to view a list of all international and migrant students forename and lastname
+
 
 <!-- Replace this text with a brief statement about the system that you intend to create, including the key functionality it should have. -->
 
@@ -54,35 +58,103 @@ The international studetns should be able to:
 
 ### Functionality
 
-Replace this text with a clear explanation of what the implication means.
+The functionality implications of a digital technology or digital outcome (e.g. a website) relate to how well it works for the end-user, in terms of meeting its intended purpose.
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+*When you create a digital technologies outcome, you should ask...*
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+- Does it do everything it is supposed to, and meets its purpose?
+- Is it bug-free and doesn't crash?
+- Does is work as expected from the user's point-of-view?
+
+*When you create a digital technologies outcome, you should try to...*
+
+- Fully satisfy the original need / purpose
+- Fully meet the user's requirements
+- Make sure that it copes with all inputs (normal, boundary and abnormal)
+
+<!-- Replace this text with a clear explanation of what the implication means. -->
+
+**Why is this relevant to this project?** <br>
+I need to design my system to be as easy to use as I can as the end-user for this project came from all around the world with different english and IT background. I have to make sure that the system have simple language that most people will understand and an easy to understand interface that will be usable for everyone even if they are not good with IT.
+<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
+
+<!-- have to paraphrase -->As I design my system’s UI, I will refer to Nielsen’s heuristics and try to make sure that the UI meets them as far as possible. Specifically, I will aim for...
+
+<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
 ### Usability
 
-Replace this text with a clear explanation of what the implication means.
+The usability implications of a digital technology or digital outcome (e.g. a website) relate to how easy it is to use for the end-user, without the need for help or guidance.
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+*When you create a digital technologies outcome, you should ask...*
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+- Does it follow common usability heuristics
+- Can the end-user complete tasks / actions easily, with little need for help?
+
+*When you create a digital technologies outcome, you should try to...*
+
+- Follow standard conventions (e.g. placement of menus, etc.)
+- Make the behaviour of the outcome logical and familiar
+- Provide the end-user with a clear route forwards (and back out, if needed)
+- Always make it obvious to the end-user what is happening
+- (See the usability heuristics for others)
+<!-- Replace this text with a clear explanation of what the implication means. -->
+
+**Why is this relevant to this project?** <br>
+
+<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
+
+<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
 ### Aesthetics
 
-Replace this text with a clear explanation of what the implication means.
+The aesthetic implications of a digital technology or digital outcome (e.g. a website) relate to how it looks in terms of design.
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+*When you create a digital technologies outcome, you should ask...*
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+- Does the design appeal to the end-users?
+- Does the design follow conventions?
+- Has good use been made of colour, font, positioning, etc.?
+
+*When you create a digital technologies outcome, you should try to...*
+
+- Create an overall design that appeals to the end-users
+- Create an overall design that is suitable for the outcome's purpose
+- Use colours that work effectively together to create a pleasing effect
+- Use fonts that work well with the design and convey the appropriate 'feel'
+- Position elements of the design in a way that is balanced
+- Group / seperate elements to focus attention and/or link related items
+<!-- Replace this text with a clear explanation of what the implication means. -->
+
+**Why is this relevant to this project?** <br>
+
+<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
+
+<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
 ### End-User
 
-Replace this text with a clear explanation of what the implication means.
+The end-user implications of a digital technology or digital outcome (e.g. a website) are connected to the specific needs of the end-user(s).
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+*When you create a digital technologies outcome, you should ask...*
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+- Are the end-users' specific needs considered (age, education level, interests, etc)?
+- Does it appeal to the correct demographic?
+- Does is work on the type(s) of device the end-users are likely to use?
+
+*When you create a digital technologies outcome, you should try to...*
+
+- Know as much as possible about your end-user(s) in terms of age, gender, interests, etc.
+- Use language and other content appropriate to your end-user(s)
+- Make regular use of end-user feedback to guide your design and implementation
+- Ensure it works on a range of devices, expecially those likely to be used by the end-user(s)
+<!-- Replace this text with a clear explanation of what the implication means. -->
+
+**Why is this relevant to this project?** <br>
+
+<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
+
+<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
 ### ..
 
