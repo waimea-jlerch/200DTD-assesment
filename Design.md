@@ -56,32 +56,6 @@ The international studetns should be able to:
 
 ## Relevant Implications
 
-### Functionality
-
-The functionality implications of a digital technology or digital outcome (e.g. a website) relate to how well it works for the end-user, in terms of meeting its intended purpose.
-
-*When you create a digital technologies outcome, you should ask...*
-
-- Does it do everything it is supposed to, and meets its purpose?
-- Is it bug-free and doesn't crash?
-- Does is work as expected from the user's point-of-view?
-
-*When you create a digital technologies outcome, you should try to...*
-
-- Fully satisfy the original need / purpose
-- Fully meet the user's requirements
-- Make sure that it copes with all inputs (normal, boundary and abnormal)
-
-<!-- Replace this text with a clear explanation of what the implication means. -->
-
-**Why is this relevant to this project?** <br>
-I need to design my system to be as easy to use as I can as the end-user for this project came from all around the world with different english and IT background. I have to make sure that the system have simple language that most people will understand and an easy to understand interface that will be usable for everyone even if they are not good with IT.
-<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
-
-<!-- have to paraphrase -->As I design my system’s UI, I will refer to Nielsen’s heuristics and try to make sure that the UI meets them as far as possible. Specifically, I will aim for...
-
-<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
-
 ### Usability
 
 The usability implications of a digital technology or digital outcome (e.g. a website) relate to how easy it is to use for the end-user, without the need for help or guidance.
@@ -101,8 +75,38 @@ The usability implications of a digital technology or digital outcome (e.g. a we
 <!-- Replace this text with a clear explanation of what the implication means. -->
 
 **Why is this relevant to this project?** <br>
+I need to design my system to be as easy to use as I can as the end-user for this project came from all around the world with different english and IT background. I have to make sure that the system have simple language that most people will understand and an easy to understand interface that will be usable for everyone even if they are not good with IT.
+<!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
+
+As I design my system’s UI, I will refer to Nielsen’s heuristics and try to make sure that the UI meets them as far as possible. Specifically, I will aim for my website to have the same UI design throughout the pages and follow other website convensions so that it is easy for people to catch on how to navigate around the website (Consistency and standards). More Over, They should be able to arrange the events as they please like: order by A-Z, order by events register closing time, and so on for easy browsing (Flexibility and efficiency of use). Lastly, when registering into events they can type a few letters and a list will appear for them to select without the need to type out the whole name out and to prevent mispelling (Recognition rather than recall).
+
+To make sure that I have succeeded this I will need to test-out the system with my end-user and get feedback to improve my system.
+<!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
+
+### Functionality
+
+The functionality implications of a digital technology or digital outcome (e.g. a website) relate to how well it works for the end-user, in terms of meeting its intended purpose.
+
+*When you create a digital technologies outcome, you should ask...*
+
+- Does it do everything it is supposed to, and meets its purpose?
+- Is it bug-free and doesn't crash?
+- Does is work as expected from the user's point-of-view?
+
+*When you create a digital technologies outcome, you should try to...*
+
+- Fully satisfy the original need / purpose
+- Fully meet the user's requirements
+- Make sure that it copes with all inputs (normal, boundary and abnormal)
+
+<!-- Replace this text with a clear explanation of what the implication means. -->
+
+**Why is this relevant to this project?** <br>
+I will need to ensure that my system is bug-free and is functioning properly. If there's somehow any error that has escaped out, the system should not show any long error message that user cannot comprehend. This implication is very vital as if it doesn't function it will not solve our initial problem and all the work put into the productio of the system will go to waste. Therefore, I need to do a lot of testing with my end-user to make sure that there is no loophole/deadend and everything will work nicely. 
 
 <!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
+
+<!-- have to paraphrase -->As I design my system’s UI, I will refer to Nielsen’s heuristics and try to make sure that the UI meets them as far as possible. Specifically, I will aim for...
 
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
