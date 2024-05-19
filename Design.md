@@ -181,7 +181,7 @@ Make UI components accessible in terms of size / target area, etc.
 **Why is this relevant to this project?** <br>
 Often times the device that seems to be most accessible to international and migrant students are mobile devices such as phones and tablets. However, there are also students who prefer to use their labtop and school's computers. 
 
-Therefore, I would like to aim for my system to be accible on most devices without elements collapsing weirdly or arrange in an unusable format. As to promote easy access to the system to end-users. 
+Therefore, I would like to aim for my system to be accessible on most devices without elements collapsing weirdly or arrange in an unusable format. As to promote easy access to the system to end-users. 
 
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
