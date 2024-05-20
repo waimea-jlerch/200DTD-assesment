@@ -33,17 +33,18 @@ Flow Version 1:
 ![Design Flow V.1](images/flow1.png)
 
 Problem I'm facing is to figure out how admin portal will work.
-Also how the students can cancel without the risk of getting impersonated.
+Also I have to figure out how the students can cancel/undo sign-ups without the risk of getting impersonated. I'm thinking of making the student enter their school password when they signed-up and undo but not sure if that's a good idea or not.
 
 Database Version 1:
-![Design Dababase V.1](images/db1.png)
+![Design Database V.1](images/db1.png)
 There's 2 and tables and 1 linking table to get data of signed up students. Have to check if the information of the student and event table are enough or too much.
 
-I will need to get feedback from my end-user about both the flow and the DB.
+I will need to get feedback from my end-user about both the flow and the DB. I also have to ask them of their preferred color pallete.
 
-### DATE HERE
+### 21/05/2024
 
-Replace this test with what you are working on
+I asked about how admin portal and added it to db
+![Design Database V.2](images/db2.png)
 
 Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
 
