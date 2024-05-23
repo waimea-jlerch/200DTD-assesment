@@ -43,17 +43,26 @@ I will need to get feedback from my end-user about both the flow and the DB. I a
 
 ### 21/05/2024
 
-I asked about how admin portal and added it to db
+I asked about how admin portal would looked like and added it to drawsql. I also change 'id' column of events table into 'code' as an events could repeat my times during school year. 
+
 ![Design Database V.2](images/db2.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Added a table with admin username and password that will be used by international staffs and leaders.
 
-### DATE HERE
+### 23/05/2024
 
-Replace this test with what you are working on
+On the 21/05/2024 after school I have discussed with my client about the progress I have done so far and got some feedback.
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+My client said that it would be a good idea to add a page where a student could view all their sign ups and manage it there for easier usage. To do that and preventing impersonation we have decided that we should make the system have a log in function.
+>Everyone should know their school password and it wouldn't be too hard to use eventhough they have to log in.
 
+is what my client said.
+
+I think that a log in function would be very nice. However, one problem I can think of is that what if a student haven't been register into the system then what would happen. I don't think it would be much of a problem though as I could add a form to register that will need admin approval before it can update into the database. Otherwise the student could talk to international staff and we can add the student in.
+
+My client have approved my database tables and also provided my with the color pallette that they would like the system. (add pic)
+
+I would need to redesign my user flow to have sign-in function that will differ in the access within the system between students and admin.
 ### DATE HERE
 
 Replace this test with what you are working on
