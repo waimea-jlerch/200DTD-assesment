@@ -71,6 +71,30 @@ I'm working on the new verstion of my user flow, however I have come across some
 User Flow Version 1:
 ![Design Flow V.2](images/flow2.png)
 
+### 10/06/24
+
+I had a conversation and I have come to the conclusion that the log in system is too complicated for my level 2 demo system, therefore I'll will be using a PIN as a security factor to prevent impersonation of students, and here is my database and flow that have been edited.
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+
 ### DATE HERE
 
 Replace this test with what you are working on
