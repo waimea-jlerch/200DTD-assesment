@@ -59,7 +59,7 @@ My client said that it would be a good idea to add a page where a student could 
 
 is what my client said.
 
-I think that a log in function would be very nice. However, one problem I can think of is that what if somehow a student haven't been register into the system then what will happen. I don't think it would be much of a problem though as I could add a form to register that will need admin approval before it can updated into the database. Otherwise the student could talk to international staff and we can add the student in.
+> I think that a log in function would be very nice. However, one problem I can think of is that what if somehow a student haven't been register into the system then what will happen. I don't think it would be much of a problem though as I could add a form to register that will need admin approval before it can updated into the database. Otherwise the student could talk to international staff and we can add the student in.
 
 My client have approved my database tables and also provided my with the color pallette that they would like the system. (add pic)
 
