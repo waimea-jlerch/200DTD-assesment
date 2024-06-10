@@ -73,7 +73,9 @@ User Flow Version 1:
 
 ### 10/06/24
 
-I had a conversation and I have come to the conclusion that the log in system is too complicated for my level 2 demo system, therefore I'll will be using a PIN as a security factor to prevent impersonation of students, and here is my database and flow that have been edited.
+I had a conversation with MR.Copley about if my system would work for my level 2 course. We have come to the conclusion that the log-in system will be too complicated for my level 2 demo system, therefore I'll will be using a PIN as a security factor to prevent impersonation of students instead of a log-in system to keep it simple for my level 2 course. I would need to re-design my user flow diagram and database to match this PIN security system.
+
+![Alt text](images/flow3.png)
 
 Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
 
