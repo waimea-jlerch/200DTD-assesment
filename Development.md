@@ -77,6 +77,10 @@ I had a conversation with MR.Copley about if my system would work for my level 2
 
 ![Alt text](images/flow3.png)
 
+how to insert image?
+end user prefer desktop use
+add existing events?
+
 Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
 
 ### DATE HERE
