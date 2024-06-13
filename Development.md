@@ -75,13 +75,30 @@ User Flow Version 1:
 
 I had a conversation with MR.Copley about if my system would work for my level 2 course. We have come to the conclusion that the log-in system will be too complicated for my level 2 demo system, therefore I'll will be using a PIN as a security factor to prevent impersonation of students instead of a log-in system to keep it simple for my level 2 course. I would need to re-design my user flow diagram and database to match this PIN security system.
 
-![Alt text](images/flow3.png)
+Here is my fixed flow design that have been approved by my end-user:
+![Flow Design V.3](images/flow3.png)
 
-how to insert image?
-end user prefer desktop use
-add existing events?
+Here is my updated database including the use of PIN:
+![DB Design V.3](images/db3.png)
+I added pin column in the student table.
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Moving on to designing the interface, my user have stated that
+>I would prefer the main use of the site to be on computers
+
+meaning that I should focus on designing the interface on desktop frame, and aware of desktop site format (eg. website conventions).
+
+### 13/06/24
+
+I have finished my black and white user interface demo in Figma with interactions!
+
+Here is what it looks like:
+![black and white user interface](images/ui1.png)
+
+I have also finished setting up my database in AdminerEvo:
+![My SQL db schema](images/sql_schema.png)
+
+
+I will arrange a catch up with my end user to see if they like the feel of this user interface demo or not, before moving forward to choosing colors palette.
 
 ### DATE HERE
 
@@ -99,10 +116,4 @@ Replace this text with brief notes describing what you worked on, any decisions 
 
 Replace this test with what you are working on
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
-
-### DATE HERE
-
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
