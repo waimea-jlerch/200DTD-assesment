@@ -118,7 +118,9 @@ Here are 2 ideas for my UI demo layout colors:
 ![1st UI demo colors](images/ui_colors1_1.png)
 
 2nd:
+![2nd UI demo colors](images/ui_colors1_2.png)
 
+The difference between the two is the main green. 1st have a more lighter and pastel green while 2nd have a darker green. I would need to ask my end user what they prefer before proceeding to add colors to all remining frames.
 
 ### DATE HERE
 
