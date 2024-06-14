@@ -100,11 +100,25 @@ I have also finished setting up my database in AdminerEvo:
 
 I will arrange a catch up with my end user to see if they like the feel of this user interface demo or not, before moving forward to choosing colors palette.
 
-### DATE HERE
+### 14/06/24
 
-Replace this test with what you are working on
+Today I had a talk with my end user about my UI demo if they are satisfied with the feeling and flow of the site. They approved that it look and feels really good when using. However, they now want me to add colors.
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+>I think for the colors we should do the Waimea green and yellow like in the Waimea College website.
+
+So I have go to Realtime Colors site to use the eyedropper tool to get the exact Waimea website color palette. Also my end user have specify to me the fonts that they want me to use for my system.
+
+>Could you use Times New Roman for the Waimea college home button on the navigation bar to match the Waimea College website? And for the normal text we usually use calibre, but the one that you have right now also looks really good.
+
+Since Figma doesn't have those text accessible for me at the moment I'll be focusing on putting in the colors into my UI demo.
+
+Here are 2 ideas for my UI demo layout colors:
+
+1st:
+![1st UI demo colors](images/ui_colors1_1.png)
+
+2nd:
+
 
 ### DATE HERE
 
