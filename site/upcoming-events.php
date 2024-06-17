@@ -11,7 +11,7 @@ include 'partials/top.php';
 $db = connectToDB();
 
 //setup a query to get all companies into
-$query = 'SELECT * FROM companies ORDER BY name ASC';
+$query = 'SELECT * FROM events ORDER BY name ASC';
 
 //Ateempt to run the query
 try{
@@ -25,7 +25,7 @@ catch (PDOException $e) {
 }
 
 //see what we got back
-consoleLog($companies);
+consoleLog($events);
 
 echo '<ul id="company-list">';
 
