@@ -29,8 +29,8 @@ $page = basename($_SERVER['SCRIPT_NAME']);
         <h1><a href="index.php"   class="<?= $page=='index.php' ? 'active' : '' ?>"><?= SITE_NAME?></a></h1>
         
         <nav>
-            <a href="upcoming-events.php"   class="<?= $page=='form-task.php' ? 'active' : '' ?>">Upcoming Events</a>
-            <a href="mySign-ups.php" class="<?= $page=='completed-task.php' ? 'active' : '' ?>">My Sign-ups</a>
+            <a href="upcoming-events.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Upcoming Events</a>
+            <a href="mySign-ups.php" class="<?= $page=='mySign-ups.php' ? 'active' : '' ?>">My Sign-ups</a>
         </nav>
 
     </header>
