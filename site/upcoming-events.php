@@ -17,7 +17,7 @@ $query = 'SELECT * FROM events ORDER BY name ASC';
 try{
     $stmt = $db->prepare($query);
     $stmt->execute();
-    $companies = $stmt->fetchALL();
+    $events = $stmt->fetchALL();
 }
 catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
@@ -27,23 +27,28 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($events);
 
-echo '<ul id="company-list">';
+echo '<ul id="upcomingEvents">';
 
-foreach ($companies as $company) {
+foreach ($events as $event) {
     echo '<li>';
 
-    echo    '<a href="company.php?code=' . $company['code'] . '">';
-    echo    $company['name'];
+    echo    '<a href="event-details.php?code=' . $event['id'] . '">';
+    echo    $event['name'];
     echo    '</a>';
     
-    echo    '<a href="' . $company['website'] . '">';
-    echo    '🔗';
+    echo    '<a href="signUp-form.php">';
+    echo        '<button>';
+    echo            'Sign-Up';
+    echo        '</button>';
     echo    '</a>';
 
     echo '</li>';
 }
 
 echo '</ul>';
+
+//ADD IS ONLY FOR ADMIN IN SESSION...???
+
 
 echo '<div id="add-button">
         <a href ="form-company.php">

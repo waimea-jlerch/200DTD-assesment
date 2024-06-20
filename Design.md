@@ -6,7 +6,6 @@ Project Author: **Jess Lerch**
 
 Assessment Standards: **91892** and **91893**
 
-
 -------------------------------------------------
 
 ## System Requirements
