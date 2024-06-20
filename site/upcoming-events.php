@@ -32,7 +32,7 @@ echo '<ul id="upcomingEvents">';
 foreach ($events as $event) {
     echo '<li>';
 
-    echo    '<a href="event-details.php?code=' . $event['id'] . '">';
+    echo    '<a href="event-details.php?id=' . $event['id'] . '">';
     echo    $event['name'];
     echo    '</a>';
     

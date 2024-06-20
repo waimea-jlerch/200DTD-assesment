@@ -31,6 +31,18 @@ echo '<p>' . $events['close_date'] . '</p>';
 
 echo '<p>' . $events['description'] . '</p>';
 
+echo    '<a href="WhosGoing.php">';
+    echo        '<button>';
+    echo            'See who else is going';
+    echo        '</button>';
+    echo    '</a>';
+
+echo    '<a href="signUp-form.php?id=' . $events['id'] . '">';
+    echo        '<button>';
+    echo            'Sign-Up';
+    echo        '</button>';
+    echo    '</a>';
+
 // echo '<table>
 //         <tr>
 //             <th>Game Title</th>
