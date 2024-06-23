@@ -38,10 +38,10 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($students);
 
-echo '<h2>Signing-up to ' . $events['name'] . '</h2>'
-?>
+echo '<h2>Signing-up to ' . $events['name'] . '</h2>';
 
-<form method="post" action="signUp-complete.php">
+echo '<form method="post" action="signUp-complete.php?id=' . $event['id'] . '">'; 
+?>
 
     <label>Name</lebel>
         <select name="sname" required>
@@ -56,23 +56,16 @@ echo '<h2>Signing-up to ' . $events['name'] . '</h2>'
         ?>
         </select>
 
-    <label>Code</lebel>
-        <input name="code" 
+    <label>PIN</lebel>
+        <input name="pin" 
             type="text" 
-            placeholder="e.g. ABCDF0"
-            minlength="3" 
+            placeholder="e.g. 123456 (6-digits)"
+            minlength="6" 
             maxlength="6" 
-            pattern="[A-Z]{3-6}"
+            pattern="[0-9]{1-6}"
             required>
 
-    <label>Name</lebel>
-    <input name="name" type="text" placeholder="e.g. Kitten Tennis" required>
-
-
-    <label>Sales</lebel>
-    <input name="sales" type="number" placeholder="e.g. 200000" required>
-
-    <input type="submit" value="Add">
+    <input type="submit" value="SIGN UP">
 
 <?php 
 include 'partials/bottom.php'; 

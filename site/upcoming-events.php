@@ -36,7 +36,7 @@ foreach ($events as $event) {
     echo    $event['name'];
     echo    '</a>';
     
-    echo    '<a href="signUp-form.php">';
+    echo    '<a href="signUp-form.php?id=' . $event['id'] . '">';
     echo        '<button>';
     echo            'Sign-Up';
     echo        '</button>';

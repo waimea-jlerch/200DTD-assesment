@@ -31,7 +31,7 @@ echo '<p>' . $events['close_date'] . '</p>';
 
 echo '<p>' . $events['description'] . '</p>';
 
-echo    '<a href="WhosGoing.php">';
+echo    '<a href="WhosGoing.php?id=' . $events['id'] . '">';
     echo        '<button>';
     echo            'See who else is going';
     echo        '</button>';
