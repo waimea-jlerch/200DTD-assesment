@@ -44,7 +44,7 @@ The international studetns should be able to:
 - click on a button to sign up for events they think they are coming
 - click on event element and view greater details such as pictures and more descriptions in a separate page
 - undo sign in incase their plans changes
-- be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server
+<!-- - be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server -->
 - be able to view a list of all international and migrant students forename and lastname
 
 
@@ -216,11 +216,15 @@ I would need to make my end-user feel welcomed when using the system by includin
 
 ### Database Structure
 
-Place a image here that shows the *final design* of your database: tables, fields and relationships.
+Final DB design:
+![Final DB design](../images/sql_schema.png)
+<!-- Place a image here that shows the *final design* of your database: tables, fields and relationships. -->
 
 ### User Interface Design
 
-Place images here that show your *final design* of your UI: layout, colours, etc.
+Final UI design (HAVE TO CHANGE TO ALL PAGES):
+![Final UI design](../images/ui_colors1_1.png)
+<!-- Place images here that show your *final design* of your UI: layout, colours, etc. -->
 
 
 -------------------------------------------------
