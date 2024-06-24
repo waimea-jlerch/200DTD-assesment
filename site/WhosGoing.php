@@ -3,11 +3,28 @@ require 'lib/utils.php'; //require means if you can't find the file required, th
 include 'partials/top.php'; 
 
 
-echo '<h1 class="centerize-title">Who is going to ' . $events['name'] . ' </h1>';
-
+$id = $_GET['id'] ?? null;
 
 //connect to database
 $db = connectToDB();
+
+//setup a query to get all companies into
+$query = 'SELECT name FROM events WHERE id=?';
+
+//Ateempt to run the query
+try{
+    $stmt = $db->prepare($query);
+    $stmt->execute([$id]);
+    $event = $stmt->fetch();
+}
+catch (PDOException $e) {
+    consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
+    die('There was an error getting event details data from the database');
+}
+
+if (!$event) die('Invalid event ID');
+
+echo '<h1 class="centerize-title">Who is going to ' . $event['name'] . ' </h1>';
 
 //setup a query to get all companies into
 $query = 'SELECT    students.forename,
@@ -27,16 +44,28 @@ $query = 'SELECT    students.forename,
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute();
-    $employees = $stmt->fetchALL();
+    $stmt->execute([$id]);
+    $registrations = $stmt->fetchAll();
 }
 catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
     die('There was an error getting student sign-ups data from the database');
 }
 
+
 //see what we got back
-consoleLog($students);
+consoleLog($registrations);
+
+if (!$registrations) {
+    echo '<h2>No sign-ups yet! be the first to sign-up! </h2>';
+    echo    '<a href="signUp-form.php?id=' . $id . '">';
+    echo        '<button>';
+    echo            'Sign-Up';
+    echo        '</button>';
+    echo    '</a>';
+
+}
+else {
 
 echo '<table>
         <tr>
@@ -45,15 +74,16 @@ echo '<table>
             <th>Nationality</th>
         </tr>';
 
-foreach ($students as $student) {
+foreach ($registrations as $registration) {
     echo '<tr>';
-    echo    '<td>' . '<p>' . $student['forename'] . " " . $student['surname']  . '</p>'. '</td>'; 
-    echo    '<td>' . $student['year'] . '</td>';
-    echo    '<td>' . $student['nationality'];
+    echo    '<td>' . '<p>' . $registration['forename'] . " " . $registration['surname']  . '</p>'. '</td>'; 
+    echo    '<td>' . $registration['year'] . '</td>';
+    echo    '<td>' . $registration['nationality'];
     echo '</tr>'; 
 }
 
 echo '</table>';
+}
 
 include 'partials/bottom.php';
 

@@ -20,7 +20,7 @@ Testing of features and further design revisions can be found [here](Development
 
 ## Project mascot
 
-![Globe](images/globe.png)
+![Globe](docs/images/globe.png)
 
 ## Documentation
 
