@@ -1,7 +1,7 @@
 </main>
 
 <footer>
-    &copy; <?= date('Y') ?> Jess Lerch
+    &copy; <?= date('Y') ?> Waimea College
 
     <p>Are you an admin? <a href="admin-form.php">Log-in here!</a></p>
 

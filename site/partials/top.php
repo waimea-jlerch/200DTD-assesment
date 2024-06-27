@@ -34,3 +34,5 @@ $page = basename($_SERVER['SCRIPT_NAME']);
         </nav>
 
     </header>
+
+    <main>

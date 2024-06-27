@@ -122,11 +122,22 @@ Here are 2 ideas for my UI demo layout colors:
 
 The difference between the two is the main green. 1st have a more lighter and pastel green while 2nd have a darker green. I would need to ask my end user what they prefer before proceeding to add colors to all remining frames.
 
-### DATE HERE
+### 27/06/24
 
-Replace this test with what you are working on
+I have finished working on the general functionality of the 
+- index page
+- upcoming event page
+- event details page
+- Who is going page
+- signing up to event / adding to DB and checking for incorrect pin: all working
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+PICS!!!:
+
+My end-user had also said that they prefer my 1st UI demo colors that had the lighter green:
+![1st UI demo colors](images/ui_colors1_1.png)
+
+
+I will need to work on the functionality of admin portals and my sign-ups before moving on the respondsive styling in css.
 
 ### DATE HERE
 

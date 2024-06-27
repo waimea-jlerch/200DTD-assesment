@@ -32,6 +32,8 @@ echo '<h1 class="centerize-title">' .  $event['name']  . '</h1>';
 //see what we got back
 consoleLog($event);
 
+//add image if null then display a gray box with ' no image ' ?
+
 echo '<p>' . $event['open_date'] . '</p>';
 echo '<p>' . $event['close_date'] . '</p>';
 

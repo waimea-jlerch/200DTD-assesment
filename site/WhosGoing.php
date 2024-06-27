@@ -24,7 +24,7 @@ catch (PDOException $e) {
 
 if (!$event) die('Invalid event ID');
 
-echo '<h1 class="centerize-title">Who is going to ' . $event['name'] . ' </h1>';
+echo '<h1 class="centerize-title">Resgistrations for ' . $event['name'] . '!</h1>';
 
 //setup a query to get all companies into
 $query = 'SELECT    students.forename,
@@ -57,7 +57,7 @@ catch (PDOException $e) {
 consoleLog($registrations);
 
 if (!$registrations) {
-    echo '<h2>No sign-ups yet! be the first to sign-up! </h2>';
+    echo '<p>No sign-ups yet! be the first to sign-up! </p>';
     echo    '<a href="signUp-form.php?id=' . $id . '">';
     echo        '<button>';
     echo            'Sign-Up';
