@@ -2,38 +2,98 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<h1 class="centerize-title">Adding Company to Database...</h1>';
-
 consoleLog($_POST, 'POST Data');
 
 // Get form data
-$student = $_POST['id'];
-$event = $_POST['event'];
-
-
-echo '<p>id: ' . $student;
-echo '<p>event: ' . $event;
+$studentID = $_POST['studentID'];
+$eventID = $_POST['eventID'];
+$pin = $_POST['pin'];
 
 
 //connect to database
 $db = connectToDB();
 
-//setup a query to get all companies into
-$query = 'INSERT INTO register 
-          (student, event)
-          VALUES (?, ?)';
+$query = 'SELECT name FROM events WHERE id=?';
 
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$student, $event]);
+    $stmt->execute([$eventID]);
+    $event = $stmt->fetch();
 }
 catch (PDOException $e) {
-    consoleLog($e->getMessage(), 'DB Sign-up Error', ERROR);
-    die('There was an error adding data to the database');
+    consoleLog($e->getMessage(), 'DB eventID Error', ERROR);
+    die('There was an error getting student pin to the database');
 }
 
-echo '<p>Success!!!</p>';
+echo '<h2 class="centerize-title">Signing-up to ' . $event['name'] . '</h2>';
+
+//setup a query to get student's PIN info
+$query = 'SELECT pin FROM students WHERE id=?';
+
+//Ateempt to run the query
+try{
+    $stmt = $db->prepare($query);
+    $stmt->execute([$studentID]);
+    $student = $stmt->fetch();
+}
+catch (PDOException $e) {
+    consoleLog($e->getMessage(), 'DB incorrect pin Error', ERROR);
+    die('There was an error getting student pin to the database');
+}
+
+//checking for repetitive sign-ups
+$query = 'SELECT student FROM register WHERE student=?';
+
+//Ateempt to run the query
+try{
+    $stmt = $db->prepare($query);
+    $stmt->execute([$studentID]);
+    $register = $stmt->fetch();
+}
+catch (PDOException $e) {
+    consoleLog($e->getMessage(), 'DB register data Error', ERROR);
+    die('There was an error getting register data from the database');
+}
+
+
+//-------------------------------------------------------------------------
+
+if ($register == NULL){
+
+    if ($student['pin'] == $pin ) {
+        //setup a query to get all companies into
+        $query = 'INSERT INTO register 
+                (student, event)
+                VALUES (?, ?)';
+
+        //Ateempt to run the query
+        try{
+            $stmt = $db->prepare($query);
+            $stmt->execute([$studentID, $eventID]);
+        }
+        catch (PDOException $e) {
+            consoleLog($e->getMessage(), 'DB Sign-up Error', ERROR);
+            die('There was an error adding data to the database');
+        }
+
+        echo '<p>Success!!!</p>';
+    }
+    else {
+        echo 'Incorrect PIN';
+        echo '<a href = "signUp-form.php?id=' . $eventID . '"><button>try again</button></a>';
+    }
+}
+else{
+    
+    echo 'You have already signed-up to ' . $event['name'] . '<br>';
+
+    echo 'would you like to return to:';        
+        echo    '<div>';
+        echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
+        echo    '<a href = "mySign-ups.php"><button>My Sign-ups</button></a>';
+        echo    '</div>';
+}    
 
 ?>
 

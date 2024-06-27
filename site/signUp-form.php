@@ -2,7 +2,7 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-$id = $_GET['id'] ?? null;
+$eventId = $_GET['id'] ?? null;
 
 //connect to database
 $db = connectToDB();
@@ -13,7 +13,7 @@ $query = 'SELECT name FROM events WHERE id=?';
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$id]);
+    $stmt->execute([$eventId]);
     $event = $stmt->fetch();
 }
 catch (PDOException $e) {
@@ -26,7 +26,7 @@ if (!$event) die('Invalid event ID');
 //see what we got back
 consoleLog($event);
 
-$query = 'SELECT * FROM students ORDER BY forename ASC';
+$query = 'SELECT id, forename, surname FROM students ORDER BY forename ASC';
 
 //Ateempt to run the query
 try{
@@ -44,11 +44,13 @@ consoleLog($students);
 
 echo '<h2>Signing-up to ' . $event['name'] . '</h2>';
 
-echo '<form method="post" action="signUp-complete.php?id=' . $id . '">'; 
 ?>
+<form method="post" action="signUp-complete.php">
 
-    <label>Name</lebel>
-        <select name="sname" required>
+    <input type="hidden" name="eventID" value="<?= $eventId ?>">
+    
+    <label>Name</label>
+        <select name="studentID" required>
         <?php
 
         foreach ($students as $student) {
@@ -60,20 +62,14 @@ echo '<form method="post" action="signUp-complete.php?id=' . $id . '">';
         ?>
         </select>
 
-    <label>PIN</lebel>
+    <label>PIN</label>
         <input name="pin" 
             type="text" 
             placeholder="e.g. 123456 (6-digits) given by international staff"
             minlength="6" 
             maxlength="6" 
-            pattern="[0-9]{1-6}"
-            required
-            
-        <?php 
-        
-        // if($student['pin'] != input) 
-        
-        ?>    >
+            pattern="[0-9]{6}"
+            required>
 
     <input type="submit" value="SIGN UP">
 
