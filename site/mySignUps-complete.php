@@ -12,19 +12,6 @@ $pin = $_POST['pin'];
 //connect to database
 $db = connectToDB();
 
-$query = 'SELECT name FROM events WHERE id=?';
-
-//Ateempt to run the query
-try{
-    $stmt = $db->prepare($query);
-    $stmt->execute([$eventID]);
-    $event = $stmt->fetch();
-}
-catch (PDOException $e) {
-    consoleLog($e->getMessage(), 'DB eventID Error', ERROR);
-    die('There was an error getting student pin to the database');
-}
-
 //setup a query to get student's PIN info
 $query = 'SELECT pin FROM students WHERE id=?';
 
@@ -56,75 +43,32 @@ catch (PDOException $e) {
 
 //-------------------------------------------------------------------------
 
-if ($register == NULL){
-
-    if ($student['pin'] == $pin ) {
-
-        echo '<h2 class="centerize-title">Sign-up to ' . $event['name'] . ' complete!</h2>';
+if ($student['pin'] == $pin ) {
 
 
-        //setup a query to get all companies into
-        $query = 'INSERT INTO register 
-                (student, event)
-                VALUES (?, ?)';
+    session_start();
 
-        //Ateempt to run the query
-        try{
-            $stmt = $db->prepare($query);
-            $stmt->execute([$studentID, $eventID]);
-        }
-        catch (PDOException $e) {
-            consoleLog($e->getMessage(), 'DB Sign-up Error', ERROR);
-            die('There was an error adding data to the database');
-        }
 
-        echo   '<p>Nice! You have successfully signed-up to 
-                <a href= "event-details.php?id=' . $eventID . '">' . $event['name'] . '</a>
-                
-                <br>
-                
-                Note: To cancel signed up events go to 
-                <a href= "mySign-ups.php">my sign-ups!</a>
-                
-                <br>
+        $_SESSION['mySignUps'] = $studentID;
 
-                Would to like to return to: </p>';
-
-                echo    '<div>';
-                echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
-                echo    '<a href = "mySign-ups.php"><button>My Sign-ups</button></a>';
-                echo    '</div>';
-    }
-    else {
-
-        echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
-        
-        echo '<p>Try again to sign-up to ' . $event['name'] . '.</p>';
-
-        echo '<a href = "signUp-form.php?id=' . $eventID . '"><button>Try again</button></a>';
-
-        echo '<br>';
-
-        echo 'Or would you like to return to:';
-            echo    '<div>';
-            echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
-            echo    '<a href = "mySign-ups.php"><button>My Sign-ups</button></a>';
-            echo    '</div>';
-    }
+        header('location: mySignUps.php');
 }
-else{
+else {
 
-    echo '<h2 class="centerize-title">Sign-up for ' . $event['name'] . ' complete!</h2>';
-
+    echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
     
-    echo 'Looks like you have already signed-up to ' . $event['name'] . '!<br>';
+    echo '<p>Try again to verify.</p>';
 
-    echo 'would you like to return to:';        
+    echo '<a href = "mySignUps-form.php"><button>Try again</button></a>';
+
+    echo '<br>';
+
+    echo 'Or would you like to return to:';
         echo    '<div>';
         echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
         echo    '<a href = "mySign-ups.php"><button>My Sign-ups</button></a>';
         echo    '</div>';
-}    
+} 
 
 ?>
 

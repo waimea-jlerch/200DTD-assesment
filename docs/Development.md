@@ -139,6 +139,36 @@ My end-user had also said that they prefer my 1st UI demo colors that had the li
 
 I will need to work on the functionality of admin portals and my sign-ups before moving on the respondsive styling in css.
 
+### 01/07/24
+
+I have finished the functionality of 'mySignUps' pages 
+
+PICS:!!
+
+It is a page where student can cancel sign-up and view what they have signed-up for using $_SESSION 
+
+
+I have to work on the admin portal.
+When an admin is in session, they can see:
+- the 'trash-can' icon that they can click on and delete event. 
+- the plus icon to add upcoming events
+- in the event details page there is an edit details button that let admin edit event details
+- New page that let's admin view every international and migrants student records
+
+Other than that I have to figure out how to add pictures into database when creating an upcoming event. Also, I have to figure out how to format the datetime so that it is easily readable by my end-users.
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
+
 ### DATE HERE
 
 Replace this test with what you are working on

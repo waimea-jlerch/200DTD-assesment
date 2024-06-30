@@ -30,7 +30,7 @@ $page = basename($_SERVER['SCRIPT_NAME']);
         
         <nav>
             <a href="upcoming-events.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Upcoming Events</a>
-            <a href="mySign-ups.php" class="<?= $page=='mySign-ups.php' ? 'active' : '' ?>">My Sign-ups</a>
+            <a href="mySignUps-form.php" class="<?= $page=='mySignUps-form.php' ? 'active' : '' ?>">My Sign-ups</a>
         </nav>
 
     </header>
