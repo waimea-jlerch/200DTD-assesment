@@ -3,6 +3,7 @@ require 'lib/utils.php'; //require means if you can't find the file required, th
 include 'partials/top.php'; 
 
 
+
 $id = $_GET['id'] ?? null;
 
 //connect to database

@@ -3,23 +3,6 @@ require 'lib/utils.php'; //require means if you can't find the file required, th
 include 'partials/top.php'; 
 
 //connect to database
-$db = connectToDB();
-
-$query = 'SELECT * FROM admin_portal';
-
-//Ateempt to run the query
-try{
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $adminPass = $stmt->fetch();
-}
-catch (PDOException $e) {
-    consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
-    die('There was an error getting admin pass data from the database');
-}
-
-//see what we got back
-consoleLog($adminPass);
 
 echo '<h2>Log into Admin Portal!</h2>';
 

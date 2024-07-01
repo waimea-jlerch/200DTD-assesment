@@ -2,16 +2,16 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+
+$studentID = $_SESSION['mySignUps'];
+consoleLog($_SESSION);
+
 echo '<h1 class="centerize-title">My Sign-ups!</h1>';
+
+
 
 //connect to database
 $db = connectToDB();
-
-
-session_start();
-
-$studentID = $_SESSION['mySignUps'];
-
 
 consoleLog($_SESSION);
 

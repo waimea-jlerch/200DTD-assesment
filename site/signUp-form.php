@@ -2,6 +2,8 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+
+
 $eventId = $_GET['id'] ?? null;
 
 //connect to database
@@ -21,7 +23,7 @@ catch (PDOException $e) {
     die('There was an error getting events data from the database');
 }
 
-if (!$event) die('Invalid event ID');
+if (!$eventID) die('Invalid event ID');
 
 //see what we got back
 consoleLog($event);

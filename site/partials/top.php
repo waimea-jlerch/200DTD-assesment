@@ -2,6 +2,12 @@
 
 <?php
 
+
+session_name('IntEventsBooking');
+session_start();
+
+$adminPortal = isset($_SESSION['admin']);
+
 $page = basename($_SERVER['SCRIPT_NAME']);
 
 // echo $page

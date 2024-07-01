@@ -2,7 +2,9 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-
+session_start();
+$adminPortal = $_SESSION['admin'];
+consoleLog($_SESSION);
 
 $id = $_GET['id'] ?? null;
 
