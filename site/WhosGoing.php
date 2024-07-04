@@ -71,7 +71,7 @@ else {
 echo '<table>
         <tr>
             <th>Name</th>
-            <th>Year Lever</th>
+            <th>Year Level</th>
             <th>Nationality</th>
         </tr>';
 

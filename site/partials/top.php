@@ -10,6 +10,8 @@ $adminPortal = isset($_SESSION['admin']);
 
 $page = basename($_SERVER['SCRIPT_NAME']);
 
+consoleLog($_SESSION)
+
 // echo $page
 // print_r($page)
 // record contained data, and container contained records
@@ -37,6 +39,13 @@ $page = basename($_SERVER['SCRIPT_NAME']);
         <nav>
             <a href="upcoming-events.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Upcoming Events</a>
             <a href="mySignUps-form.php" class="<?= $page=='mySignUps-form.php' ? 'active' : '' ?>">My Sign-ups</a>
+            <a href="student-list.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Student List</a>
+
+            <?php if($adminPortal == true){
+                echo '<a href="student-list.php" class="' . ($page=='student-list.php' ? 'active' : '') . '">Student List</a>';
+                } 
+            ?>
+
         </nav>
 
     </header>

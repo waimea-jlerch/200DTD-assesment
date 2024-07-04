@@ -5,16 +5,26 @@ include 'partials/top.php';
 
 <h2>Add Upcoming Event!</h2>
 
-<form method="post" action="addE-complete.php">
+<form method="post" action="addE-complete.php" enctype="multipart/form-data">
 
     <label>Name</lebel>
     <input name="name" type="text" placeholder="e.g. Gym Night" required>
 
     <label>Description</lebel>
-    <input name="description" type="text" placeholder="e.g. Sports!" required>
+    <input name="description" type="text" placeholder="e.g. Sports!">
 
-    <label>Website</lebel>
-    <input name="website" type="text" placeholder="e.g. https://happy.io" required>
+    <label>Open Date</lebel>
+    <input name="open-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
+
+    <label>Close Date</lebel>
+    <input name="close-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
+
+    <label>End Date</lebel>
+    <input name="end-date" type="datetime-local" placeholder="e.g. https://happy.io">
+
+    <label>Picture</lebel>
+    <input name="image" type="file" accept="images/*">
+
 
     <input type="submit" value="Add">
 
