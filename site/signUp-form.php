@@ -4,7 +4,7 @@ include 'partials/top.php';
 
 
 
-$eventId = $_GET['id'] ?? null;
+$eventID = $_GET['id'] ?? null;
 
 //connect to database
 $db = connectToDB();
@@ -15,7 +15,7 @@ $query = 'SELECT name FROM events WHERE id=?';
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$eventId]);
+    $stmt->execute([$eventID]);
     $event = $stmt->fetch();
 }
 catch (PDOException $e) {
@@ -44,12 +44,12 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($students);
 
-echo '<h2>Signing-up to ' . $event['name'] . '</h2>';
+echo '<h2 class="centerize-title">Signing-up to ' . $event['name'] . '</h2>';
 
 ?>
 <form method="post" action="signUp-complete.php">
 
-    <input type="hidden" name="eventID" value="<?= $eventId ?>">
+    <input type="hidden" name="eventID" value="<?= $eventID ?>">
     
     <label>Name</label>
         <select name="studentID" required>

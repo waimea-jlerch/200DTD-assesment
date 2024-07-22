@@ -27,7 +27,7 @@ consoleLog($events);
 echo '<ul id="upcomingEvents">';
 
 foreach ($events as $event) {
-    echo '<li>';
+    echo '<li class="page-list">';
 
     echo '<div id="upcomingEvent-list">';
 
@@ -61,7 +61,7 @@ echo '</ul>';
 if($adminPortal == true){
 echo '<div id="add-button">
         <a href ="addE-form.php">
-            Add
+            +
         </a>
       </div>';
 }

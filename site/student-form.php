@@ -14,16 +14,27 @@ include 'partials/top.php';
     <input name="surname" type="text" placeholder="e.g. Smith">
 
     <label>Role</lebel>
-    <input name="role" type="text" placeholder="e.g. International Student" required>
+    <select name="role" required>
+    <option>International Student</option>
+    <option>Migrant Student</option>
+    <option>International Leader</option>
+    <option>International Staff</option>
+    </select>
 
     <label>Nationality</lebel>
     <input name="nationality" type="text" placeholder="e.g. Japanese" required>
 
     <label>Year Level</lebel>
-    <input name="year" type="number" placeholder="e.g. 12" required>
+    <select name="year" required>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    </select>
 
     <label>Date of Birth</lebel>
-    <input name="dob" type="date" placeholder="e.g. https://happy.io" required>
+    <input name="dob" type="date" required>
 
     <label>PIN</lebel>
     <input name="pin" placeholder="e.g. 123456" type="text" minlength="6" maxlength="6" pattern="[0-9]{6}" required>

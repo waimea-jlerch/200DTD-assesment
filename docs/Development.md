@@ -143,7 +143,9 @@ I will need to work on the functionality of admin portals and my sign-ups before
 
 I have finished the functionality of 'mySignUps' pages 
 
-PICS:!!
+- This is the functionality of the 'mySignUps' pages
+
+PICS!!!!!!!
 
 It is a page where student can cancel sign-up and view what they have signed-up for using $_SESSION 
 
@@ -153,15 +155,44 @@ When an admin is in session, they can see:
 - the 'trash-can' icon that they can click on and delete event. 
 - the plus icon to add upcoming events
 - in the event details page there is an edit details button that let admin edit event details
-- New page that let's admin view every international and migrants student records
+- New page that let's admin view every international and migrants student records as well as add and delete student's record
 
 Other than that I have to figure out how to add pictures into database when creating an upcoming event. Also, I have to figure out how to format the datetime so that it is easily readable by my end-users.
 
-### DATE HERE
+### 23/07/24
 
-Replace this test with what you are working on
+I have done some of the admin fuctionality such as:
+-seeing the 'trash-can' icon and its deleting functionality with a error prevention by affirming if they are sure about deleting
+-Plus icon and its adding functionality
+-(I've also done a tiny bit of css)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
+![update](images/update3.png)
+
+- This is the delete functionality once clicked on the delete icon:
+
+1.
+![delete-function](images/update3-1.png)
+
+If click on yes the event is then deleted and vanish from the page
+
+2.
+![delete-function](images/update3-2.png)
+
+- This is the add functionality once clicked on the add icon:
+
+![Alt text](images/update3-3.png)
+
+As a note to myself next i will have to figure out and work on the followings:
+
+- edit event updating data into database especially picture file (??)
+
+- if picture is null make a gray box instead
+
+- formating datetime data to a more easily to read format
+
+- responsive and good looking css.
+
+- check when end-user if I'm going on the right track         
 
 ### DATE HERE
 

@@ -10,8 +10,6 @@ $db = connectToDB();
 //setup a query to get all companies into
 $query = 'SELECT * FROM events WHERE id=?';
 
-//We use alias (as) in games.name and companies.name to prevent confusion as they both have .name php will not beable to tell apart and overwrite them.
-
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
@@ -32,6 +30,8 @@ consoleLog($event);
 
 //add image if null then display a gray box with ' no image ' ?
 
+echo   '<img src="load-image.php?id=' . $id . '">';
+
 echo '<p>' . $event['open_date'] . '</p>';
 echo '<p>' . $event['close_date'] . '</p>';
 
@@ -46,6 +46,12 @@ echo    '<a href="WhosGoing.php?id=' . $id . '">';
 echo    '<a href="signUp-form.php?id=' . $id . '">';
     echo        '<button>';
     echo            'Sign-Up';
+    echo        '</button>';
+    echo    '</a>';
+
+echo    '<a href="editE-warning.php?id=' . $id . '">';
+    echo        '<button>';
+    echo            'Edit Details';
     echo        '</button>';
     echo    '</a>';
 

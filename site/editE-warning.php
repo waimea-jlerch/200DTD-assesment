@@ -31,11 +31,13 @@ consoleLog($event);
 
 
 
-    echo '<h2 class="centerize-title">Are you sure you want to delete ' .  $event['name'] . '?</h2>';
+    echo "<h2 class='centerize-title'>Are you sure you want to edit " .  $event['name'] . "'s details?</h2>";
+
+    echo "<h3>Warning!</h3> <p>Proceeding with editing " . $event['name'] .  "'s event details will require you to select the picture again! (unless picture is not needed)</p>";
 
     echo '<div>';
-    echo    '<a href = "delete-eventYes.php?id=' . $eventID . '"><button>YES</button></a>';
-    echo     '<a href = "delete-eventNo.php"><button>NO</button></a>';
+    echo    '<a href = "editE-form.php?id=' . $eventID . '"><button>YES</button></a>';
+    echo     '<a href = "event-details.php?id=' . $eventID . '"><button>NO</button></a>';
     echo '</div>';
 
 

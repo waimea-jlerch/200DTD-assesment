@@ -3,7 +3,7 @@ require 'lib/utils.php'; //require means if you can't find the file required, th
 include 'partials/top.php'; 
 ?>
 
-<h2>Add Upcoming Event!</h2>
+<h2 class="centerize-title">Add Upcoming Event!</h2>
 
 <form method="post" action="addE-complete.php" enctype="multipart/form-data">
 
@@ -20,7 +20,7 @@ include 'partials/top.php';
     <input name="close-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
 
     <label>End Date</lebel>
-    <input name="end-date" type="datetime-local" placeholder="e.g. https://happy.io">
+    <input name="end-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
 
     <label>Picture</lebel>
     <input name="image" type="file" accept="images/*">

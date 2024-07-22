@@ -4,13 +4,13 @@ include 'partials/top.php';
 
 ?>
 
-    <div>
+    <div class="index-image">
         <img src="images/index1.jpg">
     </div>
 
-    <div>
-        <a href = "upcoming-events.php"><button>Upcoming Events</button></a>
-        <a href = "mySign-ups.php"><button>My Sign-ups</button></a>
+    <div class = "index-buttons">
+        <a href = "upcoming-events.php" class="main-button">Upcoming Events</a>
+        <a href = "mySignUps-form.php" class="main-button">My Sign-ups</a>
     </div>
 
 <?php

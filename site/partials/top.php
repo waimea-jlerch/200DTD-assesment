@@ -24,22 +24,22 @@ consoleLog($_SESSION)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Events Register</title>
 
-    <link
+    <!-- <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.jade.min.css"
-/>
-<!-- <link rel="stylesheet" href="css/styles.css"> -->
+/> -->
+<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header>
-        <h1><a href="index.php"   class="<?= $page=='index.php' ? 'active' : '' ?>"><?= SITE_NAME?></a></h1>
+
+        <div id="international-events"><a href="index.php"><img src="images/Waimea.png"><h1><?= SITE_NAME?></h1></a></div>
         
         <nav>
             <a href="upcoming-events.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Upcoming Events</a>
             <a href="mySignUps-form.php" class="<?= $page=='mySignUps-form.php' ? 'active' : '' ?>">My Sign-ups</a>
-            <a href="student-list.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Student List</a>
 
             <?php if($adminPortal == true){
                 echo '<a href="student-list.php" class="' . ($page=='student-list.php' ? 'active' : '') . '">Student List</a>';

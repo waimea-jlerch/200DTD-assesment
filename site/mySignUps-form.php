@@ -22,7 +22,7 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($students);
 
-echo '<h2>View My Sign-ups!</h2>';
+echo '<h2 class="centerize-title">View My Sign-ups!</h2>';
 
 ?>
 <form method="post" action="mySignUps-complete.php">

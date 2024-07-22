@@ -47,4 +47,6 @@ catch (PDOException $e) {
 // //----------------------------------------------------------------------------
 // // Back to see the new thing
 
-// header('Location: event-details.php?id=' . $newEventID);
+header('Location: event-details.php?id=' . $newEventID);
+
+?>

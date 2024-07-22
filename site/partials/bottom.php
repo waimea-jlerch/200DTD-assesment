@@ -1,7 +1,6 @@
 </main>
 
 <footer>
-    &copy; <?= date('Y') ?> Waimea College
 
     <?php
 
@@ -17,6 +16,10 @@
     }
 
     ?>
+
+    <div class="credit">
+        &copy; <?= date('Y') ?> Waimea College
+    <div>
 
 </footer>
 

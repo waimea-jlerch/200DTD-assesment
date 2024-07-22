@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+}
+
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --main-light-green: #395E4A;
+    --cream:      #F6F4EC;
+    --main-yellow:    #FFD738;
+}
+
+/* HEADER ****************************************************/
+
+.centerize-title{
+    text-align: center;
+}
+
+
+header {
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--main-light-green);
+
+    position: sticky;
+    top: 0;
+}
+
+header a{
+    display: flex;
+    text-decoration: none;
+    margin: 0rem;
+}
+
+header img{
+    height: 3rem;
+    margin: 0.1rem 0rem;
+    margin-right: 0.3rem;
+}
+
+header a h1{
+    color: white;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (min-width: 55rem) {
+    header, nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* NAV ****************************************************/
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    border: solid 0.13rem white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+nav a:hover {
+    /* text-decoration: underline; */
+    color: var(--main-yellow);
+}
+
+nav a.active {
+    color: var(--main-yellow);
+    text-decoration: underline;
+}
+
+/* MAIN ****************************************************/
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* INDEX ****************************************************/
+
+div.index-image img{
+    display: block;
+    width:60%;
+    height: auto;
+    margin: auto;
+}
+
+/* BUTTON ****************************************************/
+
+div.index-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0rem;
+    padding-bottom: 0rem;
+}
+
+a.main-button{
+    background-color: var(--cream);
+    border: solid 1px #dad6ca;
+    font-size: inherit;
+    border-radius: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+a.main-button:hover{
+    color: var(--main-yellow);
+}
+
+/* TASK LIST ****************************************************/
+
+li span, li a {
+    display: inline-flex;
+} 
+
+a.name{
+    display: flex;
+    flex-grow:1;
+}
+
+/* % width are youd when you want a flexible width */
+
+li a {
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+    padding-left: 1rem;
+}
+
+li a:hover {
+    color: yellow;
+}
+
+li.page-list {
+    display: flex;
+    padding: 0.5rem;
+    border: solid 5px rgb(255, 255, 255);
+    background-color: skyblue;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+    width: 30rem;
+    margin: 1rem auto;
+    
+}
+
+span.priority {
+    line-height: 1px;
+    padding-inline: 0.75rem;
+    border: solid 3px rgb(255, 255, 255);
+    border-radius: 100%;
+}
+
+span.p1 {background-color: tomato;}
+span.p2 {background-color: orange;}
+span.p3 {background-color: rgb(216, 179, 13);}
+span.p4 {background-color: green;}
+span.p5 {background-color: blue;}
+span.p6 {background-color: purple;}
+
+
+/* ADD BUTTON **********************************************/
+
+#add-button {
+    position: sticky;
+    width: 3rem;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+#add-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+    height: 3rem;
+    width: 3rem;
+    background-color: #369;
+    border-radius: 3rem;
+}
+
+
+/* COMPLETE BUTTON ****************************************************/
+
+div#notdone-task, div#done-task{
+    text-align: end;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+}
+
+/* FORMS *****************************************************/
+
+form {
+    width: max-content;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #369;
+    border-radius: 0.5rem;
+}
+
+label {
+    display: block;
+    color: #9cf;
+}
+
+input, select {
+    display: block;
+    font: inherit;
+}
+
+input:not(:last-child),
+select:not(:last-child) {
+    margin-bottom: 0.8rem;
+}
+
+/* FOOTER ****************************************************/
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--main-light-green);
+    font-size: 0.8rem;
+    color: white;
+}
+
+footer div.credit{
+    color: slategrey;
+}
