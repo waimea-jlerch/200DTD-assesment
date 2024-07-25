@@ -28,6 +28,20 @@ body {
     text-align: center;
 }
 
+.content-box{
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+    justify-content: center;
+}
+
+.null-image{
+    width: 100%;
+    max-width: 20rem;
+    background-color: lightgrey;
+    padding: 2rem;
+    border: solid 2px gray;
+}
 
 header {
     align-items: center;
@@ -222,18 +236,21 @@ form {
     width: max-content;
     margin: 1rem auto;
     padding: 1rem;
-    border: 1px solid #369;
+    border: 1px solid var(--main-light-green);
     border-radius: 0.5rem;
+    background-color: var(--main-light-green);
 }
 
 label {
     display: block;
-    color: #9cf;
+    color: white;
 }
 
 input, select {
     display: block;
     font: inherit;
+    background-color: var(--cream);
+    cursor: pointer;
 }
 
 input:not(:last-child),

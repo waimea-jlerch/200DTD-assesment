@@ -4,7 +4,7 @@ include 'partials/top.php';
 
 //connect to database
 
-echo '<h2>Log into Admin Portal!</h2>';
+echo '<h2 class="centerize-title">Log into Admin Portal!</h2>';
 
 ?>
 <form method="post" action="admin-complete.php">

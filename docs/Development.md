@@ -131,7 +131,7 @@ I have finished working on the general functionality of the
 - Who is going page
 - signing up to event / adding to DB and checking for incorrect pin: all working
 
-PICS!!!:
+![Demonstration 1](images/update1.mp4)
 
 My end-user had also said that they prefer my 1st UI demo colors that had the lighter green:
 ![1st UI demo colors](images/ui_colors1_1.png)
@@ -145,7 +145,7 @@ I have finished the functionality of 'mySignUps' pages
 
 - This is the functionality of the 'mySignUps' pages
 
-PICS!!!!!!!
+![Demonstration 2](images/update2.mp4)
 
 It is a page where student can cancel sign-up and view what they have signed-up for using $_SESSION 
 
@@ -162,13 +162,18 @@ Other than that I have to figure out how to add pictures into database when crea
 ### 23/07/24
 
 I have done some of the admin fuctionality such as:
--seeing the 'trash-can' icon and its deleting functionality with a error prevention by affirming if they are sure about deleting
--Plus icon and its adding functionality
--(I've also done a tiny bit of css)
+
+- seeing the 'trash-can' icon and its deleting functionality with a error prevention by affirming if they are sure about deleting
+
+- Plus icon and its adding functionality
+
+- seeing the list of all student in the DB and their info aswell as a button to add new a student.
+
+- (I've also done a tiny bit of css)
 
 ![update](images/update3.png)
 
-- This is the delete functionality once clicked on the delete icon:
+#### This is the delete functionality once clicked on the delete icon:
 
 1.
 ![delete-function](images/update3-1.png)
@@ -178,9 +183,15 @@ If click on yes the event is then deleted and vanish from the page
 2.
 ![delete-function](images/update3-2.png)
 
-- This is the add functionality once clicked on the add icon:
+#### This is the add functionality once clicked on the add icon:
 
-![Alt text](images/update3-3.png)
+![add-function](images/update3-3.png)
+
+#### This is the student list page and adding new student form:
+
+![Student list Page](images/update4-1.png)
+
+![Add a new student form](images/update4-2.png)
 
 As a note to myself next i will have to figure out and work on the followings:
 
@@ -192,11 +203,18 @@ As a note to myself next i will have to figure out and work on the followings:
 
 - responsive and good looking css.
 
-- check when end-user if I'm going on the right track         
+- check with end-user if I'm going on the right track      
 
-### DATE HERE
+- check for repetitive pin when adding new student.
 
-Replace this test with what you are working on
+### 25/07/24
+
+As I was playing around the site I've notice a few problem with the 'mySignUps' function. Everytime I go out of the mySignUps page into other page and try to access back to mySignUps I kept having to verify myself over and over again. So it lead me to think that maybe I could make a processor page where it determind whether to foward to the verify page or straight to mySignUps page depening on if there is a set value in the mySignUps session. Or rather I could combine mySignUps form page and mySignUps page together and use if else function to determind which to show. (kind of the the delete button and add button for admin session) 
+
+Also! I have completed the code for when there is no image in the DB display a gray box as a placeholder instead. Like this:
+
+![Null Image Placeholder](images/null-image.png)
+
 
 Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
 

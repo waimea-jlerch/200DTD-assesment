@@ -3,7 +3,7 @@ require 'lib/utils.php'; //require means if you can't find the file required, th
 include 'partials/top.php'; 
 ?>
 
-<h2>Add A Student!</h2>
+<h2 class="centerize-title">Add A Student!</h2>
 
 <form method="post" action="student-add.php">
 

@@ -66,12 +66,12 @@ if ($student['pin'] == $pin ) {
     //setup a query to cancel signed-up info
         $query = 'DELETE FROM register
 
-        WHERE event = ?';
+        WHERE event = ? AND student = ?';
 
         //Ateempt to run the query
         try{
         $stmt = $db->prepare($query);
-        $stmt->execute([$eventID]); 
+        $stmt->execute([$eventID, $studentID]); 
         //when updating or deleting we need no fetch
         }
         catch (PDOException $e) {
@@ -100,9 +100,9 @@ else {
 
     echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
     
-    echo '<p>Try again to sign-up to ' . $event['name'] . '.</p>';
+    echo '<p>Try again to cancel your sign-up to ' . $event['name'] . '.</p>';
 
-    echo '<a href = "signUp-form.php?id=' . $eventID . '"><button>Try again</button></a>';
+    echo '<a href = "cancel-form.php?id=' . $eventID . '"><button>Try again</button></a>';
 
     echo '<br>';
 

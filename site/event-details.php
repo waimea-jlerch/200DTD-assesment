@@ -30,30 +30,52 @@ consoleLog($event);
 
 //add image if null then display a gray box with ' no image ' ?
 
-echo   '<img src="load-image.php?id=' . $id . '">';
+echo '<div class="content-box">';
 
-echo '<p>' . $event['open_date'] . '</p>';
-echo '<p>' . $event['close_date'] . '</p>';
+    if(!$event['picture_type'] or !$event['picture_type']){
+        
+        echo '<div class="null-image">';
+            echo '<p>' .  $event['name']  . '</p>';
+        echo '</div>';
 
-echo '<p>' . $event['description'] . '</p>';
+    }
+    else{
+    echo   '<img src="load-image.php?id=' . $id . '" class="detials-image">';
+    }
 
-echo    '<a href="WhosGoing.php?id=' . $id . '">';
-    echo        '<button>';
-    echo            'See who else is going';
-    echo        '</button>';
-    echo    '</a>';
+    echo '<div class="event-detials">';
 
-echo    '<a href="signUp-form.php?id=' . $id . '">';
-    echo        '<button>';
-    echo            'Sign-Up';
-    echo        '</button>';
-    echo    '</a>';
+        $openDate = new DateTimeImmutable($event['open_date']);
+        $formattedOpenDate = $openDate->format('\O\n d M Y \a\t H:i A');
 
-echo    '<a href="editE-warning.php?id=' . $id . '">';
-    echo        '<button>';
-    echo            'Edit Details';
-    echo        '</button>';
-    echo    '</a>';
+        echo '<p>' . $formattedOpenDate . '</p>';
+        echo '<p>' . $event['close_date'] . '</p>';
+
+        echo '<p>' . $event['description'] . '</p>';
+
+        echo    '<a href="WhosGoing.php?id=' . $id . '">';
+            echo        '<button>';
+            echo            'See who else is going';
+            echo        '</button>';
+            echo    '</a>';
+
+        echo    '<a href="signUp-form.php?id=' . $id . '">';
+            echo        '<button>';
+            echo            'Sign-Up';
+            echo        '</button>';
+            echo    '</a>';
+
+        if($adminPortal == true){    
+            echo    '<a href="editE-warning.php?id=' . $id . '">';
+                echo        '<button>';
+                echo            'Edit Details';
+                echo        '</button>';
+                echo    '</a>';
+        }
+
+    echo '</div>';
+
+echo '</div>';
 
 ?>
 

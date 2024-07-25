@@ -48,7 +48,7 @@ echo '<h2>Cancel your Sign-up to ' . $event['name'] . '</h2>';
 ?>
 <form method="post" action="cancel-complete.php">
 
-    <input type="hidden" name="eventID" value="<?= $eventId ?>">
+    <input type="hidden" name="eventID" value="<?= $eventID ?>">
     
     <label>Name</label>
         <select name="studentID" required>
@@ -72,7 +72,7 @@ echo '<h2>Cancel your Sign-up to ' . $event['name'] . '</h2>';
             pattern="[0-9]{6}"
             required>
 
-    <input type="submit" value="SIGN UP">
+    <input type="submit" value="CANCEL">
 
 <?php 
 include 'partials/bottom.php'; 
