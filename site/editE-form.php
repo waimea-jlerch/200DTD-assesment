@@ -23,7 +23,7 @@ catch (PDOException $e) {
 
 ?>
 
-<h2>Edit <?= $event['name'] ?>'s event details!</h2>
+<h2 class="centerize-title">Edit <?= $event['name'] ?>'s event details!</h2>
 
 <form method="post" action="addE-complete.php" enctype="multipart/form-data">
 
@@ -41,6 +41,9 @@ catch (PDOException $e) {
 
     <label>End Date</lebel>
     <input name="end-date" type="datetime-local" value="<?= $event['end_date'] ?>" required>
+
+    <p>Preview of existing image:</p>
+    <img src="load-image.php?id=<?= $event['id'] ?>" class="editE-image">
 
     <label>Picture</lebel>
     <input name="image" type="file" accept="images/*">

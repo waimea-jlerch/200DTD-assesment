@@ -113,13 +113,25 @@ main {
     padding: 1rem;
 }
 
-/* INDEX ****************************************************/
+/* IMAGES ****************************************************/
+
+img{
+    display: block;
+    max-width:100%;
+    height: auto;
+    margin: 1rem auto;
+}
+
+/* img.detials-image{
+
+} */
+
+/* img.editE-image{
+
+} */
 
 div.index-image img{
-    display: block;
     width:60%;
-    height: auto;
-    margin: auto;
 }
 
 /* BUTTON ****************************************************/

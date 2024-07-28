@@ -18,7 +18,7 @@ try{
 }
 catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
-    die('There was an error getting games data from the database');
+    die('There was an error getting event detials data from the database');
 }
 
 if (!$event) die('Invalid event ID');
