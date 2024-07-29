@@ -66,7 +66,7 @@ echo '<div class="content-box">';
             echo    '</a>';
 
         if($adminPortal == true){    
-            echo    '<a href="editE-warning.php?id=' . $id . '">';
+            echo    '<a href="editE-form.php?id=' . $id . '">';
                 echo        '<button>';
                 echo            'Edit Details';
                 echo        '</button>';

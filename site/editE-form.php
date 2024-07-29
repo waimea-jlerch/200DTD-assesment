@@ -25,7 +25,9 @@ catch (PDOException $e) {
 
 <h2 class="centerize-title">Edit <?= $event['name'] ?>'s event details!</h2>
 
-<form method="post" action="addE-complete.php" enctype="multipart/form-data">
+<form method="post" action="editE-complete.php" enctype="multipart/form-data">
+
+    <input name="id" type="hidden" value="<?= $id ?>">
 
     <label>Name</lebel>
     <input name="name" type="text" value="<?= $event['name'] ?>" required>
@@ -49,7 +51,7 @@ catch (PDOException $e) {
     <input name="image" type="file" accept="images/*">
 
 
-    <input type="submit" value="Add">
+    <input type="submit" value="Update">
 
 <?php 
 include 'partials/bottom.php'; 

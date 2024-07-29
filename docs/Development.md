@@ -207,6 +207,8 @@ As a note to myself next i will have to figure out and work on the followings:
 
 - check for repetitive pin when adding new student.
 
+- how openDate, closeDate, endDate is going to work
+
 ### 25/07/24
 
 As I was playing around the site I've notice a few problem with the 'mySignUps' function. Everytime I go out of the mySignUps page into other page and try to access back to mySignUps I kept having to verify myself over and over again. So it lead me to think that maybe I could make a processor page where it determind whether to foward to the verify page or straight to mySignUps page depening on if there is a set value in the mySignUps session. Or rather I could combine mySignUps form page and mySignUps page together and use if else function to determind which to show. (kind of the the delete button and add button for admin session) 
@@ -215,6 +217,7 @@ Also! I have completed the code for when there is no image in the DB display a g
 
 ![Null Image Placeholder](images/null-image.png)
 
+DO I NEED TO PUT WARNING WHEN GONNA EDIT?
 
 Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
 
