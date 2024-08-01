@@ -68,5 +68,7 @@ else{
         echo '</ul>';
     }
 
+    echo '<p>Do you want to change user/log out? <a href="mySignUps-logOut.php">Click here!</a></p>';
+
 include 'partials/bottom.php'; 
 ?>

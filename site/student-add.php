@@ -19,6 +19,25 @@ $pin = $_POST['pin'];
 //connect to database
 $db = connectToDB();
 
+$query = 'SELECT pin FROM students
+
+          WHERE pin = ?';
+
+//Ateempt to run the query
+try{
+    $stmt = $db->prepare($query);
+    $stmt->execute([$pin]);
+    $studentPinCheck = $stmt->fetch();
+}
+catch (PDOException $e) {
+    consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
+    die('There was an error getting students data from the database');
+}
+
+consoleLog($pin);
+consoleLog($studentPinCheck);
+
+if(!$studentPinCheck){
 
     //setup a query to get all companies into
     $query = 'INSERT INTO students 
@@ -32,10 +51,27 @@ $db = connectToDB();
     }
     catch (PDOException $e) {
         consoleLog($e->getMessage(), 'DB Sign-up Error', ERROR);
-        die('There was an error adding data to the database');
+        die('There was an error adding student data to the database');
     }
 
+    header('Location: student-list.php'); 
+}
+else{
 
-header('Location: student-list.php'); 
+    echo '<h2 class="centerize-title">This PIN already exist!</h2>';
+        
+    echo '<p>Try giving ' . $forename . ' ' . $surname . ' another pin.</p>';
+
+    echo '<a href = "student-form.php"><button>Try again</button></a>';
+
+    echo '<br>';
+
+    echo 'Or would you like to return to:';
+        echo    '<div>';
+        echo    '<a href = "student-list.php"><button>Student List</button></a>';
+        echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
+        echo    '</div>';
+
+}
 
 ?>

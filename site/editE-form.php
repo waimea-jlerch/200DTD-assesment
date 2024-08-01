@@ -45,7 +45,17 @@ catch (PDOException $e) {
     <input name="end-date" type="datetime-local" value="<?= $event['end_date'] ?>" required>
 
     <p>Preview of existing image:</p>
-    <img src="load-image.php?id=<?= $event['id'] ?>" class="editE-image">
+
+    <?php
+    if(!$event['picture_type'] or !$event['picture_type']){
+        
+        echo '<p>No existing image</p>';
+
+    }
+    else{
+    echo   '<img src="load-image.php?id=' . $id . '" class="detials-image">';
+    }
+    ?>
 
     <label>Picture</lebel>
     <input name="image" type="file" accept="images/*">

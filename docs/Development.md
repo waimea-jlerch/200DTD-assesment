@@ -215,14 +215,62 @@ As I was playing around the site I've notice a few problem with the 'mySignUps' 
 
 Also! I have completed the code for when there is no image in the DB display a gray box as a placeholder instead. Like this:
 
-![Null Image Placeholder](images/null-image.png)
+![Null Image Placeholder](images/null-image.png)     
 
-DO I NEED TO PUT WARNING WHEN GONNA EDIT?
+### 01/08/24
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
+I have finished the functionality of editing the event details as an admin.
+
+This is how it looks like when...
+ 
+- there is no existing image:
+![Alt text](images/update5-1.png)
+![Alt text](images/update5-2.png)
+
+- there is an exiting image:
+![Alt text](images/update5-3.png)
+![Alt text](images/update5-4.png)
+
+After the update button had been clicked it foward the admin to the event detials page to see the changes.
+
+I have also finished the functionality of the 'student list' page, allowing admin to add/delete new student with repetitive pin error prevention
+
+This is how it currently looks like:
+![Alt text](images/update5-5.png)
+![Alt text](images/update5-6.png)
+![Alt text](images/update5-7.png)
+![Alt text](images/update5-8.png)
+
+I will need to check with my end-user whether they want to change anything about these funtionalities I have completed. Also ask if they want a warning when clicking on the edit-detials button. Lastly, check if they want the navigation bar to be sticky, and icon for nav buttons or not.
+
+ask about dates if they want dates for event or not...
 
 ### DATE HERE
 
 Replace this test with what you are working on
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.         
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      

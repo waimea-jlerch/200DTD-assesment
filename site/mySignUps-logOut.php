@@ -3,8 +3,8 @@ require 'lib/utils.php'; //require means if you can't find the file required, th
 include 'partials/top.php'; 
 
 //stop admin portal by making it false
-unset($_SESSION['admin']);
+unset($_SESSION['mySignUps']);
 
 
-header('location: index.php'); //if use this can't use console log
+header('location: mySignUps-form.php'); //if use this can't use console log
 ?>
