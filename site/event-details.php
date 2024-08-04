@@ -45,13 +45,14 @@ echo '<div class="content-box">';
 
     echo '<div class="event-detials">';
 
-        $openDate = new DateTimeImmutable($event['open_date']);
-        $formattedOpenDate = $openDate->format('\O\n d M Y \a\t H:i A');
+        $closeDate = new DateTimeImmutable($event['close_date']);
+        $formattedcloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p \o\n d M Y \a\t H:i A');
 
-        echo '<p>' . $formattedOpenDate . '</p>';
-        echo '<p>' . $event['close_date'] . '</p>';
+        echo '<p class="descriptions">' . $event['description'] . '</p>';
 
-        echo '<p>' . $event['description'] . '</p>';
+        echo '<p class="close-date">' . $formattedcloseDate . '</p>';
+
+        echo '<p>' . $event['open_date'] . '</p>';
 
         echo    '<a href="WhosGoing.php?id=' . $id . '">';
             echo        '<button>';

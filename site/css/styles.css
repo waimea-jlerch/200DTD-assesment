@@ -26,6 +26,7 @@ body {
 
 .centerize-title{
     text-align: center;
+    margin-top: 0;
 }
 
 .content-box{
@@ -48,7 +49,7 @@ header {
     padding: 0.5rem 1rem;
     background-color: var(--main-light-green);
 
-    position: sticky;
+    /* position: sticky; */
     top: 0;
 }
 
@@ -110,8 +111,10 @@ nav a.active {
 
 main {
     flex: 1;
-    padding: 1rem;
+    padding: 1.35rem;
 }
+
+/* not equal main and context box padding have to look back at it please */
 
 /* IMAGES ****************************************************/
 
@@ -132,6 +135,25 @@ img{
 
 div.index-image img{
     width:60%;
+}
+
+/* CONTENT BOX ****************************************************/
+
+.content-box{
+    background-color: var(--main-light-green);
+    border-radius: 1rem;
+    max-width: 60rem;
+    margin: auto;
+    color: white;
+}
+
+.descriptions{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.close-date{
+    color: red;
 }
 
 /* BUTTON ****************************************************/
