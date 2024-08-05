@@ -24,12 +24,25 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($events);
 
+//Get the current time
+$now = strtotime("now");
+
+consoleLog("now",$now);
+
+
 echo '<ul id="upcomingEvents">';
 
 foreach ($events as $event) {
+
+    // Convert post's modification time to int
+    $eventOpenDate = strtotime($event['open_date']);
+    consoleLog("open_date",$eventOpenDate);
+
     echo '<li class="page-list">';
 
     echo '<div id="upcomingEvent-list">';
+
+        // if($event['open_date'])
 
         echo    '<a href="event-details.php?id=' . $event['id'] . '">';
         echo    $event['name'];
@@ -55,6 +68,8 @@ foreach ($events as $event) {
 }
 
 echo '</ul>';
+
+
 
 //ADD IS ONLY FOR ADMIN IN SESSION, SO
 

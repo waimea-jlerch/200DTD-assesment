@@ -52,7 +52,7 @@ echo '<div class="content-box">';
 
         echo '<p class="close-date">' . $formattedcloseDate . '</p>';
 
-        echo '<p>' . $event['open_date'] . '</p>';
+        // echo '<p>' . $event['open_date'] . '</p>';
 
         echo    '<a href="WhosGoing.php?id=' . $id . '">';
             echo        '<button>';
