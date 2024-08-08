@@ -13,6 +13,16 @@ include 'partials/top.php';
         <a href = "mySignUps-form.php" class="main-button">My Sign-ups</a>
     </div>
 
+    <!-- <div class = "index-buttons">
+        <button class="main-button">    
+            <a href = "upcoming-events.php">Upcoming Events</a>
+        </button>
+
+        <button class="main-button">
+            <a href = "mySignUps-form.php">My Sign-ups</a>
+        </button>
+    </div> -->
+
 <?php
     include 'partials/bottom.php';
 ?>

@@ -2,7 +2,8 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-//connect to database
+echo '<div id="back">';
+echo '<button onclick="history.back()">Go Back</button>';
 
 echo '<h2 class="centerize-title">Log into Admin Portal!</h2>';
 
@@ -17,7 +18,7 @@ echo '<h2 class="centerize-title">Log into Admin Portal!</h2>';
 
     <label>Password</label>
         <input name="password" 
-            type="text" 
+            type="password" 
             placeholder="Enter password here"
             required>
 

@@ -58,7 +58,7 @@ if(!$studentPinCheck){
 }
 else{
 
-    echo '<h2 class="centerize-title">This PIN already exist!</h2>';
+    echo '<h2 class="centerize-title">This PIN already exists!</h2>';
         
     echo '<p>Try giving ' . $forename . ' ' . $surname . ' another pin.</p>';
 

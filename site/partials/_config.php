@@ -1,6 +1,6 @@
 <?php
 
-define('SITE_NAME', 'International Events');
+define('SITE_NAME', 'Waimea College');
 define('SITE_AUTHOR', 'Jess Lerch');
 
 ?>

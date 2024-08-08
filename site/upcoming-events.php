@@ -2,6 +2,9 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+echo '<div id="back">';
+echo '<button onclick="history.back()">Go Back</button>';
+
 echo '<h1 class="centerize-title">Upcoming Events</h1>';
 
 //connect to database

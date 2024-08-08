@@ -35,7 +35,15 @@ consoleLog($_SESSION)
 
     <header>
 
-        <div id="international-events"><a href="index.php"><img src="images/Waimea.png"><h1><?= SITE_NAME?></h1></a></div>
+        <div id="international-events">
+            <a href="index.php">
+                <img src="images/Waimea.png">
+                    <div id="main-title">    
+                    <h1><?= SITE_NAME?></h1>
+                    <p>&nbsp;International Events</p>
+                    </div>
+            </a>
+        </div>
         
         <nav>
             <a href="upcoming-events.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Upcoming Events</a>

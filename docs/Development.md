@@ -245,11 +245,42 @@ I will need to check with my end-user whether they want to change anything about
 
 ask about dates if they want dates for event or not...
 
-### DATE HERE
+### 08/08/24
 
-Replace this test with what you are working on
+I have talked to my end-uesr and catch up about every progress that I have made here are their comment:
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+>For the navigation title I want to have the word 'Waimea College' as a main heading to make the students feels like they belong in Waimea College, then put 'international events' as a sub-heading.
+
+before:
+![Alt text](image.png)
+
+after:
+![Alt text](image-1.png)
+
+I would need to ask if they are happy with the 'International Events' being in yellow or another color.
+
+Then I asked my end-user if they prefer a sticky navigation bar or non-sticky nagivation bar. They said:
+>I like the sticky one more because I think it is good to be able to easily use the navigation bar to go to different page.
+
+After that we looked at the student list page and my end-user commented that:
+>I think that when we add the student and accidentally type the same pin as someone else and click try again the all the previous value that I have typed in should be there so that admin don't have to type it all out again
+
+pics:
+
+after letting them play around with the site I asked them if there is anything that feels akward to use and they commented that:
+>I think the only thing that will make it better is if we have a 'back' button to go back to the previous page
+
+before:
+
+after:
+
+event date
+>lol
+
+delete in detials
+before:
+after:
+
 
 ### DATE HERE
 
