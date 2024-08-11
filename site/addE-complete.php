@@ -21,6 +21,7 @@ if(empty($_POST) && empty($_FILES)) die ('There was a problem uploading the file
 
 $name = $_POST['name'];
 $description = $_POST['description'];
+$eventDate = $_POST['event-date'];
 $openDate = $_POST['open-date'];
 $closeDate = $_POST['close-date'];
 $endDate = $_POST['end-date'];
@@ -31,12 +32,12 @@ $endDate = $_POST['end-date'];
 $db = connectToDB();
 
 $query = 'INSERT INTO events 
-            (name, description, open_date, close_date, end_date, picture_type, picture_data) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)';
+            (name, description, event_date, open_date, close_date, end_date, picture_type, picture_data) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
 
 try {
     $stmt = $db->prepare($query);
-    $stmt->execute([$name, $description, $openDate, $closeDate, $endDate, $imageType, $imageData]);
+    $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $imageType, $imageData]);
     $newEventID = $db->lastInsertID();
 }
 catch (PDOException $e) {

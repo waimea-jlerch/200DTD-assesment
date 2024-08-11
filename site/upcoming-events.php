@@ -37,37 +37,61 @@ echo '<ul id="upcomingEvents">';
 
 foreach ($events as $event) {
 
+    consoleLog($event['id'], $event['name']);
     // Convert post's modification time to int
     $eventOpenDate = strtotime($event['open_date']);
     consoleLog("open_date",$eventOpenDate);
 
-    echo '<li class="page-list">';
+    $eventCloseDate = strtotime($event['close_date']);
+    consoleLog("close_date",$eventCloseDate);
 
-    echo '<div id="upcomingEvent-list">';
+    //do I need that? ↑
 
-        // if($event['open_date'])
+    if($now <= $eventCloseDate){
 
-        echo    '<a href="event-details.php?id=' . $event['id'] . '">';
-        echo    $event['name'];
-        echo    '</a>';
+        if($eventOpenDate <= $now or $adminPortal == true){
+
+            echo '<li class="page-list">';
+
+            echo '<div id="upcomingEvent-list">';
+
+
+                echo    '<a href="event-details.php?id=' . $event['id'] . '">';
+                echo    $event['name'];
+                echo    '</a>';
+
+                $eventDate = new DateTimeImmutable($event['event_date']);
+                $formattedEventDate = $eventDate->format('\O\n D d M Y \a\t H:i A');
+
+                echo '<p class="close-date">' . $formattedEventDate . '</p>';
+
+                if($adminPortal == true){
+
+                    $openDate = new DateTimeImmutable($event['open_date']);
+                    $formattedOpenDate = $openDate->format('\O\p\e\n \o\n D d M Y \a\t H:i A');
         
-        echo    '<a href="signUp-form.php?id=' . $event['id'] . '">';
-        echo        '<button>';
-        echo            'Sign-Up';
-        echo        '</button>';
-        echo    '</a>';
+                    echo '<p class="close-date">' . $formattedOpenDate . '</p>';
+                }
+                
+                echo    '<a href="signUp-form.php?id=' . $event['id'] . '">';
+                echo        '<button>';
+                echo            'Sign-Up';
+                echo        '</button>';
+                echo    '</a>';
 
-        if($adminPortal == true){
-            echo '<div id="trash-icon">
-                    <a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
-                        🗑
-                    </a>
-                </div>';
-            }
+                    if($adminPortal == true){
 
-    echo '</div>';  
+                        echo '<div id="trash-icon">
+                                <a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
+                                    🗑
+                                </a>
+                            </div>';
+                        }
 
-    echo '</li>';
+            echo '</div>';
+            echo '</li>';
+        }
+    }
 }
 
 echo '</ul>';

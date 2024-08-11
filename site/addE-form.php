@@ -16,14 +16,17 @@ echo '<button onclick="history.back()">Go Back</button>';
     <label>Description</lebel>
     <input name="description" type="text" placeholder="e.g. Sports!">
 
-    <label>Open Date</lebel>
-    <input name="open-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
+    <label>Event Date<br>(When does it start?)</lebel>
+    <input name="event-date" type="datetime-local" required>
 
-    <label>Close Date</lebel>
-    <input name="close-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
+    <label>Open Date<br>(When will the event be open for signed up?)</lebel>
+    <input name="open-date" type="datetime-local" required>
 
-    <label>End Date</lebel>
-    <input name="end-date" type="datetime-local" placeholder="e.g. https://happy.io" required>
+    <label>Close Date<br>(When will the event be close for signed-up?)</lebel>
+    <input name="close-date" type="datetime-local" required>
+
+    <label>End Date<br>(When will the event be deleted from the database?)</lebel>
+    <input name="end-date" type="datetime-local" required>
 
     <label>Picture</lebel>
     <input name="image" type="file" accept="images/*">

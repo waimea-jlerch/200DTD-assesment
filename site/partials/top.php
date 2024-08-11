@@ -51,6 +51,7 @@ consoleLog($_SESSION)
 
             <?php if($adminPortal == true){
                 echo '<a href="student-list.php" class="' . ($page=='student-list.php' ? 'active' : '') . '">Student List</a>';
+                echo '<a href="closed-events.php" class="' . ($page=='closed-events.php' ? 'active' : '') . '">Closed Events</a>';
                 } 
             ?>
 

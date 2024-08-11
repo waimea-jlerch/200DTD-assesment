@@ -7,11 +7,15 @@ echo '<button onclick="history.back()">Go Back</button>';
 
 $id = $_GET['id'] ?? null;
 
+//Get the current time
+$now = strtotime("now");
+consoleLog("now",$now);
+
 //connect to database
 $db = connectToDB();
 
 //setup a query to get all companies into
-$query = 'SELECT name FROM events WHERE id=?';
+$query = 'SELECT name, close_date FROM events WHERE id=?';
 
 //Ateempt to run the query
 try{
@@ -55,16 +59,31 @@ catch (PDOException $e) {
 }
 
 
+$eventCloseDate = strtotime($event['close_date']);
+consoleLog("close_date",$eventCloseDate);
+
+$closeDate = new DateTimeImmutable($event['close_date']);
+$formattedcloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p \s\i\n\c\e D d M Y \a\t H:i A');
+
 //see what we got back
 consoleLog($registrations);
 
 if (!$registrations) {
-    echo '<p>No sign-ups yet! be the first to sign-up! </p>';
-    echo    '<a href="signUp-form.php?id=' . $id . '">';
-    echo        '<button>';
-    echo            'Sign-Up';
-    echo        '</button>';
-    echo    '</a>';
+
+    if($now <= $eventCloseDate){
+        echo '<p>Be the first to sign-up!</p>';
+        echo    '<a href="signUp-form.php?id=' . $id . '">';
+            echo        '<button>';
+            echo            'Sign-Up';
+            echo        '</button>';
+            echo    '</a>';
+    }
+    else{
+        echo '<p>No sign-ups for ' . $event['name'] . '</p>';
+
+        echo $formattedcloseDate;
+
+    }
 
 }
 else {
@@ -85,6 +104,19 @@ foreach ($registrations as $registration) {
 }
 
 echo '</table>';
+
+        if($now <= $eventCloseDate){
+            echo '<p>Sign-up now!</p>';
+            echo    '<a href="signUp-form.php?id=' . $id . '">';
+                echo        '<button>';
+                echo            'Sign-Up';
+                echo        '</button>';
+                echo    '</a>';
+        }
+        else{
+            echo $formattedcloseDate;
+        }
+
 }
 
 include 'partials/bottom.php';

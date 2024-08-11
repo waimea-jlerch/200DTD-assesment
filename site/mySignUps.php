@@ -20,6 +20,7 @@ consoleLog($_SESSION);
 //setup a query to get all mysignups events for a student in session
 $query = 'SELECT register.event,    
                  events.name,
+                 events.close_date,
                  register.student
 
         FROM register
@@ -39,7 +40,6 @@ catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
     die('There was an error getting games data from the database');
 }
-
 //see what we got back
 consoleLog($registrations);
 
@@ -49,20 +49,36 @@ if(!$registrations){
      echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a><br>';
 }
 else{
+
+    //Get the current time
+    $now = strtotime("now");
+    consoleLog("now",$now);
+
         echo '<ul id="upcomingEvents">';
 
         foreach ($registrations as $register) {
             echo '<li>';
 
+            //format closed date into strtotime
+            $eventCloseDate = strtotime($register['close_date']);
+            consoleLog("close_date",$eventCloseDate);
+
+            $closeDate = new DateTimeImmutable($register['close_date']);
+            $formattedcloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p\!');
+
+
             echo    '<a href="event-details.php?id=' . $register['event'] . '">';
             echo    $register['name'];
             echo    '</a>';
+            echo    ' ' . $formattedcloseDate;
             
-            echo    '<a href="cancel-form.php?id=' . $register['event'] . '">';
-            echo        '<button>';
-            echo            'Cancel';
-            echo        '</button>';
-            echo    '</a>';
+            if($now <= $eventCloseDate){
+                echo    '<a href="cancel-form.php?id=' . $register['event'] . '">';
+                echo        '<button>';
+                echo            'Cancel';
+                echo        '</button>';
+                echo    '</a>';
+            }
 
             echo '</li>';
         }

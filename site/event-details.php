@@ -10,7 +10,7 @@ $id = $_GET['id'] ?? null;
 //connect to database
 $db = connectToDB();
 
-//setup a query to get all companies into
+//setup a query to get all events into
 $query = 'SELECT * FROM events WHERE id=?';
 
 //Ateempt to run the query
@@ -31,10 +31,13 @@ echo '<h1 class="centerize-title">' .  $event['name']  . '</h1>';
 //see what we got back
 consoleLog($event);
 
-//add image if null then display a gray box with ' no image ' ?
+//Get the current time
+$now = strtotime("now");
+consoleLog("now",$now);
 
 echo '<div class="content-box">';
 
+    //If image is null thengray box will be displayed instead
     if(!$event['picture_type'] or !$event['picture_type']){
         
         echo '<div class="null-image">';
@@ -42,18 +45,25 @@ echo '<div class="content-box">';
         echo '</div>';
 
     }
-    else{
-    echo   '<img src="load-image.php?id=' . $id . '" class="detials-image">';
-    }
+    else{ echo   '<img src="load-image.php?id=' . $id . '" class="detials-image">'; }
 
-    echo '<div class="event-detials">';
+        echo '<div class="event-detials">';
 
         $closeDate = new DateTimeImmutable($event['close_date']);
-        $formattedcloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p \o\n d M Y \a\t H:i A');
+        $formattedCloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p \o\n D d M Y \a\t H:i A');
+
+        $eventDate = new DateTimeImmutable($event['event_date']);
+        $formattedEventDate = $eventDate->format('\O\n D d M Y \a\t H:i A');
+
+        //format closed date into strtotime
+        $eventCloseDate = strtotime($event['close_date']);
+        consoleLog("close_date",$eventCloseDate);
 
         echo '<p class="descriptions">' . $event['description'] . '</p>';
 
-        echo '<p class="close-date">' . $formattedcloseDate . '</p>';
+        echo '<p class="date">' . $formattedEventDate . '</p>';
+
+        echo '<p class="date">' . $formattedCloseDate . '</p>';
 
         // echo '<p>' . $event['open_date'] . '</p>';
 
@@ -63,11 +73,13 @@ echo '<div class="content-box">';
             echo        '</button>';
             echo    '</a>';
 
-        echo    '<a href="signUp-form.php?id=' . $id . '">';
-            echo        '<button>';
-            echo            'Sign-Up';
-            echo        '</button>';
-            echo    '</a>';
+        if($now <= $eventCloseDate){
+            echo    '<a href="signUp-form.php?id=' . $id . '">';
+                echo        '<button>';
+                echo            'Sign-Up';
+                echo        '</button>';
+                echo    '</a>';
+        }
 
         if($adminPortal == true){    
             echo    '<a href="editE-form.php?id=' . $id . '">';
@@ -75,6 +87,13 @@ echo '<div class="content-box">';
                 echo            'Edit Details';
                 echo        '</button>';
                 echo    '</a>';
+
+            echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '">';
+            echo        '<button>';
+            echo            'Delete';
+            echo        '</button>';
+            echo '</a>';
+
         }
 
     echo '</div>';

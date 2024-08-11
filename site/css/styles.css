@@ -290,7 +290,7 @@ div#notdone-task, div#done-task{
 form {
     width: max-content;
     margin: 1rem auto;
-    padding: 1rem;
+    padding: 1rem 30%;
     border: 1px solid var(--main-light-green);
     border-radius: 0.5rem;
     background-color: var(--main-light-green);
@@ -302,10 +302,15 @@ label {
 }
 
 input, select {
+    border-radius: 0.5rem;
+    width: 100%;
     display: block;
     font: inherit;
     background-color: var(--cream);
     cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-style: none;
+    color: black;
 }
 
 input:not(:last-child),
@@ -326,3 +331,5 @@ footer {
 footer div.credit{
     color: slategrey;
 }
+
+/* .date */

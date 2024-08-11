@@ -252,10 +252,10 @@ I have talked to my end-uesr and catch up about every progress that I have made 
 >For the navigation title I want to have the word 'Waimea College' as a main heading to make the students feels like they belong in Waimea College, then put 'international events' as a sub-heading.
 
 before:
-![Alt text](image.png)
+![Alt text](images/update6-1.png)
 
 after:
-![Alt text](image-1.png)
+![Alt text](images/update6-2.png)
 
 I would need to ask if they are happy with the 'International Events' being in yellow or another color.
 
@@ -270,16 +270,33 @@ pics:
 after letting them play around with the site I asked them if there is anything that feels akward to use and they commented that:
 >I think the only thing that will make it better is if we have a 'back' button to go back to the previous page
 
-before:
+before:![Alt text](images/update6-5.png)
 
-after:
+after:![Alt text](images/update6-6.png)
 
-event date
->lol
+ - But I'm encountering a little problem with the back button. like when student have succesfully sign-up and click on the back button it takes them back to the sign-up form which creates an awkward flow of usage.
 
-delete in detials
-before:
-after:
+discussions about _date data
+>I want you to add a event date into the database so that people can easily see when does the event will be taking place.
+I added event_date into the database and display it on the event
+
+db change: 
+
+![Alt text](images/update6-7.png)
+
+display on upcoming  event list: ![Alt text](images/update6-8.png)
+
+display on event detail: ![Alt text](images/update6-9.png)
+
+
+delete in event detials page when in admin session
+
+before: ![Alt text](images/update6-3.png)
+
+after: ![Alt text](images/update6-4.png)
+
+Also my end-user have praised that
+> The forms are very easy to use, I like it.
 
 
 ### DATE HERE
