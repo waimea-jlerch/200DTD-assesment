@@ -2,8 +2,10 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<div id="back">';
-echo '<button onclick="history.back()">Go Back</button>';
+echo '<a href="index.php" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 echo '<h1 class="centerize-title">Upcoming Events</h1>';
 
@@ -53,7 +55,7 @@ foreach ($events as $event) {
 
             echo '<li class="page-list">';
 
-            echo '<div id="upcomingEvent-list">';
+            echo '<div class="upcomingEvent-list">';
 
 
                 echo    '<a href="event-details.php?id=' . $event['id'] . '">';
@@ -63,29 +65,24 @@ foreach ($events as $event) {
                 $eventDate = new DateTimeImmutable($event['event_date']);
                 $formattedEventDate = $eventDate->format('\O\n D d M Y \a\t H:i A');
 
-                echo '<p class="close-date">' . $formattedEventDate . '</p>';
-
+                echo '<div class="date">';
+                echo '<p>' . $formattedEventDate . '</p>';
                 if($adminPortal == true){
-
                     $openDate = new DateTimeImmutable($event['open_date']);
                     $formattedOpenDate = $openDate->format('\O\p\e\n \o\n D d M Y \a\t H:i A');
-        
-                    echo '<p class="close-date">' . $formattedOpenDate . '</p>';
+                    echo '<p>' . $formattedOpenDate . '</p>';
                 }
+                echo '</div>';
                 
-                echo    '<a href="signUp-form.php?id=' . $event['id'] . '">';
-                echo        '<button>';
+                echo        '<a href="signUp-form.php?id=' . $event['id'] . '" class="signUp-button">';
                 echo            'Sign-Up';
-                echo        '</button>';
-                echo    '</a>';
+                echo        '</a>';
 
                     if($adminPortal == true){
 
-                        echo '<div id="trash-icon">
-                                <a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
-                                    🗑
-                                </a>
-                            </div>';
+                        echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
+                                <i data-feather="trash-2"></i>
+                                </a>';
                         }
 
             echo '</div>';

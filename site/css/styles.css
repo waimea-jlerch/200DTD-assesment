@@ -186,6 +186,15 @@ div.index-buttons{
     padding-bottom: 0rem;
 }
 
+a[role=button] {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    color: rgb(92, 92, 92);
+}
+
 a.main-button{
     background-color: var(--cream);
     border: solid 1px #dad6ca;
@@ -202,7 +211,16 @@ a.main-button:hover{
     color: var(--main-yellow);
 }
 
-/* TASK LIST ****************************************************/
+a.signUp-button{
+    border: white solid 0.8rem;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+/* EVENT LIST ****************************************************/
 
 li span, li a {
     display: inline-flex;
@@ -217,42 +235,78 @@ a.name{
 
 li a {
     text-decoration: none;
-    color: black;
+    color: white;
     display: inline-flex;
-    padding-left: 1rem;
 }
 
 li a:hover {
-    color: yellow;
+    color: var(--main-yellow);
 }
 
 li.page-list {
     display: flex;
-    padding: 0.5rem;
+    padding: 0.2rem 1rem;
     border: solid 5px rgb(255, 255, 255);
-    background-color: skyblue;
-    border-radius: 3rem;
-    margin-bottom: 1rem;
-    width: 30rem;
+    background-color: var(--main-light-green);
+    border-radius: 1.5rem;
+    margin: 1rem 10rem;
+    color: white;
+}
+
+.upcomingEvent-list{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+/* TABLE ***************************************************/
+
+table {
+    font-size: inherit;
+    display: block;
+    width: max-content;
+    border-collapse: collapse;
     margin: 1rem auto;
-    
+    border: 1px solid #369;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--main-light-green);
 }
 
-span.priority {
-    line-height: 1px;
-    padding-inline: 0.75rem;
-    border: solid 3px rgb(255, 255, 255);
-    border-radius: 100%;
+td p {
+    margin: 0.3rem;
 }
 
-span.p1 {background-color: tomato;}
-span.p2 {background-color: orange;}
-span.p3 {background-color: rgb(216, 179, 13);}
-span.p4 {background-color: green;}
-span.p5 {background-color: blue;}
-span.p6 {background-color: purple;}
+th{
+    padding: 0.5rem;
+    background-color: var(--cream);
+    color: var(--main-light-green);
+}
 
+th:first-child{
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
 
+th:last-child{
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+td {
+    padding: 0.3rem 0.8rem;
+    border-bottom: 1px solid var(--cream);
+    color: white;
+}
+
+table td a{
+    color: white;
+}
+
+table td a:hover{
+    color: var(--main-yellow);
+}
 /* ADD BUTTON **********************************************/
 
 #add-button {
@@ -273,16 +327,6 @@ span.p6 {background-color: purple;}
     width: 3rem;
     background-color: #369;
     border-radius: 3rem;
-}
-
-
-/* COMPLETE BUTTON ****************************************************/
-
-div#notdone-task, div#done-task{
-    text-align: end;
-    text-decoration: none;
-    color: aliceblue;
-    display: flex;
 }
 
 /* FORMS *****************************************************/
@@ -332,4 +376,10 @@ footer div.credit{
     color: slategrey;
 }
 
-/* .date */
+/* .date{
+    display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+} */

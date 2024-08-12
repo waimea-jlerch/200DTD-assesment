@@ -43,12 +43,12 @@ catch (PDOException $e) {
 }
 
 //checking for repetitive sign-ups
-$query = 'SELECT student FROM register WHERE student=?';
+$query = 'SELECT student FROM register WHERE student=? AND event=?';
 
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$studentID]);
+    $stmt->execute([$studentID, $eventID]);
     $register = $stmt->fetch();
 }
 catch (PDOException $e) {
@@ -56,13 +56,12 @@ catch (PDOException $e) {
     die('There was an error getting register data from the database');
 }
 
+consoleLog($register);
 
 //-------------------------------------------------------------------------
 
 
-if ($register == NULL){
-
-    if ($student['pin'] == $pin ) {
+if ($register == NULL && $student['pin'] == $pin){
 
         echo '<h2 class="centerize-title">Sign-up to ' . $event['name'] . ' complete!</h2>';
 
@@ -98,30 +97,32 @@ if ($register == NULL){
                 echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
                 echo    '<a href = "mySignUps-form.php"><button>My Sign-ups</button></a>';
                 echo    '</div>';
-    }
-    else {
 
-        echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
-        
-        echo '<p>Try again to sign-up to ' . $event['name'] . '.</p>';
+}
+elseif($student['pin'] != $pin){
 
-        echo '<a href = "signUp-form.php?id=' . $eventID . '"><button>Try again</button></a>';
+    echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
+    
+    echo '<p>Try again to sign-up to 
+         <a href= "event-details.php?id=' . $eventID . '">' . $event['name'] . '</a>.</p>';
 
-        echo '<br>';
+    echo '<a href = "signUp-form.php?id=' . $eventID . '"><button>Try again</button></a>';
 
-        echo 'Or would you like to return to:';
-            echo    '<div>';
-            echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
-            echo    '<a href = "mySignUps-form.php"><button>My Sign-ups</button></a>';
-            echo    '</div>';
-    }
+    echo '<br>';
+
+    echo 'Or would you like to return to:';
+        echo    '<div>';
+        echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
+        echo    '<a href = "mySignUps-form.php"><button>My Sign-ups</button></a>';
+        echo    '</div>';
 }
 else{
 
-    echo '<h2 class="centerize-title">Sign-up for ' . $event['name'] . ' complete!</h2>';
+    echo '<h2 class="centerize-title">Sign-up for ' . $event['name'] . ' completed!</h2>';
 
     
-    echo 'Looks like you have already signed-up to ' . $event['name'] . '!<br>';
+    echo 'Looks like you have already signed-up to 
+          <a href= "event-details.php?id=' . $eventID . '">' . $event['name'] . '</a>!<br>';
 
     echo 'would you like to return to:';        
         echo    '<div>';

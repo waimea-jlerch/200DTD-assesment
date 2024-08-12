@@ -57,7 +57,7 @@ else{
         echo '<ul id="upcomingEvents">';
 
         foreach ($registrations as $register) {
-            echo '<li>';
+            echo '<li class="page-list">';
 
             //format closed date into strtotime
             $eventCloseDate = strtotime($register['close_date']);
@@ -73,10 +73,8 @@ else{
             echo    ' ' . $formattedcloseDate;
             
             if($now <= $eventCloseDate){
-                echo    '<a href="cancel-form.php?id=' . $register['event'] . '">';
-                echo        '<button>';
+                echo    '<a href="cancel-form.php?id=' . $register['event'] . '" class="signup-button">';
                 echo            'Cancel';
-                echo        '</button>';
                 echo    '</a>';
             }
 

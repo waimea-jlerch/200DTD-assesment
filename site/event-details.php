@@ -74,10 +74,8 @@ echo '<div class="content-box">';
             echo    '</a>';
 
         if($now <= $eventCloseDate){
-            echo    '<a href="signUp-form.php?id=' . $id . '">';
-                echo        '<button>';
+                echo    '<a href="signUp-form.php?id=' . $id . '">';
                 echo            'Sign-Up';
-                echo        '</button>';
                 echo    '</a>';
         }
 

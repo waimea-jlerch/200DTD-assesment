@@ -106,12 +106,9 @@ foreach ($registrations as $registration) {
 echo '</table>';
 
         if($now <= $eventCloseDate){
-            echo '<p>Sign-up now!</p>';
             echo    '<a href="signUp-form.php?id=' . $id . '">';
-                echo        '<button>';
-                echo            'Sign-Up';
-                echo        '</button>';
-                echo    '</a>';
+            echo        'Sign-up now!';
+            echo    '</a>';
         }
         else{
             echo $formattedcloseDate;

@@ -59,15 +59,12 @@ foreach ($events as $event) {
             $eventDate = new DateTimeImmutable($event['event_date']);
             $formattedEventDate = $eventDate->format('\O\n D d M Y \a\t H:i A');
 
+            echo '<div class="date">';
             echo '<p class="close-date">' . $formattedEventDate . '</p>';
-
-            if($adminPortal == true){
-
-                $openDate = new DateTimeImmutable($event['open_date']);
-                $formattedOpenDate = $openDate->format('\C\l\o\s\e\d \o\n D d M Y \a\t H:i A');
-    
-                echo '<p class="close-date">' . $formattedOpenDate . '</p>';
-            }
+            $openDate = new DateTimeImmutable($event['open_date']);
+            $formattedOpenDate = $openDate->format('\C\l\o\s\e\d \o\n D d M Y \a\t H:i A');
+            echo '<p class="close-date">' . $formattedOpenDate . '</p>';
+            echo '</div>';
 
             echo '<div id="trash-icon">
                     <a href ="delete-eventConfirm.php?id=' . $event['id'] . '">

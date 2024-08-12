@@ -40,6 +40,7 @@ echo '<table>
             <th>Role</th>
             <th>Date of Birth</th>
             <th>PIN</th>
+            <th> </th>
         </tr>';
 
 foreach ($students as $student) {
@@ -50,11 +51,9 @@ foreach ($students as $student) {
     echo    '<td>' . $student['role'];
     echo    '<td>' . $student['dob'];
     echo    '<td>' . $student['pin'];
-    echo    '<td>' . '<div id="trash-icon">
-                    <a href ="delete-studentConfirm.php?id=' . $student['id'] . '">
-                        🗑
-                    </a>
-                </div>';
+    echo    '<td>' . '<a href ="delete-studentConfirm.php?id=' . $student['id'] . '">
+                        <i data-feather="user-minus"></i>
+                    </a>';
     echo '</tr>';
 }
 

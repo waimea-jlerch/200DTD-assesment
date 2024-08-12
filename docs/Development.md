@@ -260,7 +260,7 @@ after:
 I would need to ask if they are happy with the 'International Events' being in yellow or another color.
 
 Then I asked my end-user if they prefer a sticky navigation bar or non-sticky nagivation bar. They said:
->I like the sticky one more because I think it is good to be able to easily use the navigation bar to go to different page.
+>I like the sticky one more because I think it is good to be able to easily use the navigation bar to go to different pages.
 
 After that we looked at the student list page and my end-user commented that:
 >I think that when we add the student and accidentally type the same pin as someone else and click try again the all the previous value that I have typed in should be there so that admin don't have to type it all out again
