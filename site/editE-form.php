@@ -2,10 +2,12 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<div id="back">';
-echo '<button onclick="history.back()">Go Back</button>';
+$eventID = $_GET['id'] ?? null;
 
-$id = $_GET['id'] ?? null;
+echo '<a href="event-details.php?id=' . $eventID . '" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 //connect to database
 $db = connectToDB();
@@ -16,7 +18,7 @@ $query = 'SELECT * FROM events WHERE id=?';
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$id]);
+    $stmt->execute([$eventID]);
     $event = $stmt->fetch();
 }
 catch (PDOException $e) {
@@ -30,7 +32,7 @@ catch (PDOException $e) {
 
 <form method="post" action="editE-complete.php" enctype="multipart/form-data">
 
-    <input name="id" type="hidden" value="<?= $id ?>">
+    <input name="id" type="hidden" value="<?= $eventID ?>">
 
     <label>Name</lebel>
     <input name="name" type="text" value="<?= $event['name'] ?>" required>
@@ -56,7 +58,7 @@ catch (PDOException $e) {
 
     }
     else{
-    echo   '<img src="load-image.php?id=' . $id . '" class="detials-image">';
+    echo   '<img src="load-image.php?id=' . $eventID . '" class="detials-image">';
     }
     ?>
 
@@ -65,6 +67,7 @@ catch (PDOException $e) {
 
 
     <input type="submit" value="Update">
+</form>
 
 <?php 
 include 'partials/bottom.php'; 

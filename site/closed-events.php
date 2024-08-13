@@ -2,8 +2,10 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php';
 
-echo '<div id="back">';
-echo '<button onclick="history.back()">Go Back</button>';
+echo '<a onclick="history.back()" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 echo '<h1 class="centerize-title">Upcoming Events</h1>';
 
@@ -45,7 +47,10 @@ foreach ($events as $event) {
     $eventCloseDate = strtotime($event['close_date']);
     consoleLog("close_date",$eventCloseDate);
 
-    if($eventCloseDate <= $now){
+    $eventEndDate = strtotime($event['end_date']);
+    consoleLog("end_date",$eventEndDate);
+
+    if($eventCloseDate <= $now && $now <= $eventEndDate){
 
         echo '<li class="page-list">';
 
@@ -66,11 +71,9 @@ foreach ($events as $event) {
             echo '<p class="close-date">' . $formattedOpenDate . '</p>';
             echo '</div>';
 
-            echo '<div id="trash-icon">
-                    <a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
-                        🗑
-                    </a>
-                </div>';
+            echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
+                        <i data-feather="trash-2"></i>
+                    </a>';
 
         echo '</div>';
         echo '</li>';
@@ -81,8 +84,7 @@ echo '</ul>';
 
 
 
-//ADD IS ONLY FOR ADMIN IN SESSION, SO
-
+//ADD IS ONLY FOR ADMIN IN SESSION, SO USE IF CONDITION:
 if($adminPortal == true){
 echo '<div id="add-button">
         <a href ="addE-form.php">

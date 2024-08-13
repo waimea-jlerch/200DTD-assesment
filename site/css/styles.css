@@ -193,6 +193,7 @@ a[role=button] {
     font-weight: 600;
     text-decoration: underline;
     color: rgb(92, 92, 92);
+    cursor: pointer;
 }
 
 a.main-button{

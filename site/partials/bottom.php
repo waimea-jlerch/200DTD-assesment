@@ -19,7 +19,7 @@
 
     <div class="credit">
         &copy; <?= date('Y') ?> Waimea College
-    <div>
+    </div>
 
 </footer>
 

@@ -2,10 +2,12 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<div id="back">';
-echo '<button onclick="history.back()">Go Back</button>';
+$eventID = $_GET['id'] ?? null;
 
-$id = $_GET['id'] ?? null;
+echo '<a href="event-details.php?id=' . $eventID . '" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 //Get the current time
 $now = strtotime("now");
@@ -20,7 +22,7 @@ $query = 'SELECT name, close_date FROM events WHERE id=?';
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$id]);
+    $stmt->execute([$eventID]);
     $event = $stmt->fetch();
 }
 catch (PDOException $e) {
@@ -50,7 +52,7 @@ $query = 'SELECT    students.forename,
 //Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
-    $stmt->execute([$id]);
+    $stmt->execute([$eventID]);
     $registrations = $stmt->fetchAll();
 }
 catch (PDOException $e) {
@@ -72,7 +74,7 @@ if (!$registrations) {
 
     if($now <= $eventCloseDate){
         echo '<p>Be the first to sign-up!</p>';
-        echo    '<a href="signUp-form.php?id=' . $id . '">';
+        echo    '<a href="signUp-form.php?id=' . $eventID . '">';
             echo        '<button>';
             echo            'Sign-Up';
             echo        '</button>';
@@ -106,7 +108,7 @@ foreach ($registrations as $registration) {
 echo '</table>';
 
         if($now <= $eventCloseDate){
-            echo    '<a href="signUp-form.php?id=' . $id . '">';
+            echo    '<a href="signUp-form.php?id=' . $eventID . '">';
             echo        'Sign-up now!';
             echo    '</a>';
         }

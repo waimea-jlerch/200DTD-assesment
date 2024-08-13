@@ -10,7 +10,7 @@ include 'partials/top.php';
 
     <div class = "index-buttons">
         <a href = "upcoming-events.php" class="main-button">Upcoming Events</a>
-        <a href = "mySignUps-form.php" class="main-button">My Sign-ups</a>
+        <a href = "mySignUps-redirect.php" class="main-button">My Sign-ups</a>
     </div>
 
     <!-- <div class = "index-buttons">

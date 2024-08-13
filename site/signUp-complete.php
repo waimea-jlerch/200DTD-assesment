@@ -11,6 +11,10 @@ $studentID = $_POST['studentID'];
 $eventID = $_POST['eventID'];
 $pin = $_POST['pin'];
 
+echo '<a href="event-details.php?id=' . $eventID . '" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 //connect to database
 $db = connectToDB();

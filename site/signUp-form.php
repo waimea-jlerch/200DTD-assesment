@@ -2,10 +2,12 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<div id="back">';
-echo '<button onclick="history.back()">Go Back</button>';
-
 $eventID = $_GET['id'] ?? null;
+
+echo '<a onclick="history.back()" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 //connect to database
 $db = connectToDB();

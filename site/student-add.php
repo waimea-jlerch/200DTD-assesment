@@ -58,6 +58,12 @@ if(!$studentPinCheck){
 }
 else{
 
+    //ICON DOENS'T WORK??
+    echo '<a href="student-list.php" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
+
     echo '<h2 class="centerize-title">This PIN already exists!</h2>';
         
     echo '<p>Try giving ' . $forename . ' ' . $surname . ' another pin.</p>';
@@ -71,6 +77,8 @@ else{
         echo    '<a href = "student-list.php"><button>Student List</button></a>';
         echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
         echo    '</div>';
+
+    include 'partials/bottom.php';
 
 }
 

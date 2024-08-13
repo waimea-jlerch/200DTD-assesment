@@ -22,7 +22,7 @@ consoleLog($_SESSION)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Events Register</title>
+    <title>Waimea International Events Register</title>
 
     <script src="https://unpkg.com/feather-icons"></script>
 
@@ -35,7 +35,7 @@ consoleLog($_SESSION)
 
         <div id="international-events">
             <a href="index.php">
-                <img src="images/Waimea.png">
+                <img src="images/Waimea.png" alt="Waimea College Logo">
                     <div id="main-title">    
                     <h1><?= SITE_NAME?></h1>
                     <p>&nbsp;International Events</p>
