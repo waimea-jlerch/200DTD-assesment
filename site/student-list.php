@@ -2,7 +2,7 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<a onclick="history.back()" role="button">
+echo '<a href="upcoming-events.php" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
@@ -65,7 +65,7 @@ echo '</ul>';
 
 echo '<div id="add-button">
         <a href ="student-form.php">
-            Add
+            <i data-feather="plus"></i>
         </a>
       </div>';
 

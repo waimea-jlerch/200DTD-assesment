@@ -16,18 +16,18 @@ echo '<a href="upcoming-events.php" role="button">
     <input name="name" type="text" placeholder="e.g. Gym Night" required>
 
     <label>Description</lebel>
-    <input name="description" type="text" placeholder="e.g. Sports!">
+    <textarea name="description" placeholder="e.g. Sports!"></textarea>
 
-    <label>Event Date<br>(When does it start?)</lebel>
+    <label>Event Date</lebel>
     <input name="event-date" type="datetime-local" required>
 
-    <label>Open Date<br>(When will the event be open for signed up?)</lebel>
+    <label>Open Date</lebel>
     <input name="open-date" type="datetime-local" required>
 
-    <label>Close Date<br>(When will the event be close for signed-up?)</lebel>
+    <label>Close Date</lebel>
     <input name="close-date" type="datetime-local" required>
 
-    <label>End Date<br>(When will the event be deleted from the database?)</lebel>
+    <label>End Date</lebel>
     <input name="end-date" type="datetime-local" required>
 
     <label>Picture</lebel>
@@ -35,6 +35,8 @@ echo '<a href="upcoming-events.php" role="button">
 
 
     <input type="submit" value="Add">
+
+</form>
 
 <?php 
 include 'partials/bottom.php'; 

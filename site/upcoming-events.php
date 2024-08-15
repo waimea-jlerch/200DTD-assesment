@@ -29,11 +29,13 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($events);
 
+
 //Get the current time
 $now = strtotime("now");
 
 consoleLog("now",$now);
 
+$eventCount = 0;
 
 echo '<ul id="upcomingEvents">';
 
@@ -52,6 +54,8 @@ foreach ($events as $event) {
     if($now <= $eventCloseDate){
 
         if($eventOpenDate <= $now or $adminPortal == true){
+
+            $eventCount++;
 
             echo '<li class="page-list">';
 
@@ -91,8 +95,14 @@ foreach ($events as $event) {
     }
 }
 
+
 echo '</ul>';
 
+if($eventCount == 0){
+
+    echo '<p class="sub-title">No upcoming events!</p>';
+
+}
 
 
 //ADD IS ONLY FOR ADMIN IN SESSION, SO
@@ -100,12 +110,9 @@ echo '</ul>';
 if($adminPortal == true){
 echo '<div id="add-button">
         <a href ="addE-form.php">
-            +
+            <i data-feather="plus"></i>
         </a>
       </div>';
 }
 
-?>
-
-
-<?php include 'partials/bottom.php'; ?>
+include 'partials/bottom.php'; ?>

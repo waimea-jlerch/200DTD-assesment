@@ -58,7 +58,6 @@ if(!$studentPinCheck){
 }
 else{
 
-    //ICON DOENS'T WORK??
     echo '<a href="student-list.php" role="button">
     <i data-feather="arrow-left"></i>
     Go Back

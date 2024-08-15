@@ -265,8 +265,6 @@ Then I asked my end-user if they prefer a sticky navigation bar or non-sticky na
 After that we looked at the student list page and my end-user commented that:
 >I think that when we add the student and accidentally type the same pin as someone else and click try again the all the previous value that I have typed in should be there so that admin don't have to type it all out again
 
-pics:
-
 after letting them play around with the site I asked them if there is anything that feels akward to use and they commented that:
 >I think the only thing that will make it better is if we have a 'back' button to go back to the previous page
 
@@ -276,7 +274,7 @@ after:![Alt text](images/update6-6.png)
 
  - But I'm encountering a little problem with the back button. like when student have succesfully sign-up and click on the back button it takes them back to the sign-up form which creates an awkward flow of usage.
 
-discussions about _date data
+discussions about '_date' data
 >I want you to add a event date into the database so that people can easily see when does the event will be taking place.
 I added event_date into the database and display it on the event
 
@@ -298,8 +296,15 @@ after: ![Alt text](images/update6-4.png)
 Also my end-user have praised that
 > The forms are very easy to use, I like it.
 
+### 14/08/24
 
-### DATE HERE
+I went to ask my end-user about the Waimea College 'International Event' color, if whether or not they like it being yellow.
+>I think they Waimea College and International should be the same color.
+Then I try changing it for her real-time via google chrome inspect and we came to the conclusion that both being white would be better.
+
+Before: ![Alt text](images/update6-2.png)
+
+After: ![Alt text](images/update7-1.png)
 
 Replace this test with what you are working on
 

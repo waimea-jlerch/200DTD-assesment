@@ -20,6 +20,7 @@ body {
     --main-light-green: #395E4A;
     --cream:      #F6F4EC;
     --main-yellow:    #FFD738;
+    --title-geeen: #08361D;
 }
 
 /* HEADER ****************************************************/
@@ -27,6 +28,7 @@ body {
 .centerize-title{
     text-align: center;
     margin-top: 0;
+    color: var(--title-geeen);
 }
 
 .content-box{
@@ -49,9 +51,6 @@ header {
     padding: 0.5rem 1rem;
     background-color: var(--main-light-green);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-
-    position: sticky;
-    top: 0;
 }
 
 header a{
@@ -75,19 +74,32 @@ header a h1{
 }
 
 @media screen and (min-width: 55rem) {
-    header, nav {
+
+    header {        
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
+        gap: 2rem;
     }
+}
+
+.sub-title{
+    font-weight: 500;
+    text-align: center;
 }
 
 /* NAV ****************************************************/
 
-#international-events a{
-gap: 0.5rem;
+#international-events {
+    display: flex;
 }
-
+    
+#international-events a{
+    gap: 0.5rem;
+}
+        
 #main-title{
     display: flexbox;
 }
@@ -96,7 +108,7 @@ gap: 0.5rem;
     margin-top: 0rem;
     margin-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
-    color: var(--main-yellow);
+    color: white;
 }
 
 #main-title h1{
@@ -106,7 +118,10 @@ gap: 0.5rem;
 
 nav {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -132,7 +147,7 @@ nav a.active {
 
 main {
     flex: 1;
-    padding: 1.35rem;
+    padding: 1rem;
 }
 
 /* not equal main and context box padding have to look back at it please */
@@ -146,13 +161,18 @@ img{
     margin: 1rem auto;
 }
 
-/* img.detials-image{
+img.detials-image{
+    object-fit: cover;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+}
 
-} */
-
-/* img.editE-image{
-
-} */
+img.editE-image{
+    object-fit: cover;
+    width: 8rem;
+    height: 8rem;
+}
 
 div.index-image img{
     width:60%;
@@ -173,9 +193,10 @@ div.index-image img{
     font-size: 30px;
 }
 
-/* .close-date{
-    color: red;
-} */
+#msp-log{
+    text-align: center;
+    margin-top: 1.5rem;
+}
 
 /* BUTTON ****************************************************/
 
@@ -221,6 +242,40 @@ a.signUp-button{
     margin: auto;
 }
 
+#add-button {
+    position: fixed;
+    width: 3rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+
+@media screen and (min-width: 55rem) {
+
+    #add-button {
+        position: fixed;
+        width: 3rem;
+        right: 1.5rem;
+        bottom: 7rem;
+    }
+
+}
+
+
+#add-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 3rem;
+    width: 3rem;
+    
+    border: 1px solid var(--title-geeen);
+    background-color: var(--main-light-green);
+    border-radius: 3rem;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
 /* EVENT LIST ****************************************************/
 
 li span, li a {
@@ -245,21 +300,95 @@ li a:hover {
 }
 
 li.page-list {
-    display: flex;
-    padding: 0.2rem 1rem;
+    padding: 0.5rem 1rem;
     border: solid 5px rgb(255, 255, 255);
     background-color: var(--main-light-green);
     border-radius: 1.5rem;
-    margin: 1rem 10rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 50rem;
+    color: white;
+    /* height: 4.5rem; */
+}
+
+li.closed {
+    padding: 0.5rem 1rem;
+    border: solid 5px rgb(255, 255, 255);
+    background-color: gray;
+    border-radius: 1.5rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 50rem;
     color: white;
 }
 
-.upcomingEvent-list{
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
+#upcomingEvents {
+    padding: 0;
 }
+
+.upcomingEvent-list{
+    /* display: inline-flex;
+    width: 100%;
+    gap: 2rem; */
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 100%;
+    /* grid-template-rows: 3.8rem; */
+    align-items: center;
+}
+
+.mySignUps-list{
+    /* display: inline-flex;
+    width: 100%;
+    gap: 2rem; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    /* grid-template-rows: 3.8rem; */
+    align-items: center;
+}
+
+
+@media screen and (min-width: 40rem) {
+
+    .upcomingEvent-list{
+        grid-template-columns: 30% 70%;
+    }
+
+    .mySignUps-list{
+        grid-template-columns: 30% 70%;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+
+    .upcomingEvent-list{
+        grid-template-columns: 25% auto 25% 5%;
+    }
+
+    .mySignUps-list{
+        grid-template-columns: 75% 25%;
+
+    }
+
+    li.close{
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.mySignUps-list:last-child{
+    justify-self: end;
+}
+
+.date p:first-child{
+    margin-bottom: 0rem;
+    }
+    
+.date p:last-child{
+margin-top: 0rem;
+}
+
 
 /* TABLE ***************************************************/
 
@@ -308,34 +437,14 @@ table td a{
 table td a:hover{
     color: var(--main-yellow);
 }
-/* ADD BUTTON **********************************************/
-
-#add-button {
-    position: sticky;
-    width: 3rem;
-    right: 2rem;
-    bottom: 2rem;
-}
-
-#add-button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-decoration: none;
-    color: white;
-    height: 3rem;
-    width: 3rem;
-    background-color: #369;
-    border-radius: 3rem;
-}
 
 /* FORMS *****************************************************/
 
 form {
-    width: max-content;
+    width: 100%;
+    max-width: 25rem;
     margin: 1rem auto;
-    padding: 1rem 30%;
+    padding: 1rem;
     border: 1px solid var(--main-light-green);
     border-radius: 0.5rem;
     background-color: var(--main-light-green);
@@ -346,7 +455,7 @@ label {
     color: white;
 }
 
-input, select {
+input, select, textarea {
     border-radius: 0.5rem;
     width: 100%;
     display: block;
@@ -356,6 +465,15 @@ input, select {
     padding: 0.3rem 0.5rem;
     border-style: none;
     color: black;
+}
+
+input[type=submit] {
+    margin-top: 2rem;
+}
+
+textarea{
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
 }
 
 input:not(:last-child),
@@ -376,11 +494,3 @@ footer {
 footer div.credit{
     color: slategrey;
 }
-
-/* .date{
-    display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-overflow: hidden;
-text-overflow: ellipsis;
-} */

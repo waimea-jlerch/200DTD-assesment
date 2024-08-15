@@ -59,34 +59,47 @@ else{
         echo '<ul id="upcomingEvents">';
 
         foreach ($registrations as $register) {
-            echo '<li class="page-list">';
 
             //format closed date into strtotime
             $eventCloseDate = strtotime($register['close_date']);
             consoleLog("close_date",$eventCloseDate);
 
+            if($eventCloseDate <= $now){
+                echo '<li class="closed">';
+            }
+            elseif($now <= $eventCloseDate){
+                echo '<li class="page-list">';
+            }
+
+            echo '<div class="mySignUps-list">';
+
             $closeDate = new DateTimeImmutable($register['close_date']);
             $formattedcloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p\!');
-
-
+            
             echo    '<a href="event-details.php?id=' . $register['event'] . '">';
             echo    $register['name'];
             echo    '</a>';
-            echo    ' ' . $formattedcloseDate;
+            
+            if($eventCloseDate <= $now){
+                echo    ' ' . $formattedcloseDate;
+            }
             
             if($now <= $eventCloseDate){
+                
                 echo    '<a href="cancel-form.php?id=' . $register['event'] . '" class="signup-button">';
                 echo            'Cancel';
                 echo    '</a>';
             }
 
+
+            echo '</div>';
             echo '</li>';
         }
 
         echo '</ul>';
     }
 
-    echo '<p>Do you want to change user/log out? <a href="mySignUps-logOut.php">Click here!</a></p>';
+    echo '<p id="msp-log">Do you want to change user/log out? <a href="mySignUps-logOut.php">Click here!</a></p>';
 
 include 'partials/bottom.php'; 
 ?>

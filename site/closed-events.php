@@ -7,7 +7,7 @@ echo '<a onclick="history.back()" role="button">
     Go Back
     </a>';
 
-echo '<h1 class="centerize-title">Upcoming Events</h1>';
+echo '<h1 class="centerize-title">Closed Events</h1>';
 
 //connect to database
 $db = connectToDB();
@@ -28,6 +28,8 @@ catch (PDOException $e) {
 
 //see what we got back
 consoleLog($events);
+
+$eventCount = 0;
 
 //Get the current time
 $now = strtotime("now");
@@ -52,9 +54,11 @@ foreach ($events as $event) {
 
     if($eventCloseDate <= $now && $now <= $eventEndDate){
 
+        $eventCount++;
+
         echo '<li class="page-list">';
 
-        echo '<div id="upcomingEvent-list">';
+        echo '<div class="upcomingEvent-list">';
 
 
             echo    '<a href="event-details.php?id=' . $event['id'] . '">';
@@ -66,10 +70,12 @@ foreach ($events as $event) {
 
             echo '<div class="date">';
             echo '<p class="close-date">' . $formattedEventDate . '</p>';
-            $openDate = new DateTimeImmutable($event['open_date']);
-            $formattedOpenDate = $openDate->format('\C\l\o\s\e\d \o\n D d M Y \a\t H:i A');
-            echo '<p class="close-date">' . $formattedOpenDate . '</p>';
+            $closeDate = new DateTimeImmutable($event['close_date']);
+            $formattedCloseDate = $closeDate->format('\C\l\o\s\e\d \o\n D d M Y \a\t H:i A');
+            echo '<p class="close-date">' . $formattedCloseDate . '</p>';
             echo '</div>';
+
+            echo '<p> </p>';
 
             echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
                         <i data-feather="trash-2"></i>
@@ -82,18 +88,10 @@ foreach ($events as $event) {
 
 echo '</ul>';
 
+if($eventCount == 0){
 
+    echo '<p class="sub-title">No closed events!</p>';
 
-//ADD IS ONLY FOR ADMIN IN SESSION, SO USE IF CONDITION:
-if($adminPortal == true){
-echo '<div id="add-button">
-        <a href ="addE-form.php">
-            +
-        </a>
-      </div>';
 }
 
-?>
-
-
-<?php include 'partials/bottom.php'; ?>
+include 'partials/bottom.php'; ?>
