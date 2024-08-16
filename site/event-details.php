@@ -67,34 +67,30 @@ echo '<div class="content-box">';
 
         echo '<p class="date">' . $formattedCloseDate . '</p>';
 
-        // echo '<p>' . $event['open_date'] . '</p>';
+        echo '<p>' . $event['open_date'] . '</p>';
 
-        echo    '<a href="WhosGoing.php?id=' . $id . '">';
-            echo        '<button>';
+        echo '<div class="E-button">';
+            echo    '<a href="WhosGoing.php?id=' . $id . '" role="Edetails-button">';
             echo            'See who else is going';
-            echo        '</button>';
             echo    '</a>';
 
         if($now <= $eventCloseDate){
-                echo    '<a href="signUp-form.php?id=' . $id . '">';
+                echo    '<a href="signUp-form.php?id=' . $id . '" role="Edetails-button">';
                 echo            'Sign-Up';
                 echo    '</a>';
         }
 
         if($adminPortal == true){    
-            echo    '<a href="editE-form.php?id=' . $id . '">';
-                echo        '<button>';
+                echo    '<a href="editE-form.php?id=' . $id . '" role="Edetails-button">';
                 echo            'Edit Details';
-                echo        '</button>';
                 echo    '</a>';
 
-            echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '">';
-            echo        '<button>';
+            echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '" role="Edetails-button">';
             echo            'Delete';
-            echo        '</button>';
             echo '</a>';
 
         }
+        echo '</div>';
 
     echo '</div>';
 
