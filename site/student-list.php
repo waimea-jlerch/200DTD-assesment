@@ -34,6 +34,7 @@ consoleLog($students);
 
 echo '<ul id="student-list">';
 
+echo '<div class="student-table">';
 echo '<table>
         <tr>
             <th>Name</th>
@@ -60,6 +61,7 @@ foreach ($students as $student) {
 }
 
 echo '</table>';
+echo '</div>';
 
 echo '</ul>';
 

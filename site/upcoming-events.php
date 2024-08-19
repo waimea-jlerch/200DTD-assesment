@@ -27,13 +27,14 @@ catch (PDOException $e) {
 }
 
 //see what we got back
-consoleLog($events);
+// consoleLog($events);
 
 
 //Get the current time
 $now = strtotime("now");
 
-consoleLog("now",$now);
+//see what we got back
+// consoleLog("now",$now);
 
 $eventCount = 0;
 
@@ -41,15 +42,14 @@ echo '<ul id="upcomingEvents">';
 
 foreach ($events as $event) {
 
-    consoleLog($event['id'], $event['name']);
+    // consoleLog($event['id'], $event['name']);
     // Convert post's modification time to int
     $eventOpenDate = strtotime($event['open_date']);
-    consoleLog("open_date",$eventOpenDate);
+    // consoleLog("open_date",$eventOpenDate);
 
     $eventCloseDate = strtotime($event['close_date']);
-    consoleLog("close_date",$eventCloseDate);
+    // consoleLog("close_date",$eventCloseDate);
 
-    //do I need that? ↑
 
     if($now <= $eventCloseDate){
 

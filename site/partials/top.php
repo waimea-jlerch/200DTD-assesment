@@ -10,7 +10,7 @@ $adminPortal = isset($_SESSION['admin']);
 
 $page = basename($_SERVER['SCRIPT_NAME']);
 
-consoleLog($_SESSION)
+// consoleLog($_SESSION)
 
 // echo $page
 // print_r($page)

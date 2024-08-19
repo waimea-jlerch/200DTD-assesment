@@ -28,8 +28,8 @@ catch (PDOException $e) {
 
 if (!$eventID) die('Invalid event ID');
 
-//see what we got back
-consoleLog($event);
+// see what we got back
+// consoleLog($event);
 
 $query = 'SELECT id, forename, surname FROM students ORDER BY forename ASC';
 
@@ -45,7 +45,7 @@ catch (PDOException $e) {
 }
 
 //see what we got back
-consoleLog($students);
+// consoleLog($students);
 
 echo '<h2 class="centerize-title">Signing-up to ' . $event['name'] . '</h2>';
 
@@ -77,6 +77,8 @@ echo '<h2 class="centerize-title">Signing-up to ' . $event['name'] . '</h2>';
             required>
 
     <input type="submit" value="SIGN UP">
+
+</form>
 
 <?php 
 include 'partials/bottom.php'; 

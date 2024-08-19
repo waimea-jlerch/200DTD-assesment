@@ -259,9 +259,6 @@ after:
 
 I would need to ask if they are happy with the 'International Events' being in yellow or another color.
 
-Then I asked my end-user if they prefer a sticky navigation bar or non-sticky nagivation bar. They said:
->I like the sticky one more because I think it is good to be able to easily use the navigation bar to go to different pages.
-
 After that we looked at the student list page and my end-user commented that:
 >I think that when we add the student and accidentally type the same pin as someone else and click try again the all the previous value that I have typed in should be there so that admin don't have to type it all out again
 
@@ -306,17 +303,62 @@ Before: ![Alt text](images/update6-2.png)
 
 After: ![Alt text](images/update7-1.png)
 
-Replace this test with what you are working on
+solution to back button problem:
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+respondsive
+
+main focus is desktop as student will be using it in future for school blah blah....
+
+go back and comment neatly  
+
+### 18/8/24
+
+Today is Validation day!!
+
+I think have finish all the functionality to which my end-user have approved of liking how it feels when letting them play around with the site.
+
+- I'm going to start of with the index page
+![alt text](image-2.png)
+Fixed:
+![alt text](image-3.png)
+
+- Upcoming-Events page
+![alt text](image-4.png)
+after commenting all the consolelogs, there is no bugs first-try, go me! :D
+
+- Sign-up form 
+![alt text](image-5.png)
+fixed:
+![Alt text](image-1.png)
+
+- Sign-up error page
+![Alt text](image.png)
+fixed:
+![Alt text](image-7.png)
+
+- Sign-up complete page
+
+- Event-Details page
+
+- Who's else is going page
+
+- My Sign-ups form
+
+- My Sign-ups error page
+
+- My Sign-up page
+
+- Cancel form
+
+- Cancel Error page
+
+- Cancel complete page
+
+- Admin form >>>>
 
 ### DATE HERE
 
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
-
-### DATE HERE
+TESTING OF ALL KEY FEATURES!
 
 Replace this test with what you are working on
 

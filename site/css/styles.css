@@ -114,7 +114,15 @@ nav {
     gap: 1rem;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 60rem) {
+
+    nav {
+        justify-content: flex-end;
+    }
+
 }
 
 nav a {
@@ -195,6 +203,28 @@ div.index-image img{
     margin-top: 1.5rem;
 }
 
+.complete-box {
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem;
+    display: block;
+    justify-content: center;
+    background-color: var(--main-light-green);
+    border-radius: 1rem;
+    max-width: 60rem;
+    margin: auto;
+    color: white;
+}
+
+.complete-box p:first-child{
+    margin-bottom: 0rem;
+}
+
+.complete-box p a{
+    color: white;
+    font-weight: 500;
+}
+
 /* BUTTON ****************************************************/
 
 div.index-buttons{
@@ -273,7 +303,8 @@ a.signUp-button{
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-a[role=Edetails-button] {
+a[role=button].Edetails {
+    display: inline-block;
     text-decoration: none;
     font-weight: 600;
     color: var(--title-geeen);
@@ -281,6 +312,7 @@ a[role=Edetails-button] {
     border: 1px solid var(--cream);
     background-color: var(--cream);
     border-radius: 0.5rem;
+    margin: 1rem 1rem;
 }
 
 /* .E-button {
@@ -402,6 +434,10 @@ margin-top: 0rem;
 
 
 /* TABLE ***************************************************/
+
+.student-table {
+    overflow-x: auto;
+}
 
 table {
     font-size: inherit;
