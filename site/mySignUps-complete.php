@@ -58,17 +58,21 @@ else {
 
     echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
     
-    echo '<p>Try again to verify.</p>';
+    echo '<div class="complete-box">';
 
-    echo '<a href = "mySignUps-form.php"><button>Try again</button></a>';
+    echo '<p>Please try again to verify.</p>';
+
+    echo '<a href = "mySignUps-form.php" role="button" class="Edetails">Try again</a>';
 
     echo '<br>';
 
     echo 'Or would you like to return to:';
         echo    '<div>';
-        echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
-        echo    '<a href = "mySign-ups.php"><button>My Sign-ups</button></a>';
+        echo    '<a href = "upcoming-events.php" role="button" class="Edetails">Upcoming Events</a>';
+        echo    '<a href = "mySign-ups.php" role="button" class="Edetails">My Sign-ups</a>';
         echo    '</div>';
+
+    echo    '</div>';
 } 
 
 ?>

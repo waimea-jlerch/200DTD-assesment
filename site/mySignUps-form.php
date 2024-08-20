@@ -34,7 +34,7 @@ echo '<h2 class="centerize-title">View My Sign-ups!</h2>';
     <input type="hidden" name="eventID" value="<?= $eventId ?>">
     
     <label>Name</label>
-        <select name="studentID" required>
+        <select name="studentID">
         <?php
 
         foreach ($students as $student) {
@@ -56,6 +56,8 @@ echo '<h2 class="centerize-title">View My Sign-ups!</h2>';
             required>
 
     <input type="submit" value="VERIFY">
+
+</form>
 
 <?php 
 include 'partials/bottom.php'; 

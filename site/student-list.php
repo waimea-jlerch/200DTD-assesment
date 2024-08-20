@@ -34,7 +34,7 @@ consoleLog($students);
 
 echo '<ul id="student-list">';
 
-echo '<div class="student-table">';
+echo '<div class="list-table">';
 echo '<table>
         <tr>
             <th>Name</th>

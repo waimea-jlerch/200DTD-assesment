@@ -31,7 +31,7 @@ if (!$event) die('Invalid event ID');
 echo '<h1 class="centerize-title">' .  $event['name']  . '</h1>';
 
 //see what we got back
-consoleLog($event);
+// consoleLog($event);
 
 //Get the current time
 $now = strtotime("now");
@@ -47,7 +47,7 @@ echo '<div class="content-box">';
         echo '</div>';
 
     }
-    else{ echo   '<img src="load-image.php?id=' . $id . '" class="detials-image">'; }
+    else{ echo   '<img src="load-image.php?id=' . $id . '" class="detials-image" alt="Event Image">'; }
 
         echo '<div class="event-detials">';
 
@@ -67,25 +67,25 @@ echo '<div class="content-box">';
 
         echo '<p class="date">' . $formattedCloseDate . '</p>';
 
-        echo '<p>' . $event['open_date'] . '</p>';
+        // echo '<p>' . $event['open_date'] . '</p>';
 
         echo '<div class="E-button">';
-            echo    '<a href="WhosGoing.php?id=' . $id . '" role="Edetails-button">';
+            echo    '<a href="WhosGoing.php?id=' . $id . '" role="button" class="Edetails">';
             echo            'See who else is going';
             echo    '</a>';
 
         if($now <= $eventCloseDate){
-                echo    '<a href="signUp-form.php?id=' . $id . '" role="Edetails-button">';
+                echo    '<a href="signUp-form.php?id=' . $id . '" role="button" class="Edetails">';
                 echo            'Sign-Up';
                 echo    '</a>';
         }
 
         if($adminPortal == true){    
-                echo    '<a href="editE-form.php?id=' . $id . '" role="Edetails-button">';
+                echo    '<a href="editE-form.php?id=' . $id . '" role="button" class="Edetails">';
                 echo            'Edit Details';
                 echo    '</a>';
 
-            echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '" role="Edetails-button">';
+            echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '" role="button" class="Edetails">';
             echo            'Delete';
             echo '</a>';
 

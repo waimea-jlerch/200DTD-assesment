@@ -127,6 +127,7 @@ else{
 
     echo '<h2 class="centerize-title">Sign-up for ' . $event['name'] . ' completed!</h2>';
 
+    echo '<div class="complete-box">';
     
     echo 'Looks like you have already signed-up to 
           <a href= "event-details.php?id=' . $eventID . '">' . $event['name'] . '</a>!<br>';
@@ -135,6 +136,8 @@ else{
         echo    '<div>';
         echo    '<a href = "upcoming-events.php"  role="button" class="Edetails">Upcoming Events</a>';
         echo    '<a href = "mySignUps-form.php"  role="button" class="Edetails">My Sign-ups</a>';
+        echo    '</div>';
+
         echo    '</div>';
 }    
 

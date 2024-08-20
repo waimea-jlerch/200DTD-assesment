@@ -90,6 +90,7 @@ if (!$registrations) {
 }
 else {
 
+echo '<div class="list-table">';
 echo '<table>
         <tr>
             <th>Name</th>
@@ -106,9 +107,10 @@ foreach ($registrations as $registration) {
 }
 
 echo '</table>';
+echo '</div>';
 
         if($now <= $eventCloseDate){
-            echo    '<a href="signUp-form.php?id=' . $eventID . '">';
+            echo    '<a href="signUp-form.php?id=' . $eventID . '" role="button" class="main-button">';
             echo        'Sign-up now!';
             echo    '</a>';
         }

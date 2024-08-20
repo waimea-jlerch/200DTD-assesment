@@ -183,14 +183,22 @@ div.index-image img{
 
 .content-box {
     gap: 2rem;
-    padding: 3rem;
-    display: flex;
+    padding: 5vw;
+    display: block;
     justify-content: center;
     background-color: var(--main-light-green);
     border-radius: 1rem;
     max-width: 60rem;
     margin: auto;
     color: white;
+}
+
+@media screen and (min-width: 66rem) {
+
+    .content-box {
+        display: flex;
+    }
+
 }
 
 .descriptions{
@@ -206,7 +214,7 @@ div.index-image img{
 .complete-box {
     text-align: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 5vw;
     display: block;
     justify-content: center;
     background-color: var(--main-light-green);
@@ -220,7 +228,7 @@ div.index-image img{
     margin-bottom: 0rem;
 }
 
-.complete-box p a{
+.complete-box a{
     color: white;
     font-weight: 500;
 }
@@ -312,12 +320,14 @@ a[role=button].Edetails {
     border: 1px solid var(--cream);
     background-color: var(--cream);
     border-radius: 0.5rem;
-    margin: 1rem 1rem;
+    margin: 1rem 0.5rem;
 }
 
-/* .E-button {
-    gap: 1rem;
-} */
+a[role=button].main-button{
+    width: max-content;
+    margin: 1rem auto;
+    cursor: pointer;
+}
 
 /* EVENT LIST ****************************************************/
 
@@ -368,6 +378,11 @@ li.closed {
 #upcomingEvents {
     padding: 0;
 }
+
+#upcomingEvents a {
+    width: max-content;
+}
+
 
 .upcomingEvent-list{
     /* display: inline-flex;
@@ -435,7 +450,7 @@ margin-top: 0rem;
 
 /* TABLE ***************************************************/
 
-.student-table {
+.list-table {
     overflow-x: auto;
 }
 

@@ -337,14 +337,23 @@ fixed:
 ![Alt text](image-7.png)
 
 - Sign-up complete page
+![Alt text](image-8.png)
 
 - Event-Details page
+![Alt text](image-9.png)
+fixed:
+![Alt text](image-10.png)
 
 - Who's else is going page
+![Alt text](image-11.png)
 
 - My Sign-ups form
+![Alt text](image-12.png)
+fixed:
+![Alt text](image-13.png)
 
 - My Sign-ups error page
+![Alt text](image-14.png)
 
 - My Sign-up page
 

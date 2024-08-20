@@ -86,7 +86,7 @@ else{
             
             if($now <= $eventCloseDate){
                 
-                echo    '<a href="cancel-form.php?id=' . $register['event'] . '" class="signup-button">';
+                echo    '<a href="cancel-form.php?id=' . $register['event'] . '" class="signUp-button">';
                 echo            'Cancel';
                 echo    '</a>';
             }
