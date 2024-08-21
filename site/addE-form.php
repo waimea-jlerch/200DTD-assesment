@@ -12,25 +12,25 @@ echo '<a href="upcoming-events.php" role="button">
 
 <form method="post" action="addE-complete.php" enctype="multipart/form-data">
 
-    <label>Name</lebel>
+    <label>Name</label>
     <input name="name" type="text" placeholder="e.g. Gym Night" required>
 
-    <label>Description</lebel>
+    <label>Description</label>
     <textarea name="description" placeholder="e.g. Sports!"></textarea>
 
-    <label>Event Date</lebel>
+    <label>Event Date</label>
     <input name="event-date" type="datetime-local" required>
 
-    <label>Open Date</lebel>
+    <label>Open Date</label>
     <input name="open-date" type="datetime-local" required>
 
-    <label>Close Date</lebel>
+    <label>Close Date</label>
     <input name="close-date" type="datetime-local" required>
 
-    <label>End Date</lebel>
+    <label>End Date</label>
     <input name="end-date" type="datetime-local" required>
 
-    <label>Picture</lebel>
+    <label>Picture</label>
     <input name="image" type="file" accept="images/*">
 
 

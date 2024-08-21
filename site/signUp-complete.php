@@ -11,6 +11,7 @@ $studentID = $_POST['studentID'];
 $eventID = $_POST['eventID'];
 $pin = $_POST['pin'];
 
+//back button
 echo '<a href="event-details.php?id=' . $eventID . '" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
@@ -85,22 +86,26 @@ if ($register == NULL && $student['pin'] == $pin){
             die('There was an error adding data to the database');
         }
 
+        echo '<div class="complete-box">';
+
         echo   '<p>Nice! You have successfully signed-up to 
                 <a href= "event-details.php?id=' . $eventID . '">' . $event['name'] . '</a>
                 
                 <br>
                 
                 Note: To cancel signed up events go to 
-                <a href= "mySignUps-form.php">my sign-ups!</a>
+                <a href= "mySignUps-redirect.php">my sign-ups!</a>
                 
                 <br>
 
                 Would to like to return to: </p>';
 
                 echo    '<div>';
-                echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
-                echo    '<a href = "mySignUps-form.php"><button>My Sign-ups</button></a>';
+                echo    '<a href = "upcoming-events.php" role="button" class="Edetails">Upcoming Events</a>';
+                echo    '<a href = "mySignUps-redirect.php" role="button" class="Edetails">My Sign-ups</a>';
                 echo    '</div>';
+
+        echo    '</div>';
 
 }
 elseif($student['pin'] != $pin){
@@ -118,7 +123,7 @@ elseif($student['pin'] != $pin){
     echo 'Or would you like to return to:';
         echo    '<div>';
         echo    '<a href = "upcoming-events.php" role="button" class="Edetails">Upcoming Events</a>';
-        echo    '<a href = "mySignUps-form.php" role="button" class="Edetails">My Sign-ups</a>';
+        echo    '<a href = "mySignUps-redirect.php" role="button" class="Edetails">My Sign-ups</a>';
         echo    '</div>';
 
         echo    '</div>';
@@ -135,7 +140,7 @@ else{
     echo 'would you like to return to:';        
         echo    '<div>';
         echo    '<a href = "upcoming-events.php"  role="button" class="Edetails">Upcoming Events</a>';
-        echo    '<a href = "mySignUps-form.php"  role="button" class="Edetails">My Sign-ups</a>';
+        echo    '<a href = "mySignUps-redirect.php"  role="button" class="Edetails">My Sign-ups</a>';
         echo    '</div>';
 
         echo    '</div>';

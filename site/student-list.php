@@ -32,9 +32,9 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($students);
 
-echo '<ul id="student-list">';
-
 echo '<div class="list-table">';
+
+
 echo '<table>
         <tr>
             <th>Name</th>
@@ -61,9 +61,8 @@ foreach ($students as $student) {
 }
 
 echo '</table>';
-echo '</div>';
 
-echo '</ul>';
+echo '</div>';
 
 echo '<div id="add-button">
         <a href ="student-form.php">

@@ -313,65 +313,100 @@ go back and comment neatly
 
 ### 18/8/24
 
-Today is Validation day!!
+#### Today is Validation day!!
 
 I think have finish all the functionality to which my end-user have approved of liking how it feels when letting them play around with the site.
 
 - I'm going to start of with the index page
-![alt text](image-2.png)
+![alt text](images/validation1.png)
 Fixed:
-![alt text](image-3.png)
+![alt text](images/validation1-1.png)
 
 - Upcoming-Events page
-![alt text](image-4.png)
+![alt text](images/validation2.png)
 after commenting all the consolelogs, there is no bugs first-try, go me! :D
 
 - Sign-up form 
-![alt text](image-5.png)
+![alt text](images/validation3.png)
 fixed:
-![Alt text](image-1.png)
+![Alt text](images/validation3-1.png)
 
 - Sign-up error page
-![Alt text](image.png)
+![Alt text](images/validation4.png)
 fixed:
-![Alt text](image-7.png)
+![Alt text](images/validation4-1.png)
 
 - Sign-up complete page
-![Alt text](image-8.png)
+![Alt text](images/validation5.png)
 
 - Event-Details page
-![Alt text](image-9.png)
+![Alt text](images/validation6.png)
 fixed:
-![Alt text](image-10.png)
+![Alt text](images/validation6-1.png)
 
 - Who's else is going page
-![Alt text](image-11.png)
+![Alt text](images/validation7.png)
 
 - My Sign-ups form
-![Alt text](image-12.png)
+![Alt text](images/validation8.png)
 fixed:
-![Alt text](image-13.png)
+![Alt text](images/validation8-1.png)
 
 - My Sign-ups error page
-![Alt text](image-14.png)
+![Alt text](images/validation9.png)
 
 - My Sign-up page
+![alt text](images/validation10.png)
 
 - Cancel form
+![alt text](images/validation11.png)
+fixed:
+![alt text](images/validation11-1.png)
 
 - Cancel Error page
+![alt text](images/validation12.png)
 
 - Cancel complete page
+![alt text](images/validation13.png)
 
-- Admin form >>>>
+- Admin form
+![alt text](images/validation14.png)
+
+- Student List page
+![alt text](images/validation15.png)
+fixed:
+![Alt text](images/validation15-1.png)
+
+- Closed Events page
+![alt text](images/validation16.png)
+
+- Add Event form
+![Alt text](images/validation17.png)
+
+- Edit Event form
+![Alt text](images/validation18.png)
+
+- Add student form
+![Alt text](images/validation19.png)
+
+- Add student error
+![Alt text](images/validation20.png)
+
+- Delete confirmation page
+![Alt text](images/validation21.png)
+
 
 ### DATE HERE
 
 TESTING OF ALL KEY FEATURES!
 
-Replace this test with what you are working on
+go back to check all comments
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+mySignUps not form redirect
+
+Event title in list pages have more font weight
+
+Write up design.md     
 
 ### DATE HERE
 

@@ -27,7 +27,7 @@ catch (PDOException $e) {
 }
 
 //see what we got back
-consoleLog($events);
+// consoleLog($events);
 
 $eventCount = 0;
 

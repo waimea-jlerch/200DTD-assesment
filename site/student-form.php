@@ -12,25 +12,25 @@ echo '<a href="student-list.php" role="button">
 
 <form method="post" action="student-add.php">
 
-    <label>Forename</lebel>
+    <label>Forename</label>
     <input name="forename" type="text" placeholder="e.g. John" required>
 
-    <label>Surname</lebel>
+    <label>Surname</label>
     <input name="surname" type="text" placeholder="e.g. Smith">
 
-    <label>Role</lebel>
-    <select name="role" required>
+    <label>Role</label>
+    <select name="role">
     <option>International Student</option>
     <option>Migrant Student</option>
     <option>International Leader</option>
     <option>International Staff</option>
     </select>
 
-    <label>Nationality</lebel>
+    <label>Nationality</label>
     <input name="nationality" type="text" placeholder="e.g. Japanese" required>
 
-    <label>Year Level</lebel>
-    <select name="year" required>
+    <label>Year Level</label>
+    <select name="year">
     <option>9</option>
     <option>10</option>
     <option>11</option>
@@ -38,14 +38,15 @@ echo '<a href="student-list.php" role="button">
     <option>13</option>
     </select>
 
-    <label>Date of Birth</lebel>
+    <label>Date of Birth</label>
     <input name="dob" type="date" required>
 
-    <label>PIN</lebel>
+    <label>PIN</label>
     <input name="pin" placeholder="e.g. 123456" type="text" minlength="6" maxlength="6" pattern="[0-9]{6}" required>
 
 
     <input type="submit" value="Add">
+</form>
 
 <?php 
 include 'partials/bottom.php'; 

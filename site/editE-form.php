@@ -34,19 +34,19 @@ catch (PDOException $e) {
 
     <input name="id" type="hidden" value="<?= $eventID ?>">
 
-    <label>Name</lebel>
+    <label>Name</label>
     <input name="name" type="text" value="<?= $event['name'] ?>" required>
 
-    <label>Description</lebel>
+    <label>Description</label>
     <input name="description" type="text" value="<?= $event['description'] ?>">
 
-    <label>Open Date</lebel>
+    <label>Open Date</label>
     <input name="open-date" type="datetime-local" value="<?= $event['open_date'] ?>" required>
 
-    <label>Close Date</lebel>
+    <label>Close Date</label>
     <input name="close-date" type="datetime-local" value="<?= $event['close_date'] ?>" required>
 
-    <label>End Date</lebel>
+    <label>End Date</label>
     <input name="end-date" type="datetime-local" value="<?= $event['end_date'] ?>" required>
 
     <p>Preview of existing image:</p>
@@ -58,11 +58,11 @@ catch (PDOException $e) {
 
     }
     else{
-    echo   '<img src="load-image.php?id=' . $eventID . '" class="detials-image">';
+    echo   '<img src="load-image.php?id=' . $eventID . '" class="detials-image" alt="Event Image">';
     }
     ?>
 
-    <label>Picture</lebel>
+    <label>Picture</label>
     <input name="image" type="file" accept="images/*">
 
 

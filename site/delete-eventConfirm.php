@@ -33,11 +33,14 @@ consoleLog($event);
 
     echo '<h2 class="centerize-title">Are you sure you want to delete ' .  $event['name'] . '?</h2>';
 
-    echo '<div>';
-    echo    '<a href = "delete-eventYes.php?id=' . $eventID . '"><button>YES</button></a>';
-    echo     '<a href = "delete-eventNo.php"><button>NO</button></a>';
-    echo '</div>';
+    echo '<div class="complete-box">';
 
+        echo '<div>';
+        echo    '<a href = "delete-eventYes.php?id=' . $eventID . '" role="button" class="Edetails">YES</a>';
+        echo     '<a href = "delete-eventNo.php" role="button" class="Edetails">NO</a>';
+        echo '</div>';
+
+    echo '</div>';
 
     include 'partials/bottom.php';
 ?>

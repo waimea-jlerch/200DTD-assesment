@@ -2,8 +2,10 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-echo '<div id="back">';
-echo '<button onclick="history.back()">Go Back</button>';
+echo '<a href="mySignUps.php" role="button">
+    <i data-feather="arrow-left"></i>
+    Go Back
+    </a>';
 
 $eventID = $_GET['id'] ?? null;
 
@@ -45,7 +47,7 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($students);
 
-echo '<h2>Cancel your Sign-up to ' . $event['name'] . '</h2>';
+echo '<h2 class="centerize-title">Cancel your Sign-up to ' . $event['name'] . '</h2>';
 
 ?>
 <form method="post" action="cancel-complete.php">
@@ -53,7 +55,7 @@ echo '<h2>Cancel your Sign-up to ' . $event['name'] . '</h2>';
     <input type="hidden" name="eventID" value="<?= $eventID ?>">
     
     <label>Name</label>
-        <select name="studentID" required>
+        <select name="studentID">
         <?php
 
         foreach ($students as $student) {
@@ -75,6 +77,8 @@ echo '<h2>Cancel your Sign-up to ' . $event['name'] . '</h2>';
             required>
 
     <input type="submit" value="CANCEL">
+
+</form>
 
 <?php 
 include 'partials/bottom.php'; 

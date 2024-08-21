@@ -64,18 +64,22 @@ else{
     </a>';
 
     echo '<h2 class="centerize-title">This PIN already exists!</h2>';
+
+    echo '<div class="complete-box">';
         
-    echo '<p>Try giving ' . $forename . ' ' . $surname . ' another pin.</p>';
+        echo '<p>Try giving ' . $forename . ' ' . $surname . ' another pin.</p>';
 
-    echo '<a href = "student-form.php"><button>Try again</button></a>';
+        echo '<a href = "student-form.php" role="button" class="Edetails">Try again</a>';
 
-    echo '<br>';
+        echo '<br>';
 
-    echo 'Or would you like to return to:';
-        echo    '<div>';
-        echo    '<a href = "student-list.php"><button>Student List</button></a>';
-        echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a>';
-        echo    '</div>';
+        echo 'Or would you like to return to:';
+            echo    '<div>';
+            echo    '<a href = "student-list.php" role="button" class="Edetails">Student List</a>';
+            echo    '<a href = "upcoming-events.php" role="button" class="Edetails">Upcoming Events</a>';
+            echo    '</div>';
+    
+    echo    '</div>';
 
     include 'partials/bottom.php';
 
