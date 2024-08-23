@@ -40,6 +40,9 @@ catch (PDOException $e) {
     <label>Description</label>
     <input name="description" type="text" value="<?= $event['description'] ?>">
 
+    <label>Event Date</label>
+    <input name="event-date" type="datetime-local" value="<?= $event['event_date'] ?>" required>
+
     <label>Open Date</label>
     <input name="open-date" type="datetime-local" value="<?= $event['open_date'] ?>" required>
 

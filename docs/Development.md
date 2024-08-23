@@ -408,6 +408,42 @@ Event title in list pages have more font weight
 
 Write up design.md     
 
+### 23/08/24
+
+I'll be displaying clips of the testing of all key features using real data.
+
+- Student POV:
+  - Looking at upcoming events, event detials, list of who's going and signing up to an event
+
+  - accessing the MySignUps page to view their pass signed-ups
+
+  - Cancelling their signed-up to an event, and log-out of their mySignUps session
+
+- Admin POV:
+  - Accessing admin portal and verify
+
+  - Add event
+
+  - Edit event
+
+  - Delete event
+
+  - Closed event page
+
+  - Student list page, add student + delete student 
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+
+### DATE HERE
+
+Replace this test with what you are working on
+
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+
 ### DATE HERE
 
 Replace this test with what you are working on

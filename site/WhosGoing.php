@@ -73,12 +73,8 @@ consoleLog($registrations);
 if (!$registrations) {
 
     if($now <= $eventCloseDate){
-        echo '<p>Be the first to sign-up!</p>';
-        echo    '<a href="signUp-form.php?id=' . $eventID . '">';
-            echo        '<button>';
-            echo            'Sign-Up';
-            echo        '</button>';
-            echo    '</a>';
+        echo '<p class="sub-title">Be the first to sign-up!</p>';
+        echo    '<a href="signUp-form.php?id=' . $eventID . '" role="button" class="main-button">Sign-Up</a>';
     }
     else{
         echo '<p>No sign-ups for ' . $event['name'] . '</p>';

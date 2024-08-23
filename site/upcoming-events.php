@@ -58,12 +58,12 @@ foreach ($events as $event) {
             $eventCount++;
 
             echo '<li class="page-list">';
-
+            
             echo '<div class="upcomingEvent-list">';
 
 
                 echo    '<a href="event-details.php?id=' . $event['id'] . '">';
-                echo    $event['name'];
+                echo    '<p class="event-title">' . $event['name'] . '</p>';
                 echo    '</a>';
 
                 $eventDate = new DateTimeImmutable($event['event_date']);

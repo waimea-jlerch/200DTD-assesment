@@ -340,6 +340,10 @@ a[role=button].main-button{
 
 /* EVENT LIST ****************************************************/
 
+.event-title{
+    font-weight: 600;
+}
+
 li span, li a {
     display: inline-flex;
 } 
@@ -519,6 +523,10 @@ form {
     border: 1px solid var(--main-light-green);
     border-radius: 0.5rem;
     background-color: var(--main-light-green);
+}
+
+form p{
+    color: white;
 }
 
 label {

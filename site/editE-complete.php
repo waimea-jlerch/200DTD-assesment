@@ -15,6 +15,7 @@ if(empty($_POST) && empty($_FILES)) die ('There was a problem uploading the file
 $id = $_POST['id'];
 $name = $_POST['name'];
 $description = $_POST['description'];
+$eventDate = $_POST['event-date'];
 $openDate = $_POST['open-date'];
 $closeDate = $_POST['close-date'];
 $endDate = $_POST['end-date'];
@@ -29,13 +30,13 @@ $db = connectToDB();
 if($_FILES['image']['error'] == 4){
 
     $query = 'UPDATE events 
-    SET name=?, description=?, open_date=?, close_date=?, end_date=? 
+    SET name=?, description=?, event_date=?, open_date=?, close_date=?, end_date=? 
     
     WHERE id = ?';
 
     try {
         $stmt = $db->prepare($query);
-        $stmt->execute([$name, $description, $openDate, $closeDate, $endDate, $id]);
+        $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $id]);
     }
     catch (PDOException $e) {
         consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
@@ -52,13 +53,13 @@ else{
     ] = uploadedImageData($_FILES['image']);
     
     $query = 'UPDATE events 
-    SET name=?, description=?, open_date=?, close_date=?, end_date=?, picture_type=?, picture_data=?
+    SET name=?, description=?, event_date=? open_date=?, close_date=?, end_date=?, picture_type=?, picture_data=?
     
     WHERE id = ?';
 
     try {
         $stmt = $db->prepare($query);
-        $stmt->execute([$name, $description, $openDate, $closeDate, $endDate, $imageType, $imageData, $id]);
+        $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $imageType, $imageData, $id]);
     }
     catch (PDOException $e) {
         consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
