@@ -33,9 +33,9 @@ consoleLog($student);
 
     echo "<h2 class='centerize-title'>Are you sure you want to delete " .  $student['forename'] . " " . $student['surname'] . "'s record?</h2>";
 
-    echo '<div>';
-    echo    '<a href = "delete-studentYes.php?id=' . $studentID . '"><button>YES</button></a>';
-    echo     '<a href = "delete-studentNo.php"><button>NO</button></a>';
+    echo '<div class="complete-box">';
+    echo    '<a href = "delete-studentYes.php?id=' . $studentID . '" role="button" class="Edetails">YES</a>';
+    echo     '<a href = "delete-studentNo.php" role="button" class="Edetails">NO</a>';
     echo '</div>';
 
 

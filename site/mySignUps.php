@@ -10,19 +10,14 @@ echo '<a href="index.php" role="button">
 $studentID = $_SESSION['mySignUps'];
 consoleLog($_SESSION);
 
-echo '<h1 class="centerize-title">My Sign-ups!</h1>';
-
-
-
 //connect to database
 $db = connectToDB();
-
-consoleLog($_SESSION);
 
 //setup a query to get all mysignups events for a student in session
 $query = 'SELECT register.event,    
                  events.name,
                  events.close_date,
+                 events.end_date,
                  register.student
 
         FROM register
@@ -45,24 +40,30 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($registrations);
 
-if(!$registrations){
-     echo 'You have no sign-ups yet!<br>';
-     echo 'would you like to see the upcoming events?<br>';
-     echo    '<a href = "upcoming-events.php"><button>Upcoming Events</button></a><br>';
-}
-else{
 
-    //Get the current time
-    $now = strtotime("now");
-    consoleLog("now",$now);
+//Get the current time
+$now = strtotime("now");
+consoleLog("now",$now);
 
-        echo '<ul id="upcomingEvents">';
+$eventCount = 0;
 
-        foreach ($registrations as $register) {
+echo '<h1 class="centerize-title">My Sign-ups!</h1>';
 
-            //format closed date into strtotime
-            $eventCloseDate = strtotime($register['close_date']);
-            consoleLog("close_date",$eventCloseDate);
+    echo '<ul id="upcomingEvents">';
+
+    foreach ($registrations as $register) {
+
+        //format closed date into strtotime
+        $eventCloseDate = strtotime($register['close_date']);
+        consoleLog("close_date",$eventCloseDate);
+
+        //format end date into strtotime
+        $eventEndDate = strtotime($register['end_date']);
+        consoleLog("end_date",$eventEndDate);
+
+        if($now < $eventEndDate){
+
+            $eventCount++;
 
             if($eventCloseDate <= $now){
                 echo '<li class="closed">';
@@ -95,8 +96,16 @@ else{
             echo '</div>';
             echo '</li>';
         }
+    }
 
-        echo '</ul>';
+    echo '</ul>';
+
+    if($eventCount == 0){
+
+        echo    '<p class="sub-title">You have no sign-ups yet!</p>';
+        echo    '<p class="sub-title">Would you like to see the upcoming events?</p>';
+        echo    '<a href = "upcoming-events.php" role="button" class="main-button">Upcoming Events</a>';
+    
     }
 
     echo '<p id="msp-log">Do you want to change user/log out? <a href="mySignUps-logOut.php">Click here!</a></p>';

@@ -111,7 +111,7 @@ echo '</div>';
             echo    '</a>';
         }
         else{
-            echo $formattedcloseDate;
+            echo '<p class="sub-title">' . $formattedcloseDate . '</p>';
         }
 
 }

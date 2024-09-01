@@ -28,3 +28,25 @@ The following documents support this project:
 
 - [Design & Review](Design.md)
 - [Development & Testing](Development.md)
+
+## Accounts
+
+#### Admin Portal
+- Username: waimea
+- Password: International
+
+#### Student accounts
+- Jess Lerch
+    - PIN: 123456
+
+- Mimi Tangitcharoen
+    - PIN: 654321
+
+- Koharu Bell
+    - PIN: 220207
+
+- Freshy Komsonta
+    - PIN: 555555
+
+
+

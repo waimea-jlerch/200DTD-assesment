@@ -44,8 +44,8 @@ $page = basename($_SERVER['SCRIPT_NAME']);
         </div>
         
         <nav>
-            <a href="upcoming-events.php"   class="<?= $page=='upcoming-events.php' ? 'active' : '' ?>">Upcoming Events</a>
-            <a href="mySignUps-redirect.php" class="<?= $page=='mySignUps-form.php' ? 'active' : '' ?>">My Sign-ups</a>
+            <a href="upcoming-events.php"   class="<?= ($page=='upcoming-events.php' ? 'active' : '') ?>">Upcoming Events</a>
+            <a href="mySignUps-redirect.php" class="<?= ($page=='mySignUps-form.php' ? 'active' : '') . ($page=='mySignUps.php' ? 'active' : '') ?>">My Sign-ups</a>
 
             <?php if($adminPortal == true){
                 echo '<a href="student-list.php" class="' . ($page=='student-list.php' ? 'active' : '') . '">Student List</a>';

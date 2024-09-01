@@ -415,9 +415,13 @@ I'll be displaying clips of the testing of all key features using real data.
 - Student POV:
   - Looking at upcoming events, event detials, list of who's going and signing up to an event
 
-  - accessing the MySignUps page to view their pass signed-ups
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/ER45JImixM9EqJXrbKtZ8XYBrW8hyDvOK9HZamg9nT_i7w)
 
-  - Cancelling their signed-up to an event, and log-out of their mySignUps session
+  - accessing the MySignUps page to view their past signed-ups, as well as cancelling their signed-up event.
+  
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EQ2rkEdvW4NJmcRBRZnXl1kByiOBPUBJCMXTSSKXDXiDqg)
+
+
 
 - Admin POV:
   - Accessing admin portal and verify
