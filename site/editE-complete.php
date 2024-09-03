@@ -53,7 +53,7 @@ else{
     ] = uploadedImageData($_FILES['image']);
     
     $query = 'UPDATE events 
-    SET name=?, description=?, event_date=? open_date=?, close_date=?, end_date=?, picture_type=?, picture_data=?
+    SET name=?, description=?, event_date=?, open_date=?, close_date=?, end_date=?, picture_type=?, picture_data=?
     
     WHERE id = ?';
 

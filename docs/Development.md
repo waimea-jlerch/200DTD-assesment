@@ -398,13 +398,13 @@ fixed:
 
 ### DATE HERE
 
-TESTING OF ALL KEY FEATURES!
+TESTING OF ALL KEY FEATURES! :D
 
 go back to check all comments
 
-mySignUps not form redirect
+mySignUps not form redirect :D
 
-Event title in list pages have more font weight
+Event title in list pages have more font weight :D
 
 Write up design.md     
 
@@ -426,15 +426,27 @@ I'll be displaying clips of the testing of all key features using real data.
 - Admin POV:
   - Accessing admin portal and verify
 
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/ETgTsDUsuUlDoL10C9ReqRYB3u_pg80JKkcickKOtzeIKg?e=MiQuvA&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
   - Add event
 
-  - Edit event
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/ES2VDmtdpCdPiW9jAJKFmW0BUEwjASMHcMhJDXqvk_01jA?e=iXX4sN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+  - Edit event detials
+
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/ESYO5gBPl5pEnGHr-kOPGZABCDckHRH4ybh_sByOnFI8oA?e=z7gQWl&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D_)
 
   - Delete event
 
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EcBg22mIeihJg0Em-szKbs4B-j_fEKqwbskVA0pj1uyj5A?e=6A5pFs&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
   - Closed event page
 
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EVlYYO1gSuxAs8ILDez0udwBw_3YsFZs6qa7oRhcJ3KIWQ?e=Z4dahm&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
   - Student list page, add student + delete student 
+
+      [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/Ed4WZuYUsyFIqm7WHH8K4eEBcy1hAb_XEmRorHXJnZIRpw?e=GVdsci&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ### DATE HERE
 
