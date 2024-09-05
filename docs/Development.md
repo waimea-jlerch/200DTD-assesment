@@ -11,20 +11,6 @@ Assessment Standards: **91892** and **91893**
 
 ## Design, Development and Testing Log
 
-### DATE HERE
-
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
-
-snapshot of smt V.1
-
-I showed this to ... and got their feed back
-
->quote what they say like this
-
-I made some changes and here is V.2
-
 ### 20/05/2024
 
 Worked on flow and database design
@@ -66,7 +52,7 @@ My client have approved my database tables and also provided my with the color p
 I would need to redesign my user flow to have sign-in function that will differ in the access within the system between students and admin.
 ### 27/05/24
 
-I'm working on the new verstion of my user flow, however I have come across some confusing aspect of the system. My user suggest that I add a page that have a list of all the sign ups that a student have done. I'm just confused on what would happened when the sign up period ends..? would the sign up be gone from the 'My sign ups' page or would it be gray and uninteractable. If then when will the gray sign up be gone? Or perhaps I should add a section called passed events signups where it all go there after the event has ended? I would need to have a discussion with my end user.
+I'm working on the new version of my user flow, however I have come across some confusing aspect of the system. My user suggest that I add a page that have a list of all the sign ups that a student have done. I'm just confused on what would happened when the sign up period ends..? would the sign up be gone from the 'My sign ups' page or would it be gray and uninteractable. If then when will the gray sign up be gone? Or perhaps I should add a section called passed events signups where it all go there after the event has ended? I would need to have a discussion with my end user.
 
 User Flow Version 1:
 ![Design Flow V.2](images/flow2.png)
@@ -83,9 +69,9 @@ Here is my updated database including the use of PIN:
 I added pin column in the student table.
 
 Moving on to designing the interface, my user have stated that
->I would prefer the main use of the site to be on computers
+>I would prefer the main use of the site to be on computers as in the future students will be required to bringe their devices to school.
 
-meaning that I should focus on designing the interface on desktop frame, and aware of desktop site format (eg. website conventions).
+meaning that I should focus on designing the interface on a desktop frame, and aware of desktop site format (eg. website conventions).
 
 ### 13/06/24
 
@@ -93,6 +79,8 @@ I have finished my black and white user interface demo in Figma with interaction
 
 Here is what it looks like:
 ![black and white user interface](images/ui1.png)
+
+[Click here to access the interactive figma page](https://www.figma.com/proto/exC58SeVDemDwwqeriYzBB/International-even-register-DTD-level-2-Assessment?node-id=18-2&node-type=CANVAS&t=OFuwStXqjfQrZYcx-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=18%3A2)
 
 I have also finished setting up my database in AdminerEvo:
 ![My SQL db schema](images/sql_schema.png)
@@ -131,7 +119,9 @@ I have finished working on the general functionality of the
 - Who is going page
 - signing up to event / adding to DB and checking for incorrect pin: all working
 
-![Demonstration 1](images/update1.mp4)
+This clip will show you those finished functions!
+
+[Click here to view my first update clip!](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EZnKW1e1e8dHnSLck1qXcL0BRnLtgmIjQW19xyp17cg4eQ?e=6x3ici)
 
 My end-user had also said that they prefer my 1st UI demo colors that had the lighter green:
 ![1st UI demo colors](images/ui_colors1_1.png)
@@ -145,7 +135,7 @@ I have finished the functionality of 'mySignUps' pages
 
 - This is the functionality of the 'mySignUps' pages
 
-![Demonstration 2](images/update2.mp4)
+[Click here to view my second update clip!](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EZRRUYB7RsVHpZnYPZ2aTQEBtUhRrgUg1M5Yk8bzVIDcbg)
 
 It is a page where student can cancel sign-up and view what they have signed-up for using $_SESSION 
 
@@ -259,9 +249,6 @@ after:
 
 I would need to ask if they are happy with the 'International Events' being in yellow or another color.
 
-After that we looked at the student list page and my end-user commented that:
->I think that when we add the student and accidentally type the same pin as someone else and click try again the all the previous value that I have typed in should be there so that admin don't have to type it all out again
-
 after letting them play around with the site I asked them if there is anything that feels akward to use and they commented that:
 >I think the only thing that will make it better is if we have a 'back' button to go back to the previous page
 
@@ -269,7 +256,7 @@ before:![Alt text](images/update6-5.png)
 
 after:![Alt text](images/update6-6.png)
 
- - But I'm encountering a little problem with the back button. like when student have succesfully sign-up and click on the back button it takes them back to the sign-up form which creates an awkward flow of usage.
+ - But I'm encountering a little problem with the back button when using 'history.back()'. For instance when student have succesfully sign-up and click on the back button it takes them back to the sign-up form which creates an awkward flow of usage.
 
 discussions about '_date' data
 >I want you to add a event date into the database so that people can easily see when does the event will be taking place.
@@ -303,13 +290,13 @@ Before: ![Alt text](images/update6-2.png)
 
 After: ![Alt text](images/update7-1.png)
 
-solution to back button problem:
+solution to back button problem: I just put my back button as an 'a href' link to the page that correspond with my site flow of usage rather than 'history.back()' to prevent akward usage.
 
-respondsive
+I also made my css respondsive enough to be use of phone so that everyone can easily access the site anywhere and anytime.
 
-main focus is desktop as student will be using it in future for school blah blah....
+Here is me playing around my site in a respondsive mobile frame!
 
-go back and comment neatly  
+[Click here to view respondsive testing clip!](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EVgzTFNd5eVDiDLB3rWY8YEBokTa5IwgjJzsa9rF6kqQlA)
 
 ### 18/8/24
 
@@ -398,17 +385,13 @@ fixed:
 
 ### DATE HERE
 
-TESTING OF ALL KEY FEATURES! :D
-
 go back to check all comments
-
-mySignUps not form redirect :D
-
-Event title in list pages have more font weight :D
 
 Write up design.md     
 
 ### 23/08/24
+
+#### REAL DATA TESTING EVIDENCE!
 
 I'll be displaying clips of the testing of all key features using real data.
 
@@ -446,7 +429,7 @@ I'll be displaying clips of the testing of all key features using real data.
 
   - Student list page, add student + delete student 
 
-      [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/Ed4WZuYUsyFIqm7WHH8K4eEBcy1hAb_XEmRorHXJnZIRpw?e=GVdsci&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+    [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/Ed4WZuYUsyFIqm7WHH8K4eEBcy1hAb_XEmRorHXJnZIRpw?e=GVdsci&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ### DATE HERE
 

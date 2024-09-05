@@ -217,13 +217,13 @@ I would need to make my end-user feel welcomed when using the system by includin
 ### Database Structure
 
 Final DB design:
-![Final DB design](../images/sql_schema.png)
+![Final DB design](images/sql_schema.png)
 <!-- Place a image here that shows the *final design* of your database: tables, fields and relationships. -->
 
 ### User Interface Design
 
-Final UI design (HAVE TO CHANGE TO ALL PAGES):
-![Final UI design](../images/ui_colors1_1.png)
+Do I have to include all pages?
+![Final UI design](images/ui_colors1_1.png)
 <!-- Place images here that show your *final design* of your UI: layout, colours, etc. -->
 
 

@@ -9,14 +9,6 @@ consoleLog($_FILES, 'FILES');
 if(empty($_POST) && empty($_FILES)) die ('There was a problem uploading the file (probably too large)');
 
 //----------------------------------------------------------------------------
-// Get image data and type of uploaded file from the $_FILES super-global
-
-[
-    'data' => $imageData,
-    'type' => $imageType
-] = uploadedImageData($_FILES['image']);
-
-//----------------------------------------------------------------------------
 // Get other data from form via the $_POST super-global.
 
 $name = $_POST['name'];
@@ -31,18 +23,58 @@ $endDate = $_POST['end-date'];
 
 $db = connectToDB();
 
-$query = 'INSERT INTO events 
+// $query = 'INSERT INTO events 
+//             (name, description, event_date, open_date, close_date, end_date, picture_type, picture_data) 
+//             VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+
+// try {
+//     $stmt = $db->prepare($query);
+//     $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $imageType, $imageData]);
+//     $newEventID = $db->lastInsertID();
+// }
+// catch (PDOException $e) {
+//     consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
+//     die('There was an error adding picture to the database');
+// }
+
+if($_FILES['image']['error'] == 4){
+
+    $query = 'INSERT INTO events 
+            (name, description, event_date, open_date, close_date, end_date)
+            VALUES (?, ?, ?, ?, ?, ?)';
+
+    try {
+        $stmt = $db->prepare($query);
+        $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate]);
+        $newEventID = $db->lastInsertID();
+    }
+    catch (PDOException $e) {
+        consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
+        die('There was an error adding picture to the database');
+    }
+
+}
+else{
+
+    // Get image data and type of uploaded file from the $_FILES super-global
+    [
+        'data' => $imageData,
+        'type' => $imageType
+    ] = uploadedImageData($_FILES['image']);
+    
+    $query = 'INSERT INTO events 
             (name, description, event_date, open_date, close_date, end_date, picture_type, picture_data) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
 
-try {
-    $stmt = $db->prepare($query);
-    $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $imageType, $imageData]);
-    $newEventID = $db->lastInsertID();
-}
-catch (PDOException $e) {
-    consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
-    die('There was an error adding picture to the database');
+    try {
+        $stmt = $db->prepare($query);
+        $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $imageType, $imageData]);
+        $newEventID = $db->lastInsertID();
+    }
+    catch (PDOException $e) {
+        consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
+        die('There was an error adding picture to the database');
+    }
 }
 
 // //----------------------------------------------------------------------------

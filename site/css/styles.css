@@ -31,14 +31,6 @@ body {
     color: var(--title-geeen);
 }
 
-.null-image{
-    width: 100%;
-    max-width: 20rem;
-    background-color: lightgrey;
-    padding: 2rem;
-    border: solid 2px gray;
-}
-
 header {
     align-items: center;
     padding: 0.5rem 1rem;
@@ -185,6 +177,22 @@ div.index-image img{
         width:80vw;
     }
 
+}
+
+.null-image{
+    width: 100%;
+    max-width: 20rem;
+    background-color: lightgrey;
+    padding: 2rem;
+    border: solid 2px gray;
+    border-radius: 0.5rem;
+}
+
+.null-image p{
+    text-align: center;
+    font-weight: 600;
+    color: gray;
+    line-height: 10rem;
 }
 
 
