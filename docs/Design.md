@@ -20,9 +20,7 @@ This will work as a multi-user system by my 2 main groups of end-user which are:
 
 - **The International Leaders/Staffs** are involved in organizing events. In order to efficiently planned the equipment needed they would need to be able to clearly see a list of the students that are coming to the upcoming events.
 
-- **The International Students** including migrants, would likely want to know the upcoming events easily without the need to only go to school and look at the international notice board. With this system they will be able to look out for upcoming events in the site and make them self free for the day and sign up!
-
-<!-- Replace this text with a description of your typical end-users and their specific needs / expectations / requirements. -->
+- **The International Students** including migrants, would likely want to know the upcoming events easily without the need to only go to school and look at the international notice board. With this system they will be able to look out for upcoming events in the site and make themselves free for the day and sign up!
 
 ### Proposed Solution
 
@@ -39,17 +37,13 @@ The international staffs/leaders (The admins) should be able to:
 - be able to update the events starting/closing sign up date or description incase anything changes
 - view a list of all the international and migrant students with all information i.e. DoB, nationality, forename, surname
 
-The international studetns should be able to:
+The international students should be able to:
 - view upcoming and past events
 - click on a button to sign up for events they think they are coming
 - click on event element and view greater details such as pictures and more descriptions in a separate page
 - undo sign in incase their plans changes
-<!-- - be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server -->
+- be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server
 - be able to view a list of all international and migrant students forename and lastname
-
-
-<!-- Replace this text with a brief statement about the system that you intend to create, including the key functionality it should have. -->
-
 
 -------------------------------------------------
 
@@ -74,10 +68,11 @@ The usability implications of a digital technology or digital outcome (e.g. a we
 <!-- Replace this text with a clear explanation of what the implication means. -->
 
 **Why is this relevant to this project?** <br>
-I need to design my system to be as easy to use as I can as the end-user for this project came from all around the world with different english and IT background. I have to make sure that the system have simple language that most people will understand and an easy to understand interface that will be usable for everyone even if they are not good with IT. A help page is also necessary to help people who are stuck with how to use the system.
+I need to design my system to be as easy to use as I can as the end-user for this project came from all around the world with different english and IT background. I have to make sure that the  interface is easy to understand, and will be usable for everyone even if they are not good with IT.
 <!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 
-As I design my system’s UI, I will refer to Nielsen’s heuristics and try to make sure that the UI meets them as far as possible. Specifically, I will aim for my website to have the same UI design throughout the pages and follow other website convensions so that it is easy for people to catch on how to navigate around the website (Consistency and standards). Moreover, They should be able to arrange the events as they please like: order by A-Z, order by events register closing time, and so on for easy browsing (Flexibility and efficiency of use). The user should also have to ability to undo or cancle their sign ups incase they change their minds. The button to leave or way out of pages should also be easy to spot (User control and freedom). When registering into events they can type a few letters and a list will appear for them to select without the need to type out the whole name out and to prevent mispelling (Recognition rather than recall). Lastly, I will provide a help section/page that end-user could go to if they have trouble understanding the UI and how to sign up to events (Help and documentation).
+As I design my system’s UI, I will refer to Nielsen’s heuristics and try to make sure that the UI meets them as far as possible. Specifically, I will aim for my website to have the same UI design throughout the pages with good consistency and follow other website convensions so that it is easy for people to catch on how to navigate around the website (Consistency and standards). Moreover, They should be able to arrange the events as they please like: order by A-Z, order by events register closing time, and so on for easy browsing (Flexibility and efficiency of use). The user should also have to ability to undo or cancle their sign ups incase they change their minds. The button to leave or way out of pages should also be easy to spot (User control and freedom). When registering into events they select their name from the list that will appear for them to select without the need to type out the whole name to prevent mispelling (Recognition rather than recall). 
+Lastly, I will provide a help section/page that end-user could go to if they have trouble understanding the UI and how to sign up to events (Help and documentation).
 
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->To make sure that I have succeeded this I will need to test-out the system with my end-user and get feedback to improve my system.
 
@@ -104,7 +99,7 @@ I will need to ensure that my system is bug-free and is functioning properly wit
 
 <!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 
-<!-- have to paraphrase -->I will aim for my website to keep the end-user informed of what is going on, for example, when finished signing up, they will see a message saying 'you have been signed up' and the sign up button will change color. This is so that user knows that the website is working and did not freeze (Visibility of system status). I also have to ensure that my forms can recognize invalid inputs and prevents error that the end-user could mistakenly make, like for example if they forgot to select their name for the sign-up.(Error prevention). Moreover, to make sure that my website will be fully functional and have no dead-end, I have to provide a feedback of how they can fix that error, for example, 'invalid email: email should be in abc@abc.com format,' this will help user recognize their error and recover from it, which would also enhance my last point of trying to prevent.(users recognize, diagnose, and recover from errors).
+<!-- have to paraphrase -->I will aim for my website to keep the end-user informed of what is going on, for example, when a student sign-up to an event they have already sign-up to, the system will tell that they have already signed-up to this event so that the user don't get confused and aware about system status. Also, closed events in student's my sign up page will turn gray and uninteractable.This is so that user knows that the website is working and did not freeze (Visibility of system status). I also have to ensure that my forms can recognize invalid inputs and prevents error that the end-user could mistakenly make, like for example if they forgot to type their pin for the sign-up.(Error prevention). Moreover, to make sure that my website will be fully functional and have no dead-end, I have to provide a feedback of how they can fix that error, for example, 'PIN should only be in numbers,' this will help user recognize their error and recover from it, which would also enhance my last point of trying to prevent.(users recognize, diagnose, and recover from errors).
 
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
@@ -153,7 +148,7 @@ The end-user implications of a digital technology or digital outcome (e.g. a web
 <!-- Replace this text with a clear explanation of what the implication means. -->
 
 **Why is this relevant to this project?** <br>
-My system should meet the needs and problem that my end-user and I had discussed which is how the system will help increase the efficiency of keeping track of the students that will be participating in extra curricular events that the international department is holding. I should design to that my system has simple language that most international students will understand suitable for different English background that each student have and a consistant interface that will be usable for everyone even if they are not good with IT.
+My system should meet the needs and problem that my end-user and I had discussed which is how the system will help increase the efficiency of keeping track of the students that will be participating in extra curricular events that the international department is holding. I should design to that my system has simple language that most international students will understand suitable for different English background that each student could have and a consistant interface that will be usable for everyone even if they are not good with IT.
 
 <!-- Replace this text with an explanation of why the implication is relevant to this particular project. --> 
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. --> I will have to regularly keep in touch with my end-user about my system progress and get feedback on if the project is going in the right track and improve based on their feedback.
@@ -178,7 +173,7 @@ Make UI components accessible in terms of size / target area, etc.
 
 <!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 **Why is this relevant to this project?** <br>
-Often times the device that seems to be most accessible to international and migrant students are mobile devices such as phones and tablets. However, there are also students who prefer to use their labtop and school's computers. 
+Often times the device that seems to be most accessible to international and migrant students are mobile devices such as phones and tablets. However, there are also students who prefer to use their laptop and school's computers. 
 
 Therefore, I would like to aim for my system to be accessible on most devices without elements collapsing weirdly or arrange in an unusable format. As to promote easy access to the system to end-users. 
 
@@ -204,10 +199,11 @@ Ensure text in all languages used are translated and spelled correctly
 
 <!-- Replace this text with an explanation of why the implication is relevant to this particular project. -->
 **Why is this relevant to this project?** <br>
-As I'm working with a system that will be access by students from different countries and cultures from around the globe, so I have to especially be sensitive and aware to all cultures. 
+As I'm working with a system that will be access by students from different countries and cultures from around the globe, so I have to especially be sensitive and aware to all cultures. Since the students came from various English backgrounds I have to make sure that the system have simple language that most people will understand.
 
-I would need to make my end-user feel welcomed when using the system by including all hello phases from all around the world in my home page section. I would also need to be careful with words used in the system that might be sensitive or inappropriate.
+I would need to make my end-user feel welcomed when using the system by including a international student showcase picture to show that students environment is friendly and not scary. I would also need to be careful with words used in the system that might be sensitive or inappropriate aswell as use simple language.
 
+To ensure this I will need to ask a few international students from different culture to play around with my site and see if there is anything inappropriate to them
 <!-- Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication. -->
 
 -------------------------------------------------
@@ -217,14 +213,13 @@ I would need to make my end-user feel welcomed when using the system by includin
 ### Database Structure
 
 Final DB design:
-![Final DB design](images/sql_schema.png)
-<!-- Place a image here that shows the *final design* of your database: tables, fields and relationships. -->
+
+![Final DB design in Draw Sql](images/drawSql.png)
+
 
 ### User Interface Design
+![Final UI design in Figma](images/ui_colors1_1.png)
 
-Do I have to include all pages?
-![Final UI design](images/ui_colors1_1.png)
-<!-- Place images here that show your *final design* of your UI: layout, colours, etc. -->
 
 
 -------------------------------------------------
@@ -232,12 +227,12 @@ Do I have to include all pages?
 ## Completed System
 
 ### Database Structure
+![Final DB in Adminer](images/sql_schema.png)
 
-Place a image here that shows the *actual database structure* that you implemented: tables, fields and relationships.
 
 ### User Interface Design
 
-Place screenshots and notes here that show your *actual system UI* in action.
+[Click here to view my Final UI design in action showcase clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/EarnNgBsjC1ClNGIOkb9BYQB7Rdrx5gDxOSVBcQp2A1ATA)
 
 
 -------------------------------------------------
@@ -246,22 +241,142 @@ Place screenshots and notes here that show your *actual system UI* in action.
 
 ### Meeting the Needs of the Users
 
-Replace this text with a brief evaluation of how well you met the needs of your users. Look at what you initially wrote about who they are, what specific needs they have, etc. and discuss how well the system meets those needs.
+At the start I mentioned that the user need is that the international department staff of Waimea College want to be able to see how many students is going to go to an extra curricular event held frequently by them, and be able to use that information for better organization and planning. Furthermore, they want an easier way for student to check what event is coming up as most of the students doesn't really look at the notice board.
+
+I think that I have reached this need of my client well as my system is able to show my client the list of names of students that have signed-up to an event. Also the international staff have good control of the site to put up upcoming events so that students can be aware of.
+![proof](images/proof1.png)
+![proof](images/proof2.png)
 
 ### Meeting the System Requirements
 
-Replace this text with a brief evaluation of how well you met the requirements that you defined at the start of the project, etc. Look back at the list of features / functionality you initially set and discuss how well your system has implemented each one.
+Initially I mentioned that the system should be able to:
 
-### Review of IMPLICATION NAME HERE
+- The international staffs/leaders (The admins) should be able to:
+    - log in through admin portal access password
+    - view upcoming and past events
+    - be able to set up a new upcoming event with a starting/closing date for signing up
+    - Leaders should also sign up like the students
+    - be able to view a list of students who are coming in a clear neat table
+    - be able to update the events starting/closing sign up date or description incase anything changes
+    - view a list of all the international and migrant students with all information i.e. DoB, nationality, forename, surname
 
-Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+- The international students should be able to:
+    - view upcoming and past events
+    - click on a button to sign up for events they think they are coming
+    - click on event element and view greater details such as pictures and more descriptions in a separate page
+    - undo sign in incase their plans changes
+    - be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server
+    - be able to view a list of all international and migrant students forename and lastname
 
-### Review of IMPLICATION NAME HERE
+In my final outcome, most of these requirements were met. Though, there were some of the international *students* requirements planned that were changed during the developing period. I will  be explaining these changes and why it is better to change.
 
-Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+In the final system the system IS able to:
 
-### Review of IMPLICATION NAME HERE
+- The international staffs/leaders (The admins) is able to:
+    - do everything mentioned initially
 
-Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+- The international students IS able to:
+    - Do most of what is mentioned initially, However these points where changed:
+        - view upcoming and past events:
+        Students are not now able to view past/closed events (closed event page) as it is irrelevant to them unless that is event is signed-up by them. In that case, it would apear in the MySignUps page.
+
+        - be able to view a list of all international and migrant students forename and lastname: Students are now not able to veiw student list for privacy purposes purpose by my client. Only the admin is able to view student list.
+
+        - be able to submit a form of student info if their name is not yet in the database that will need to get approve by an admin before it can get updated on the server: Students are now not able to submit an add student form as they can no longer access student list.
+
+Overall I have met most of the system requirements can implications, only a few were changed to improved the final system while keeping the same aim.
+
+<!-- Replace this text with a brief evaluation of how well you met the requirements that you defined at the start of the project, etc. Look back at the list of features / functionality you initially set and discuss how well your system has implemented each one. -->
+
+### Review of Usability
+
+In my final system, it has followed the usability system as my system followed the standard conventions of website making my end-user have an easy time using the site as most would probably be familiarize with the website conventions. I have also use easy language that students are able to understand when using the site.
+
+I have also followed the Nielsen's Heuristics mentioned earlier which are: consistency and standards, User control and freedom, and recognition rather than recall. As I was able to; follow the website standard conventions and keeping the site consistence throughout the use; able to let students change their mind and cancel their sign-up to an event if they wish to; and able the select their name in forms so students don't have to type out their whole name, this is also to prevent any typo that could happen.
+
+website conventions of navigation bar (nav button and logo placement), footer, and back button (consistency and standard).
+![proof](images/proof2.png)
+
+Students can cancel their sign-up to active events (user control and freedom).
+![proof](images/proof3.png)
+
+In forms student don't have to type out their name, they can just select it from the drop down menu (recognition rather than recall).
+![proof](images/proof4.png)
+
+However I didn't quite have the time and coding experience to do what I said I was going to do for flexibility and efficiency of use, and help and documentation. I think these can be cancel out (not that relevant) as the system is a relatively simple system that is not complicated enough / not enough data to have a arrange functions. Moreover, the system is not used in a big scale size, user are in a small group/area this means that the system have not much need for a help page.
+
+<!-- Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features. -->
+
+### Review of Functionality
+
+In my final system, I was able to reached the need of my end user as mentioned in 'Meeting the Needs of the Users' and 'Meeting the System Requirements'. The system is able to detect any invalid input and suggest the user how to type in a valid input as well as have a example of input in the placeholder in form input element and doesn't let null input pass when it is required. Moreover, the final system ask for confirmation when deleting an event or student (this follows Nielsen's Heuristics of error prevention / users recognize, diagnose, and recover from errors). The final system can also display element that reflect system status, like how closed event turn gray and let student know that they have already signed-up if they signed-up to the same event twice (this follows Nielsen's Heuristics of Visibility of system status). Other than this, my final system is bug-free as all pages have been validated. It function properly without crashes. It there is an error occur like when event id is missing in URL the system only display readable error message that user can understand. The final system also work quite fast.
+
+Final system doesn't let null input pass through if it is required.
+![proof](images/proof5.png)
+
+Fianl system recognise invalid input.
+![proof](images/proof6.png)
+![proof](images/proof7.png)
+
+Final system has example input in placeholder.
+![proof](images/proof8.png)
+
+Final system reflect system status by recognizing that student had signed-up twice.
+![proof](images/proof9.png)
+
+Final system reflect system status that an event is open or closed for signed-up.
+![proof](images/proof10.png)
+
+Final system give readable error message when id is missing from URL (caused by messing around of user).
+![proof](images/proof11.png)
+
+Final system ask for confirmation when admin is deleting an event or student
+![proof](images/proof16.png)
+![proof](images/proof17.png)
+
+<!-- Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features. -->
+
+### Review of Asthetic
+
+In my final system, I think that I have follow this implications as my system have good colors that contrast each other really well like green and yellow and green and white. The fonts are also very easy to read and doesn't make user feel overwhelmed. The element in my Final is also very well placed as the system look very clean and minimal. It creates a pleasing experience for user when using the site. Important messages are bolder than the less important ones. (this follows Nielsen's Heuristics of Aesthetic and Minimalist Design).
+Those examples are shown in these proof images:
+![proof](images/proof2.png)
+![proof](images/proof10.png)
+![proof](images/proof12.png)
+
+<!-- Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features. -->
+
+### Review of End-user
+
+In my final system I have met the need of my end user as mentioned in 'Meeting the Needs of the Users' and 'Meeting the System Requirements'. The system uses simple language that my end-users from various English background can understand. Moreover, the system is usable on computer and phone, repondsive to whatever device end-user wishes to access the site, with the priority being on computer as school policy now require student to bring their own device which increase the use of desktop size screen. Most importantly my site have been approved though iterative testing with my client that it will work well with my end-users. The system is based off of the Waimea college website as my client's brief and as as it is appropriate for my end-user since my end-users are international and migrants students from Waimea college.
+
+![proof](images/proof13.png)
+
+<!-- Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features. -->
+
+### Review of Accessibility
+
+In my final system it is responsive to all screen types making my end-user, which are the international and migrants students, able to access the site from wherever and whenever they want to. My final site have well balanced elements which are very friendly to use, the font sizes are big enough to be read in all screen sizes and the color are well contrast making it easy to spot different element throughout the stie. The hit-boxes / target area of elements are  in a reasonable size and not small so that people don't have a hard time using the site. Images in my final site have an alt text which will give user an idea of what the image is if for some reason the image is not showing up. Moreover, the fonts use in my final system are all very easy to read. Overall it is a system that consider end-user accessibility and allows end-user to browse the site with good experience.
+
+desktop screen size:
+![proof](images/proof14.png)
+![proof](images/proof2.png)
+
+Phone screen size:
+![proof](images/proof13.png)
+![proof](images/proof15.png)
+
+<!-- Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features. -->
+
+### Review of Cultural
+
+My final system is very cultural neutral and I have ensure that the language and images used in my final system will be appropriate for all cultures. Moreover, to make sure that all students will feel welcome by the website I included an index image showcasing the international and migrant student that the environment is friendly and not scary. The English in my final system are very simple so that international and migrants student from different English background can understand and freely use the site on their own.
+
+index page with student showcase image:
+![proof](images/proof14.png)
+![proof](images/proof13.png)
+
+<!-- Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features. -->
+
 
 

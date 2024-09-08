@@ -2,6 +2,7 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// back button
 echo '<a href="index.php" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
@@ -9,10 +10,11 @@ echo '<a href="index.php" role="button">
 
 echo '<h1 class="centerize-title">Upcoming Events</h1>';
 
+//--------------------------------------------------------------------
 //connect to database
 $db = connectToDB();
 
-//setup a query to get all companies into
+//setup a query to get all events info
 $query = 'SELECT * FROM events ORDER BY name ASC';
 
 //Ateempt to run the query
@@ -27,15 +29,15 @@ catch (PDOException $e) {
 }
 
 //see what we got back
-// consoleLog($events);
-
+consoleLog($events);
+//-------------------------------------------------------------------
 
 //Get the current time
 $now = strtotime("now");
+//see current time
+consoleLog("now",$now);
 
-//see what we got back
-// consoleLog("now",$now);
-
+// Check how many events are being display
 $eventCount = 0;
 
 echo '<ul id="upcomingEvents">';
@@ -52,9 +54,10 @@ foreach ($events as $event) {
 
 
     if($now <= $eventCloseDate){
-
+    //only show events that are open (not closed)
         if($eventOpenDate <= $now or $adminPortal == true){
 
+            // add to event display checker variable
             $eventCount++;
 
             echo '<li class="page-list">';
@@ -66,12 +69,16 @@ foreach ($events as $event) {
                 echo    '<p class="event-title">' . $event['name'] . '</p>';
                 echo    '</a>';
 
+                // formatting event date
                 $eventDate = new DateTimeImmutable($event['event_date']);
                 $formattedEventDate = $eventDate->format('\O\n D d M Y \a\t H:i A');
 
                 echo '<div class="date">';
                 echo '<p>' . $formattedEventDate . '</p>';
+
+                // show when admin session is active
                 if($adminPortal == true){
+                    // formatting event open date
                     $openDate = new DateTimeImmutable($event['open_date']);
                     $formattedOpenDate = $openDate->format('\O\p\e\n \o\n D d M Y \a\t H:i A');
                     echo '<p>' . $formattedOpenDate . '</p>';
@@ -82,8 +89,9 @@ foreach ($events as $event) {
                 echo            'Sign-Up';
                 echo        '</a>';
 
+                    // show when admin session is active
                     if($adminPortal == true){
-
+                        //delete button
                         echo '<a href ="delete-eventConfirm.php?id=' . $event['id'] . '">
                                 <i data-feather="trash-2"></i>
                                 </a>';
@@ -108,6 +116,7 @@ if($eventCount == 0){
 //ADD IS ONLY FOR ADMIN IN SESSION, SO
 
 if($adminPortal == true){
+// display add event button when in admin session
 echo '<div id="add-button">
         <a href ="addE-form.php">
             <i data-feather="plus"></i>

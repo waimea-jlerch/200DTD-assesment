@@ -2,6 +2,7 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// back button
 echo '<a href="student-list.php" role="button">
         <i data-feather="arrow-left"></i>
         Go Back

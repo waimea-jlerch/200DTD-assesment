@@ -2,13 +2,16 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// get event id from URL
 $eventID = $_GET['id'] ?? null;
 
+// back button
 echo '<a href="event-details.php?id=' . $eventID . '" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
 
+//----------------------------------------------------------------------------------
 //connect to database
 $db = connectToDB();
 
@@ -25,7 +28,7 @@ catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB event details Error', ERROR);
     die('There was an error getting event details to the database');
 }
-
+//------------------------------------------------------------------------------------
 ?>
 
 <h2 class="centerize-title">Edit <?= $event['name'] ?>'s event details!</h2>
@@ -56,20 +59,19 @@ catch (PDOException $e) {
 
     <?php
     if(!$event['picture_type'] or !$event['picture_type']){
-        
         echo '<p>No existing image</p>';
-
     }
     else{
-    echo   '<img src="load-image.php?id=' . $eventID . '" class="detials-image" alt="Event Image">';
+        // show existing event image
+        echo   '<img src="load-image.php?id=' . $eventID . '" class="detials-image" alt="Event Image">';
     }
     ?>
 
     <label>Picture</label>
     <input name="image" type="file" accept="images/*">
 
-
     <input type="submit" value="Update">
+    
 </form>
 
 <?php 

@@ -1,11 +1,13 @@
 <?php
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 
-
+// get student id from URL
 $id = $_GET['id'] ?? null;
 
+//connect to DB
 $db = connectToDB();
-//setup a query to get all companies into
+
+//setup a query to get student info
 $query = 'DELETE FROM students
 
           WHERE id = ?';
@@ -21,6 +23,6 @@ catch (PDOException $e) {
     die('There was an error deleting data from the database');
 }
 
-
-header('location: student-list.php'); //if use this can't use console log
+// redirect back
+header('location: student-list.php');
 ?>

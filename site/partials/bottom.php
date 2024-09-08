@@ -3,7 +3,7 @@
 <footer>
 
     <?php
-
+    // Show Log-in or Log-out option depending on if admin session is active
     if($adminPortal){
 
         echo '<p>Hello Admin! <a href="admin-logOut.php">Log-out?</a></p>';

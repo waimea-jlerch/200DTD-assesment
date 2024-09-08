@@ -2,9 +2,9 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-//stop admin portal by making it false
+// stop admin portal by making it false → log-out
 unset($_SESSION['mySignUps']);
 
-
-header('location: mySignUps-form.php'); //if use this can't use console log
+// redirect back
+header('location: mySignUps-form.php');
 ?>

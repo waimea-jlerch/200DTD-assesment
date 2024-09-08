@@ -2,6 +2,7 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// back button
 echo '<a href="upcoming-events.php" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
@@ -11,14 +12,14 @@ echo '<a href="upcoming-events.php" role="button">
 <h1 class="centerize-title">International & Migrant Students</h1>
 
 <?php
-
-//connect to database
+//----------------------------------------------------------------------
+// connect to database
 $db = connectToDB();
 
-//setup a query to get all companies into
+// setup a query to get all students info
 $query = 'SELECT * FROM students ORDER BY forename ASC';
 
-//Ateempt to run the query
+// Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
     $stmt->execute();
@@ -29,12 +30,12 @@ catch (PDOException $e) {
     die('There was an error getting data from the database');
 }
 
-//see what we got back
+// see what we got back
 consoleLog($students);
+//----------------------------------------------------------------------
 
+// student table
 echo '<div class="list-table">';
-
-
 echo '<table>
         <tr>
             <th>Name</th>
@@ -61,9 +62,9 @@ foreach ($students as $student) {
 }
 
 echo '</table>';
-
 echo '</div>';
 
+// add button
 echo '<div id="add-button">
         <a href ="student-form.php">
             <i data-feather="plus"></i>

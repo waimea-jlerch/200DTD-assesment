@@ -33,5 +33,4 @@
     // Got here, so all went well. Pass back the image data as a response
     header('Content-type: ' . $image['picture_type']);
     echo $image['picture_data'];
-
 ?>

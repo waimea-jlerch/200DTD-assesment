@@ -19,26 +19,12 @@ $closeDate = $_POST['close-date'];
 $endDate = $_POST['end-date'];
 
 //----------------------------------------------------------------------------
-// Insert the thing data and image into the database
-
+// Connect to Database
 $db = connectToDB();
-
-// $query = 'INSERT INTO events 
-//             (name, description, event_date, open_date, close_date, end_date, picture_type, picture_data) 
-//             VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-
-// try {
-//     $stmt = $db->prepare($query);
-//     $stmt->execute([$name, $description, $eventDate, $openDate, $closeDate, $endDate, $imageType, $imageData]);
-//     $newEventID = $db->lastInsertID();
-// }
-// catch (PDOException $e) {
-//     consoleLog($e->getMessage(), 'DB Upload Picture', ERROR);
-//     die('There was an error adding picture to the database');
-// }
 
 if($_FILES['image']['error'] == 4){
 
+    // Insert new event into DB
     $query = 'INSERT INTO events 
             (name, description, event_date, open_date, close_date, end_date)
             VALUES (?, ?, ?, ?, ?, ?)';
@@ -62,6 +48,7 @@ else{
         'type' => $imageType
     ] = uploadedImageData($_FILES['image']);
     
+    // Insert new event + image into DB
     $query = 'INSERT INTO events 
             (name, description, event_date, open_date, close_date, end_date, picture_type, picture_data) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
@@ -77,9 +64,8 @@ else{
     }
 }
 
-// //----------------------------------------------------------------------------
-// // Back to see the new thing
+//----------------------------------------------------------------------------
 
+// Back to see added event
 header('Location: event-details.php?id=' . $newEventID);
-
 ?>

@@ -2,25 +2,26 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-consoleLog($_POST, 'POST Data');
-
 // Get form data
+consoleLog($_POST, 'POST Data');
 $studentID = $_POST['studentID'];
 $eventID = $_POST['eventID'];
 $pin = $_POST['pin'];
 
-//back button
+// back button
 echo '<a href="mySignUps.php" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
 
-//connect to database
+//------------------------------------------------------------------------
+// connect to database
 $db = connectToDB();
 
+//set up a query to get event info
 $query = 'SELECT name FROM events WHERE id=?';
 
-//Ateempt to run the query
+// Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
     $stmt->execute([$eventID]);
@@ -31,7 +32,8 @@ catch (PDOException $e) {
     die('There was an error getting student pin to the database');
 }
 
-//setup a query to get student's PIN info
+//-----------------------------------------------------------------------
+// setup a query to get student's PIN info
 $query = 'SELECT pin FROM students WHERE id=?';
 
 //Ateempt to run the query
@@ -45,7 +47,8 @@ catch (PDOException $e) {
     die('There was an error getting student pin to the database');
 }
 
-//checking for repetitive sign-ups
+//-----------------------------------------------------------------------------
+// set up a query to check for repetitive sign-ups
 $query = 'SELECT student FROM register WHERE student=?';
 
 //Ateempt to run the query
@@ -58,17 +61,13 @@ catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB register data Error', ERROR);
     die('There was an error getting register data from the database');
 }
-
-
 //-------------------------------------------------------------------------
-
 
 if ($student['pin'] == $pin ) {
 
     echo '<h2 class="centerize-title">Your signed-up to ' . $event['name'] . ' had been cancelled!</h2>';
 
-
-    //setup a query to cancel signed-up info
+        //setup a query to cancel signed-up info
         $query = 'DELETE FROM register
 
         WHERE event = ? AND student = ?';
@@ -125,7 +124,4 @@ else {
     echo    '</div>';
 }
 
-?>
-
-
-<?php include 'partials/bottom.php'; ?>
+include 'partials/bottom.php'; ?>

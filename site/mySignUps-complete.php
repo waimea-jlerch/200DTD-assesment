@@ -9,7 +9,7 @@ consoleLog($_POST, 'POST Data');
 $studentID = $_POST['studentID'];
 $pin = $_POST['pin'];
 
-
+//-----------------------------------------------------------------------
 //connect to database
 $db = connectToDB();
 
@@ -27,6 +27,7 @@ catch (PDOException $e) {
     die('There was an error getting student pin to the database');
 }
 
+//--------------------------------------------------------------------------
 //checking for repetitive sign-ups
 $query = 'SELECT student FROM register WHERE student=?';
 
@@ -41,20 +42,20 @@ catch (PDOException $e) {
     die('There was an error getting register data from the database');
 }
 
-
 //-------------------------------------------------------------------------
 
 if ($student['pin'] == $pin ) {
+//all went well
 
-
+    // start student session based on their id
     session_start();
+    $_SESSION['mySignUps'] = $studentID;
 
-
-        $_SESSION['mySignUps'] = $studentID;
-
-        header('location: mySignUps.php');
+    //redirect back
+    header('location: mySignUps.php');
 }
 else {
+// Wrong pin input
 
     echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
     
@@ -75,7 +76,4 @@ else {
     echo    '</div>';
 } 
 
-?>
-
-
-<?php include 'partials/bottom.php'; ?>
+include 'partials/bottom.php'; ?>

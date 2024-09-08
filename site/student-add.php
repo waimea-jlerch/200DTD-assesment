@@ -2,8 +2,6 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-
-
 consoleLog($_POST, 'POST Data');
 
 // Get form data
@@ -15,15 +13,16 @@ $year = $_POST['year'];
 $dob = $_POST['dob'];
 $pin = $_POST['pin'];
 
-
-//connect to database
+//-------------------------------------------------------------------------------
+// connect to database
 $db = connectToDB();
 
+// set up a query to get student PIN info
 $query = 'SELECT pin FROM students
 
           WHERE pin = ?';
 
-//Ateempt to run the query
+// Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
     $stmt->execute([$pin]);
@@ -34,12 +33,14 @@ catch (PDOException $e) {
     die('There was an error getting students data from the database');
 }
 
+// see what we get back
 consoleLog($pin);
 consoleLog($studentPinCheck);
+//------------------------------------------------------------------------------
 
 if(!$studentPinCheck){
 
-    //setup a query to get all companies into
+    //setup a query to add a new student
     $query = 'INSERT INTO students 
             (forename, surname, role, nationality, year, dob, pin)
             VALUES (?, ?, ?, ?, ?, ?, ?)';
@@ -54,9 +55,11 @@ if(!$studentPinCheck){
         die('There was an error adding student data to the database');
     }
 
+    // redirect back
     header('Location: student-list.php'); 
 }
 else{
+// PIN that was input in form has already existing
 
     echo '<a href="student-list.php" role="button">
     <i data-feather="arrow-left"></i>
@@ -84,5 +87,4 @@ else{
     include 'partials/bottom.php';
 
 }
-
 ?>

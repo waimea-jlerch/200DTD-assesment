@@ -2,8 +2,6 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-
-
 consoleLog($_POST, 'POST Data');
 
 // Get form data
@@ -11,18 +9,20 @@ $studentID = $_POST['studentID'];
 $eventID = $_POST['eventID'];
 $pin = $_POST['pin'];
 
-//back button
+// back button
 echo '<a href="event-details.php?id=' . $eventID . '" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
 
-//connect to database
+//--------------------------------------------------------------------------------
+// connect to database
 $db = connectToDB();
 
+// set up a query to get event name
 $query = 'SELECT name FROM events WHERE id=?';
 
-//Ateempt to run the query
+// Ateempt to run the query
 try{
     $stmt = $db->prepare($query);
     $stmt->execute([$eventID]);
@@ -33,6 +33,7 @@ catch (PDOException $e) {
     die('There was an error getting student pin to the database');
 }
 
+//--------------------------------------------------------------------------------
 //setup a query to get student's PIN info
 $query = 'SELECT pin FROM students WHERE id=?';
 
@@ -61,12 +62,14 @@ catch (PDOException $e) {
     die('There was an error getting register data from the database');
 }
 
+// see what we get back
 consoleLog($register);
 
 //-------------------------------------------------------------------------
 
 
 if ($register == NULL && $student['pin'] == $pin){
+// all input is correct
 
         echo '<h2 class="centerize-title">Sign-up to ' . $event['name'] . ' complete!</h2>';
 
@@ -109,6 +112,7 @@ if ($register == NULL && $student['pin'] == $pin){
 
 }
 elseif($student['pin'] != $pin){
+// pin is wrong
 
     echo '<h2 class="centerize-title">Incorrect PIN!</h2>';
     
@@ -129,6 +133,7 @@ elseif($student['pin'] != $pin){
         echo    '</div>';
 }
 else{
+// repetitive sign-up
 
     echo '<h2 class="centerize-title">Sign-up for ' . $event['name'] . ' completed!</h2>';
 

@@ -2,14 +2,17 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// back button
 echo '<a onclick="history.back()" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
 
-//connect to database
+//-------------------------------------------------------------------------------
+// connect to database
 $db = connectToDB();
 
+// set up a query to get students info
 $query = 'SELECT id, forename, surname FROM students ORDER BY forename ASC';
 
 //Ateempt to run the query
@@ -25,6 +28,7 @@ catch (PDOException $e) {
 
 //see what we got back
 consoleLog($students);
+//-------------------------------------------------------------------------------
 
 echo '<h2 class="centerize-title">View My Sign-ups!</h2>';
 
@@ -36,13 +40,12 @@ echo '<h2 class="centerize-title">View My Sign-ups!</h2>';
     <label>Name</label>
         <select name="studentID">
         <?php
-
+        // display list of student for user to select
         foreach ($students as $student) {
             echo '<option value="' .$student['id'] . '">';
             echo    $student['forename'] . ' ' . $student['surname'];
             echo  '</option>';
         }
-        
         ?>
         </select>
 

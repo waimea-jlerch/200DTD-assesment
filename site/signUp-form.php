@@ -2,13 +2,16 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// get event id from URL
 $eventID = $_GET['id'] ?? null;
 
+// back button
 echo '<a onclick="history.back()" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
 
+//----------------------------------------------------------------------------------
 //connect to database
 $db = connectToDB();
 
@@ -26,11 +29,14 @@ catch (PDOException $e) {
     die('There was an error getting events data from the database');
 }
 
+// if no event id is regcognize in URL then can't continue
 if (!$eventID) die('Invalid event ID');
 
 // see what we got back
 // consoleLog($event);
 
+//------------------------------------------------------------------------------------
+//setup a query to get students info
 $query = 'SELECT id, forename, surname FROM students ORDER BY forename ASC';
 
 //Ateempt to run the query
@@ -47,6 +53,8 @@ catch (PDOException $e) {
 //see what we got back
 // consoleLog($students);
 
+//------------------------------------------------------------------------------------
+
 echo '<h2 class="centerize-title">Signing-up to ' . $event['name'] . '</h2>';
 
 ?>
@@ -57,7 +65,7 @@ echo '<h2 class="centerize-title">Signing-up to ' . $event['name'] . '</h2>';
     <label>Name</label>
         <select name="studentID" required>
         <?php
-
+        // display list of student for user to select
         foreach ($students as $student) {
             echo '<option value="' .$student['id'] . '">';
             echo    $student['forename'] . ' ' . $student['surname'];

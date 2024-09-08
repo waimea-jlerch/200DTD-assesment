@@ -2,17 +2,16 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-// Check for event id in URL
+// get event id from URL
 $eventID = $_GET['id'] ?? null;
-
-// see event ID
+// see event id
 consoleLog($eventID);
 
-//----------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------
 //connect to database
 $db = connectToDB();
 
-//setup a query to get event info
+//setup a query to get event name
 $query = 'SELECT name FROM events WHERE id=?';
 
 //Ateempt to run the query
@@ -31,15 +30,19 @@ if (!$eventID) die('Invalid event ID');
 
 //see what we got back
 consoleLog($event);
-//---------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------
 
-    echo '<h2 class="centerize-title">Are you sure you want to delete ' .  $event['name'] . '?</h2>';
+
+    echo "<h2 class='centerize-title'>Are you sure you want to edit " .  $event['name'] . "'s details?</h2>";
+
+    echo "<h3>Warning!</h3> <p>Proceeding with editing " . $event['name'] .  "'s event details will require you to select the picture again! (unless picture is not needed)</p>";
 
     //ask for confirmation
-    echo '<div class="complete-box">';
-        echo    '<a href = "delete-eventYes.php?id=' . $eventID . '" role="button" class="Edetails">YES</a>';
-        echo     '<a href = "delete-eventNo.php" role="button" class="Edetails">NO</a>';
+    echo '<div>';
+    echo    '<a href = "editE-form.php?id=' . $eventID . '"><button>YES</button></a>';
+    echo     '<a href = "event-details.php?id=' . $eventID . '"><button>NO</button></a>';
     echo '</div>';
+
 
 include 'partials/bottom.php';
 ?>

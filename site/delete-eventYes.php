@@ -1,16 +1,20 @@
 <?php
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 
-
+// Check for event id in URL
 $eventID = $_GET['id'] ?? null;
 
-// consoleLog($eventID);
+// see event ID
+consoleLog($eventID);
 
+// if no event id is regcognize in URL then display error
 if (!$eventID) die('Invalid event ID');
 
+//--------------------------------------------------------------------------------------
+// connect to DB
 $db = connectToDB();
 
-//setup a query to get all register info
+//setup a query to delete all register info in an event
 $query = 'DELETE FROM register
 
           WHERE event = ?';
@@ -26,7 +30,8 @@ catch (PDOException $e) {
     die('There was an error deleting registering data from the database');
 }
 
-//setup a query to get all events info
+//----------------------------------------------------------------------------------------
+//setup a query to delete an event from DB
 $query = 'DELETE FROM events
 
           WHERE id = ?';
@@ -41,6 +46,8 @@ catch (PDOException $e) {
     consoleLog($e->getMessage(), 'DB List Fetch', ERROR);
     die('There was an error deleting event data from the database');
 }
+//-------------------------------------------------------------------------------------------
 
-header('location: upcoming-events.php'); //if use this can't use console log
+//redirect back
+header('location: upcoming-events.php');
 ?>

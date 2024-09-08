@@ -2,9 +2,8 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
-
+// Get back input values via global var POST 
 consoleLog($_POST, 'POST Data');
-
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -13,6 +12,7 @@ $password = $_POST['password'];
 //connect to database
 $db = connectToDB();
 
+//setup a query to get password info
 $query = 'SELECT * FROM admin_portal';
 
 //Ateempt to run the query
@@ -33,33 +33,25 @@ consoleLog($adminPass);
 
 if ($adminPass['username'] == $username && $adminPass['password'] == $password) {
 
+    // Start admin session
+    $_SESSION['admin'] = true;
+    //redirect
+    header('location: upcoming-events.php');
 
-        $_SESSION['admin'] = true;
-
-        header('location: upcoming-events.php');
 }
 else {
-
     echo '<h2 class="centerize-title">Incorrect username or password!</h2>';
 
     echo '<div class="complete-box">';
-    
-    echo '<p>Check your username and password again to log-in!</p>';
-
-    echo '<a href = "admin-form.php" role="button" class="Edetails">Try again</a>';
-
-    echo '<br>';
-
-    echo 'Or would you like to return to:';
-        echo    '<div>';
-        echo    '<a href = "upcoming-events.php" role="button" class="Edetails">Upcoming Events</a>';
-        echo    '<a href = "mySignUps-redirect.php" role="button" class="Edetails">My Sign-ups</a>';
-        echo    '</div>';
-
+        echo '<p>Check your username and password again to log-in!</p>';
+        echo '<a href = "admin-form.php" role="button" class="Edetails">Try again</a>';
+        echo '<br>';
+        echo 'Or would you like to return to:';
+            echo    '<div>';
+            echo    '<a href = "upcoming-events.php" role="button" class="Edetails">Upcoming Events</a>';
+            echo    '<a href = "mySignUps-redirect.php" role="button" class="Edetails">My Sign-ups</a>';
+            echo    '</div>';
     echo    '</div>';
 } 
 
-?>
-
-
-<?php include 'partials/bottom.php'; ?>
+include 'partials/bottom.php'; ?>

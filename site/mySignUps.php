@@ -2,18 +2,21 @@
 require 'lib/utils.php'; //require means if you can't find the file required, then give up no point in continueing
 include 'partials/top.php'; 
 
+// back button
 echo '<a href="index.php" role="button">
     <i data-feather="arrow-left"></i>
     Go Back
     </a>';
 
+// get student id via session value
 $studentID = $_SESSION['mySignUps'];
 consoleLog($_SESSION);
 
+//----------------------------------------------------------------------------------
 //connect to database
 $db = connectToDB();
 
-//setup a query to get all mysignups events for a student in session
+//setup a query to get all mysignups events for the student in session
 $query = 'SELECT register.event,    
                  events.name,
                  events.close_date,
@@ -40,11 +43,14 @@ catch (PDOException $e) {
 //see what we got back
 consoleLog($registrations);
 
+//-----------------------------------------------------------------------------------
 
-//Get the current time
+// Get the current time
 $now = strtotime("now");
+// see current time
 consoleLog("now",$now);
 
+// Check how many events are being display
 $eventCount = 0;
 
 echo '<h1 class="centerize-title">My Sign-ups!</h1>';
@@ -62,7 +68,9 @@ echo '<h1 class="centerize-title">My Sign-ups!</h1>';
         consoleLog("end_date",$eventEndDate);
 
         if($now < $eventEndDate){
+        // display event that have not reach end date
 
+            // add to event display checker variable
             $eventCount++;
 
             if($eventCloseDate <= $now){
@@ -74,6 +82,7 @@ echo '<h1 class="centerize-title">My Sign-ups!</h1>';
 
             echo '<div class="mySignUps-list">';
 
+            // formatting event close date
             $closeDate = new DateTimeImmutable($register['close_date']);
             $formattedcloseDate = $closeDate->format('\C\l\o\s\e\d \f\o\r \s\i\g\n\-\u\p\!');
             
@@ -82,16 +91,16 @@ echo '<h1 class="centerize-title">My Sign-ups!</h1>';
             echo    '</a>';
             
             if($eventCloseDate <= $now){
+            // closed event (cannot cancel anymore)
                 echo    ' ' . $formattedcloseDate;
             }
             
             if($now <= $eventCloseDate){
-                
+            // event that is not yet closed (able to cancel)
                 echo    '<a href="cancel-form.php?id=' . $register['event'] . '" class="signUp-button">';
                 echo            'Cancel';
                 echo    '</a>';
             }
-
 
             echo '</div>';
             echo '</li>';
@@ -101,6 +110,7 @@ echo '<h1 class="centerize-title">My Sign-ups!</h1>';
     echo '</ul>';
 
     if($eventCount == 0){
+    //no event to display 
 
         echo    '<p class="sub-title">You have no sign-ups yet!</p>';
         echo    '<p class="sub-title">Would you like to see the upcoming events?</p>';
@@ -108,6 +118,7 @@ echo '<h1 class="centerize-title">My Sign-ups!</h1>';
     
     }
 
+    // log-out/change user button
     echo '<p id="msp-log">Do you want to change user/log out? <a href="mySignUps-logOut.php">Click here!</a></p>';
 
 include 'partials/bottom.php'; 

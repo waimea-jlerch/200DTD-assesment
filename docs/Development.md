@@ -214,22 +214,22 @@ I have finished the functionality of editing the event details as an admin.
 This is how it looks like when...
  
 - there is no existing image:
-![Alt text](images/update5-1.png)
-![Alt text](images/update5-2.png)
+![no img](images/update5-1.png)
+![no img](images/update5-2.png)
 
 - there is an exiting image:
-![Alt text](images/update5-3.png)
-![Alt text](images/update5-4.png)
+![exsiting img](images/update5-3.png)
+![exsiting img](images/update5-4.png)
 
 After the update button had been clicked it foward the admin to the event detials page to see the changes.
 
 I have also finished the functionality of the 'student list' page, allowing admin to add/delete new student with repetitive pin error prevention
 
 This is how it currently looks like:
-![Alt text](images/update5-5.png)
-![Alt text](images/update5-6.png)
-![Alt text](images/update5-7.png)
-![Alt text](images/update5-8.png)
+![student list](images/update5-5.png)
+![add student form](images/update5-6.png)
+![add student repetitive PIN error](images/update5-7.png)
+![Delete student record confirmation](images/update5-8.png)
 
 I will need to check with my end-user whether they want to change anything about these funtionalities I have completed. Also ask if they want a warning when clicking on the edit-detials button. Lastly, check if they want the navigation bar to be sticky, and icon for nav buttons or not.
 
@@ -242,19 +242,19 @@ I have talked to my end-uesr and catch up about every progress that I have made 
 >For the navigation title I want to have the word 'Waimea College' as a main heading to make the students feels like they belong in Waimea College, then put 'international events' as a sub-heading.
 
 before:
-![Alt text](images/update6-1.png)
+![nav logo before](images/update6-1.png)
 
 after:
-![Alt text](images/update6-2.png)
+![nav logo after](images/update6-2.png)
 
 I would need to ask if they are happy with the 'International Events' being in yellow or another color.
 
 after letting them play around with the site I asked them if there is anything that feels akward to use and they commented that:
 >I think the only thing that will make it better is if we have a 'back' button to go back to the previous page
 
-before:![Alt text](images/update6-5.png)
+before:![before adding back button](images/update6-5.png)
 
-after:![Alt text](images/update6-6.png)
+after:![after adding back button](images/update6-6.png)
 
  - But I'm encountering a little problem with the back button when using 'history.back()'. For instance when student have succesfully sign-up and click on the back button it takes them back to the sign-up form which creates an awkward flow of usage.
 
@@ -264,18 +264,18 @@ I added event_date into the database and display it on the event
 
 db change: 
 
-![Alt text](images/update6-7.png)
+![add event_date culumn in DB table](images/update6-7.png)
 
-display on upcoming  event list: ![Alt text](images/update6-8.png)
+display on upcoming  event list: ![open date in event list](images/update6-8.png)
 
-display on event detail: ![Alt text](images/update6-9.png)
+display on event detail: ![open date in event details](images/update6-9.png)
 
 
 delete in event detials page when in admin session
 
-before: ![Alt text](images/update6-3.png)
+before: ![before adding delete button](images/update6-3.png)
 
-after: ![Alt text](images/update6-4.png)
+after: ![after adding delete button](images/update6-4.png)
 
 Also my end-user have praised that
 > The forms are very easy to use, I like it.
@@ -286,11 +286,14 @@ I went to ask my end-user about the Waimea College 'International Event' color, 
 >I think they Waimea College and International should be the same color.
 Then I try changing it for her real-time via google chrome inspect and we came to the conclusion that both being white would be better.
 
-Before: ![Alt text](images/update6-2.png)
+Before: ![nav subtitle before](images/update6-2.png)
 
-After: ![Alt text](images/update7-1.png)
+After: ![nav subtitle after](images/update7-1.png)
 
 solution to back button problem: I just put my back button as an 'a href' link to the page that correspond with my site flow of usage rather than 'history.back()' to prevent akward usage.
+
+I asked a few of my international friends from different cultural whether any thing is the site if offensive to them at all and they said that
+> Everything looks good!
 
 I also made my css respondsive enough to be use of phone so that everyone can easily access the site anywhere and anytime.
 
@@ -305,89 +308,82 @@ Here is me playing around my site in a respondsive mobile frame!
 I think have finish all the functionality to which my end-user have approved of liking how it feels when letting them play around with the site.
 
 - I'm going to start of with the index page
-![alt text](images/validation1.png)
+![index validation](images/validation1.png)
 Fixed:
-![alt text](images/validation1-1.png)
+![index validation fixed](images/validation1-1.png)
 
 - Upcoming-Events page
-![alt text](images/validation2.png)
+![Upcoming event validation](images/validation2.png)
 after commenting all the consolelogs, there is no bugs first-try, go me! :D
 
 - Sign-up form 
-![alt text](images/validation3.png)
+![sign-up form validation](images/validation3.png)
 fixed:
-![Alt text](images/validation3-1.png)
+![sign-up form validation fixed](images/validation3-1.png)
 
 - Sign-up error page
-![Alt text](images/validation4.png)
+![sign-up error page validation](images/validation4.png)
 fixed:
-![Alt text](images/validation4-1.png)
+![sign-up error page validation fixed](images/validation4-1.png)
 
 - Sign-up complete page
-![Alt text](images/validation5.png)
+![sign-up complete validation](images/validation5.png)
 
 - Event-Details page
-![Alt text](images/validation6.png)
+![event details vilidation](images/validation6.png)
 fixed:
-![Alt text](images/validation6-1.png)
+![event details vilidation fixed](images/validation6-1.png)
 
 - Who's else is going page
-![Alt text](images/validation7.png)
+![WhosGoing validation](images/validation7.png)
 
 - My Sign-ups form
-![Alt text](images/validation8.png)
+![mySignUps form validation](images/validation8.png)
 fixed:
-![Alt text](images/validation8-1.png)
+![mySignUps form validation](images/validation8-1.png)
 
 - My Sign-ups error page
-![Alt text](images/validation9.png)
+![mySignUps error validation](images/validation9.png)
 
 - My Sign-up page
-![alt text](images/validation10.png)
+![mySignUps page validation](images/validation10.png)
 
 - Cancel form
-![alt text](images/validation11.png)
+![cancel form validation](images/validation11.png)
 fixed:
-![alt text](images/validation11-1.png)
+![cancel form validatoin fixed](images/validation11-1.png)
 
 - Cancel Error page
-![alt text](images/validation12.png)
+![cancel error validation](images/validation12.png)
 
 - Cancel complete page
-![alt text](images/validation13.png)
+![cancel complete validation](images/validation13.png)
 
 - Admin form
-![alt text](images/validation14.png)
+![admin form validatoin](images/validation14.png)
 
 - Student List page
-![alt text](images/validation15.png)
+![student list validation](images/validation15.png)
 fixed:
-![Alt text](images/validation15-1.png)
+![student list validation fixed](images/validation15-1.png)
 
 - Closed Events page
-![alt text](images/validation16.png)
+![closed event page validation](images/validation16.png)
 
 - Add Event form
-![Alt text](images/validation17.png)
+![add event form validation](images/validation17.png)
 
 - Edit Event form
-![Alt text](images/validation18.png)
+![edit event form validation](images/validation18.png)
 
 - Add student form
-![Alt text](images/validation19.png)
+![student add form validation](images/validation19.png)
 
 - Add student error
-![Alt text](images/validation20.png)
+![student add error validation](images/validation20.png)
 
 - Delete confirmation page
-![Alt text](images/validation21.png)
-
-
-### DATE HERE
-
-go back to check all comments
-
-Write up design.md     
+![delete confirmation validation](images/validation21.png)
 
 ### 23/08/24
 
@@ -431,20 +427,8 @@ I'll be displaying clips of the testing of all key features using real data.
 
     [Click here to view testing clip](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/jlerch_waimea_school_nz/Ed4WZuYUsyFIqm7WHH8K4eEBcy1hAb_XEmRorHXJnZIRpw?e=GVdsci&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-### DATE HERE
+<!-- ### DATE HERE
 
 Replace this test with what you are working on
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
-
-### DATE HERE
-
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
-
-### DATE HERE
-
-Replace this test with what you are working on
-
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.      
+Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary. -->

@@ -1,17 +1,13 @@
-<?php require_once '_config.php'; ?>
+<?php 
+require_once '_config.php';
 
-<?php
-
-
+// Site Sessions
 session_name('IntEventsBooking');
 session_start();
-
 $adminPortal = isset($_SESSION['admin']);
-
-$page = basename($_SERVER['SCRIPT_NAME']);
-
 // consoleLog($_SESSION)
 
+$page = basename($_SERVER['SCRIPT_NAME']);
 // echo $page
 // print_r($page)
 // record contained data, and container contained records
@@ -47,9 +43,11 @@ $page = basename($_SERVER['SCRIPT_NAME']);
             <a href="upcoming-events.php"   class="<?= ($page=='upcoming-events.php' ? 'active' : '') ?>">Upcoming Events</a>
             <a href="mySignUps-redirect.php" class="<?= ($page=='mySignUps-form.php' ? 'active' : '') . ($page=='mySignUps.php' ? 'active' : '') ?>">My Sign-ups</a>
 
-            <?php if($adminPortal == true){
-                echo '<a href="student-list.php" class="' . ($page=='student-list.php' ? 'active' : '') . '">Student List</a>';
-                echo '<a href="closed-events.php" class="' . ($page=='closed-events.php' ? 'active' : '') . '">Closed Events</a>';
+            <?php 
+                //Extra nav for admin in session only
+                if($adminPortal == true){
+                    echo '<a href="student-list.php" class="' . ($page=='student-list.php' ? 'active' : '') . '">Student List</a>';
+                    echo '<a href="closed-events.php" class="' . ($page=='closed-events.php' ? 'active' : '') . '">Closed Events</a>';
                 } 
             ?>
 
